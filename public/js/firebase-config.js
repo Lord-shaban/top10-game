@@ -1,15 +1,16 @@
 /**
  * Firebase Configuration
- * إعدادات Firebase — استبدل القيم بإعدادات مشروعك
+ * إعدادات Firebase الخاصة بمشروع top10-7aa3d
  */
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDizMH71WHp7ySaxBusbHHEIFN1lQ_qKns",
+  authDomain: "top10-7aa3d.firebaseapp.com",
+  databaseURL: "https://top10-7aa3d-default-rtdb.firebaseio.com",
+  projectId: "top10-7aa3d",
+  storageBucket: "top10-7aa3d.firebasestorage.app",
+  messagingSenderId: "595821499501",
+  appId: "1:595821499501:web:cae68ead8c3cbafbd01b64",
+  measurementId: "G-CQT4LEGLYL"
 };
 
 // تهيئة Firebase
