@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Top 10 — لعبة التخمين الأونلاين</title>
+  <meta name="description" content="تنافس مع أصدقائك في تخمين أفضل 10 في عالم كرة القدم! لعبة أونلاين ممتعة في الوقت الحقيقي.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- CRT Scanline Overlay -->
+  <div class="crt-overlay"></div>
+  <div class="crt-flicker"></div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- الشاشة الرئيسية                     -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="screen-home" class="screen active">
+    <div class="container home-container">
+      <div class="logo-section">
+        <div class="logo-box retro-border">
+          <div class="logo">
+            <span class="logo-top">TOP</span>
+            <span class="logo-number">10</span>
+          </div>
+          <div class="logo-stars">★ ★ ★ ★ ★</div>
+        </div>
+        <p class="logo-subtitle">تنافس في تخمين أفضل 10 في كرة القدم</p>
+      </div>
+
+      <div class="home-card retro-border">
+        <div class="card-header">
+          <i data-lucide="user" class="icon"></i>
+          <span>بيانات اللاعب</span>
+        </div>
+        <div class="input-group">
+          <label for="player-name">الاسم</label>
+          <div class="retro-input-wrapper">
+            <i data-lucide="pen-line" class="input-icon"></i>
+            <input type="text" id="player-name" placeholder="أدخل اسمك هنا..." maxlength="20" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="home-actions">
+          <button id="btn-create-room" class="btn btn-primary btn-lg">
+            <i data-lucide="plus-circle" class="btn-ic"></i>
+            إنشاء غرفة جديدة
+          </button>
+          
+          <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-text">أو انضم لغرفة</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <div class="join-section">
+            <div class="input-group">
+              <label for="room-code-input">كود الغرفة</label>
+              <div class="retro-input-wrapper">
+                <i data-lucide="key-round" class="input-icon"></i>
+                <input type="text" id="room-code-input" placeholder="أدخل الكود المكون من 6 أحرف" maxlength="6" autocomplete="off" class="code-input">
+              </div>
+            </div>
+            <button id="btn-join-room" class="btn btn-secondary btn-lg">
+              <i data-lucide="log-in" class="btn-ic"></i>
+              انضمام
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-hint">
+        <i data-lucide="monitor-smartphone" class="icon-sm"></i>
+        <span>يعمل على الهاتف والكمبيوتر</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- غرفة الانتظار                       -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="screen-lobby" class="screen">
+    <div class="container">
+      <div class="lobby-header">
+        <h1 class="retro-title">غرفة الانتظار</h1>
+        <div class="room-code-display retro-border">
+          <div class="code-label">
+            <i data-lucide="hash" class="icon-sm"></i>
+            <span>كود الغرفة</span>
+          </div>
+          <div class="code-row">
+            <span id="lobby-room-code" class="room-code-value">------</span>
+            <button id="btn-copy-code" class="btn-copy" title="نسخ الكود">
+              <i data-lucide="copy" class="icon-sm"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="players-card retro-border">
+        <div class="card-header">
+          <i data-lucide="users" class="icon"></i>
+          <span>اللاعبون</span>
+          <span id="players-count" class="badge">0/10</span>
+        </div>
+        <ul id="players-list" class="players-list">
+          <!-- يتم تعبئته ديناميكياً -->
+        </ul>
+      </div>
+
+      <div id="lobby-actions" class="lobby-actions">
+        <button id="btn-start-game" class="btn btn-primary btn-lg btn-pulse" style="display: none;">
+          <i data-lucide="play" class="btn-ic"></i>
+          بدء اللعبة
+        </button>
+        <p id="waiting-msg" class="waiting-text">
+          <i data-lucide="loader" class="icon-spin"></i>
+          في انتظار المضيف لبدء اللعبة...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- شاشة اللعب                         -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="screen-game" class="screen">
+    <div class="container game-container">
+      <!-- الشريط العلوي -->
+      <div class="game-topbar">
+        <div class="game-info">
+          <span id="round-indicator" class="round-badge retro-border-sm">
+            <i data-lucide="repeat" class="icon-xs"></i>
+            الجولة 1/5
+          </span>
+          <span id="category-badge" class="category-badge retro-border-sm">
+            <i data-lucide="tag" class="icon-xs"></i>
+            التصنيف
+          </span>
+        </div>
+        <div id="timer" class="timer retro-border-sm">
+          <svg class="timer-ring" viewBox="0 0 100 100">
+            <circle class="timer-ring-bg" cx="50" cy="50" r="45" />
+            <circle id="timer-circle" class="timer-ring-fg" cx="50" cy="50" r="45" />
+          </svg>
+          <span id="timer-text" class="timer-text">90</span>
+        </div>
+      </div>
+
+      <!-- السؤال -->
+      <div class="question-card retro-border">
+        <div class="question-icon">
+          <i data-lucide="help-circle"></i>
+        </div>
+        <h2 id="question-text" class="question-text">السؤال يظهر هنا</h2>
+      </div>
+
+      <!-- الإجابات -->
+      <div class="answers-board">
+        <div id="answers-grid" class="answers-grid">
+          <!-- 10 خانات إجابة -->
+        </div>
+      </div>
+
+      <!-- حقل الإدخال -->
+      <div class="input-section retro-border">
+        <div class="autocomplete-wrapper">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="answer-input" class="answer-input" placeholder="اكتب تخمينك هنا..." autocomplete="off">
+          <div id="suggestions-list" class="suggestions-list"></div>
+        </div>
+      </div>
+
+      <!-- لوحة النقاط المصغرة -->
+      <div class="mini-scoreboard retro-border">
+        <div class="card-header compact">
+          <i data-lucide="trophy" class="icon-sm"></i>
+          <span>النقاط</span>
+        </div>
+        <ul id="mini-scores" class="mini-scores-list">
+          <!-- يتم تعبئته ديناميكياً -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- نتائج الجولة                        -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="screen-round-results" class="screen">
+    <div class="container">
+      <h1 class="retro-title results-title">
+        <i data-lucide="flag" class="icon"></i>
+        نتائج الجولة
+      </h1>
+      
+      <div class="round-results-question retro-border">
+        <i data-lucide="help-circle" class="icon-sm"></i>
+        <p id="results-question-text">السؤال</p>
+      </div>
+
+      <div class="results-answers retro-border">
+        <div class="card-header">
+          <i data-lucide="list-ordered" class="icon"></i>
+          <span>القائمة الكاملة</span>
+        </div>
+        <ol id="results-answers-list" class="results-answers-list">
+          <!-- يتم تعبئته ديناميكياً -->
+        </ol>
+      </div>
+
+      <div class="results-scores retro-border">
+        <div class="card-header">
+          <i data-lucide="bar-chart-3" class="icon"></i>
+          <span>ترتيب اللاعبين</span>
+        </div>
+        <ul id="results-scores-list" class="results-scores-list">
+          <!-- يتم تعبئته ديناميكياً -->
+        </ul>
+      </div>
+
+      <div id="round-results-actions" class="round-results-actions">
+        <button id="btn-next-round" class="btn btn-primary btn-lg btn-pulse" style="display: none;">
+          <i data-lucide="arrow-left" class="btn-ic"></i>
+          الجولة التالية
+        </button>
+        <p id="waiting-next-round" class="waiting-text">
+          <i data-lucide="loader" class="icon-spin"></i>
+          في انتظار المضيف...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- النتائج النهائية                    -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="screen-final" class="screen">
+    <div class="container">
+      <div class="final-header">
+        <div class="trophy-icon">
+          <i data-lucide="crown"></i>
+        </div>
+        <h1 class="retro-title final-title">النتائج النهائية</h1>
+      </div>
+
+      <div class="podium-section">
+        <div id="podium" class="podium">
+          <!-- يتم تعبئته ديناميكياً -->
+        </div>
+      </div>
+
+      <div class="final-rankings retro-border">
+        <div class="card-header">
+          <i data-lucide="award" class="icon"></i>
+          <span>الترتيب الكامل</span>
+        </div>
+        <ul id="final-rankings-list" class="final-rankings-list">
+          <!-- يتم تعبئته ديناميكياً -->
+        </ul>
+      </div>
+
+      <div id="final-actions" class="final-actions">
+        <button id="btn-play-again" class="btn btn-primary btn-lg btn-pulse" style="display: none;">
+          <i data-lucide="rotate-ccw" class="btn-ic"></i>
+          لعب مرة أخرى
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- Toast                              -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="toast" class="toast">
+    <i data-lucide="alert-circle" class="toast-icon"></i>
+    <span class="toast-text"></span>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- إشعار الإجابة الصحيحة              -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="answer-notification" class="answer-notification">
+    <i data-lucide="check-circle" class="notif-icon"></i>
+    <span id="notif-player" class="notif-player"></span>
+    <span> اكتشف </span>
+    <span id="notif-answer" class="notif-answer"></span>
+    <span id="notif-points" class="notif-points"></span>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/autocomplete.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/socket.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    // تهيئة أيقونات Lucide
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
