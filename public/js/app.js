@@ -1,18 +1,19 @@
 /**
  * App — المنطق الرئيسي للتطبيق
+ * يستخدم RealtimeClient (Firebase) بدلاً من SocketClient (Socket.IO)
  */
 (function() {
   'use strict';
 
-  // تهيئة Socket.IO
-  SocketClient.init();
+  // تهيئة Firebase Realtime Client
+  RealtimeClient.init();
 
   // تهيئة Autocomplete
   window.autocomplete = new Autocomplete(
     UI.elements.answerInput,
     UI.elements.suggestionsList,
     (selectedName) => {
-      SocketClient.submitAnswer(selectedName);
+      RealtimeClient.submitAnswer(selectedName);
     }
   );
 
@@ -40,7 +41,7 @@
   UI.elements.btnCreateRoom.addEventListener('click', () => {
     const name = validatePlayerName();
     if (name) {
-      SocketClient.createRoom(name);
+      RealtimeClient.createRoom(name);
     }
   });
 
@@ -61,7 +62,7 @@
       return;
     }
 
-    SocketClient.joinRoom(code, name);
+    RealtimeClient.joinRoom(code, name);
   });
 
   // Enter في حقل الكود → انضمام
@@ -101,7 +102,7 @@
 
   // بدء اللعبة
   UI.elements.btnStartGame.addEventListener('click', () => {
-    SocketClient.startGame();
+    RealtimeClient.startGame();
   });
 
   // ═══════════════════════════════════
@@ -113,7 +114,7 @@
     if (e.key === 'Enter' && !window.autocomplete.isOpen) {
       const answer = UI.elements.answerInput.value.trim();
       if (answer) {
-        SocketClient.submitAnswer(answer);
+        RealtimeClient.submitAnswer(answer);
         UI.elements.answerInput.value = '';
       }
     }
@@ -125,7 +126,7 @@
 
   // الجولة التالية
   UI.elements.btnNextRound.addEventListener('click', () => {
-    SocketClient.nextRound();
+    RealtimeClient.nextRound();
   });
 
   // ═══════════════════════════════════
@@ -134,7 +135,7 @@
 
   // لعب مرة أخرى
   UI.elements.btnPlayAgain.addEventListener('click', () => {
-    SocketClient.playAgain();
+    RealtimeClient.playAgain();
   });
 
   // ═══════════════════════════════════
@@ -151,5 +152,5 @@
     UI.elements.playerName.focus();
   }, 500);
 
-  console.log('🎮 Top 10 — اللعبة جاهزة!');
+  console.log('🎮 Top 10 — اللعبة جاهزة! (Firebase Mode)');
 })();

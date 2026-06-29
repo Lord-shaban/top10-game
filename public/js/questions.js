@@ -1148,4 +1148,4 @@ function getSuggestionList(question) {
   return suggestions;
 }
 
-module.exports = { questions, getRandomQuestions, getSuggestionList };
+// متاح كمتغيرات عالمية في المتصفح

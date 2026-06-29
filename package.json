@@ -1,17 +1,9 @@
 {
   "name": "top10-game",
-  "version": "1.0.0",
-  "description": "لعبة Top 10 - تنافس في تخمين أفضل 10 في كرة القدم",
-  "main": "server.js",
+  "version": "2.0.0",
+  "description": "لعبة Top 10 - تنافس في تخمين أفضل 10 في كرة القدم (Vercel + Firebase)",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "npx -y nodemon server.js"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "express": "^4.21.0",
-    "socket.io": "^4.7.5"
+    "dev": "npx -y serve public -l 3000"
   }
 }
