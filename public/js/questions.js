@@ -568,10 +568,10 @@ const questions = [
       { name: "جنوة", value: "9 ألقاب", aliases: ["Genoa"] },
       { name: "تورينو", value: "7 ألقاب", aliases: ["Torino"] },
       { name: "بولونيا", value: "7 ألقاب", aliases: ["Bologna"] },
-      { name: "نابولي", value: "3 ألقاب", aliases: ["Napoli"] },
+      { name: "برو فيرتشيلي", value: "7 ألقاب", aliases: ["Pro Vercelli"] },
+      { name: "نابولي", value: "4 ألقاب", aliases: ["Napoli"] },
       { name: "روما", value: "3 ألقاب", aliases: ["Roma"] },
-      { name: "لاتسيو", value: "2 لقب", aliases: ["Lazio"] },
-      { name: "فيورنتينا", value: "2 لقب", aliases: ["Fiorentina"] }
+      { name: "لاتسيو", value: "2 لقب", aliases: ["Lazio"] }
     ]
   },
   {
@@ -580,7 +580,7 @@ const questions = [
     category: "الدوري الفرنسي",
     type: "club",
     answers: [
-      { name: "باريس سان جيرمان", value: "12 لقب", aliases: ["باريس", "PSG"] },
+      { name: "باريس سان جيرمان", value: "13 لقب", aliases: ["باريس", "PSG"] },
       { name: "سانت إتيان", value: "10 ألقاب", aliases: ["Saint-Etienne"] },
       { name: "مارسيليا", value: "9 ألقاب", aliases: ["Marseille", "OM"] },
       { name: "موناكو", value: "8 ألقاب", aliases: ["Monaco"] },
@@ -588,14 +588,10 @@ const questions = [
       { name: "ليون", value: "7 ألقاب", aliases: ["Lyon", "OL"] },
       { name: "ريمس", value: "6 ألقاب", aliases: ["Reims"] },
       { name: "بوردو", value: "6 ألقاب", aliases: ["Bordeaux"] },
-      { name: "نيس", value: "4 ألقاب", aliases: ["Nice"] },
-      { name: "ليل", value: "4 ألقاب", aliases: ["Lille"] }
+      { name: "ليل", value: "4 ألقاب", aliases: ["Lille"] },
+      { name: "نيس", value: "4 ألقاب", aliases: ["Nice"] }
     ]
   },
-
-  // ──────────────────────────────────
-  // أندية كبرى — هدافون تاريخيون
-  // ──────────────────────────────────
   {
     id: 24,
     question: "أكثر 10 هدافين في تاريخ ريال مدريد",
@@ -603,15 +599,15 @@ const questions = [
     type: "player",
     answers: [
       { name: "كريستيانو رونالدو", value: "451 هدف", aliases: ["رونالدو", "CR7"] },
+      { name: "كريم بنزيما", value: "354 هدف", aliases: ["بنزيما", "Benzema"] },
       { name: "راؤول غونزاليس", value: "323 هدف", aliases: ["راؤول", "Raul"] },
       { name: "ألفريدو دي ستيفانو", value: "308 هدف", aliases: ["دي ستيفانو", "Di Stefano"] },
-      { name: "كريم بنزيما", value: "354 هدف", aliases: ["بنزيما", "Benzema"] },
-      { name: "سانتيلانا", value: "290 هدف", aliases: ["Santillana"] },
+      { name: "كارلوس سانتيانا", value: "290 هدف", aliases: ["سانتيانا", "Santillana"] },
       { name: "فيرينتش بوشكاش", value: "242 هدف", aliases: ["بوشكاش", "Puskas"] },
-      { name: "أوغو سانشيز", value: "208 هدف", aliases: ["سانشيز", "Hugo Sanchez"] },
-      { name: "إيميليو بوتراغينيو", value: "171 هدف", aliases: ["بوتراغينيو", "Butragueno"] },
+      { name: "هوغو سانشيز", value: "208 هدف", aliases: ["سانشيز", "Hugo Sanchez"] },
       { name: "فرانسيسكو خينتو", value: "182 هدف", aliases: ["خينتو", "Gento"] },
-      { name: "غاريث بيل", value: "106 هدف", aliases: ["بيل", "Gareth Bale"] }
+      { name: "خوسيه مارتينيز بيري", value: "172 هدف", aliases: ["بيري", "Pirri"] },
+      { name: "إيميليو بوتراغينيو", value: "171 هدف", aliases: ["بوتراغينيو", "Butragueno"] }
     ]
   },
   {
@@ -622,14 +618,14 @@ const questions = [
     answers: [
       { name: "ليونيل ميسي", value: "672 هدف", aliases: ["ميسي", "Messi"] },
       { name: "سيزار رودريغيز", value: "232 هدف", aliases: ["سيزار", "Cesar"] },
-      { name: "لاديسلاف كوبالا", value: "196 هدف", aliases: ["كوبالا", "Kubala"] },
       { name: "لويس سواريز", value: "198 هدف", aliases: ["سواريز", "Luis Suarez"] },
+      { name: "لاديسلاف كوبالا", value: "196 هدف", aliases: ["كوبالا", "Kubala"] },
       { name: "جوسيب ساميتيير", value: "184 هدف", aliases: ["ساميتيير", "Samitier"] },
+      { name: "جوسيب إسكولا", value: "167 هدف", aliases: ["إسكولا", "Escola"] },
+      { name: "باولينو ألكانتارا", value: "143 هدف", aliases: ["ألكانتارا", "Paulino Alcantara"] },
       { name: "ريفالدو", value: "130 هدف", aliases: ["Rivaldo"] },
       { name: "صامويل إيتو", value: "130 هدف", aliases: ["إيتو", "Etoo"] },
-      { name: "نيمار", value: "105 هدف", aliases: ["Neymar"] },
-      { name: "رونالدينيو", value: "94 هدف", aliases: ["Ronaldinho"] },
-      { name: "روبرت ليفاندوفسكي", value: "78 هدف", aliases: ["ليفاندوفسكي", "Lewandowski"] }
+      { name: "ماريانو مارتين", value: "124 هدف", aliases: ["Mariano Martin"] }
     ]
   },
   {
@@ -640,14 +636,14 @@ const questions = [
     answers: [
       { name: "غيرد مولر", value: "566 هدف", aliases: ["مولر", "Gerd Muller"] },
       { name: "روبرت ليفاندوفسكي", value: "344 هدف", aliases: ["ليفاندوفسكي", "Lewandowski"] },
+      { name: "توماس مولر", value: "248 هدف", aliases: ["توماس مولر", "Thomas Muller"] },
       { name: "كارل هاينتس رومينيغه", value: "217 هدف", aliases: ["رومينيغه", "Rummenigge"] },
-      { name: "توماس مولر", value: "240+ هدف", aliases: ["مولر", "Thomas Muller"] },
-      { name: "ديتر هونيس", value: "159 هدف", aliases: ["هونيس", "Dieter Hoeness"] },
-      { name: "رولاند فوفاريتش", value: "133 هدف", aliases: ["فوفاريتش"] },
+      { name: "رولاند فولفارت", value: "155 هدف", aliases: ["Wohlfarth", "Roland Wohlfarth"] },
+      { name: "ديتر هونيس", value: "145 هدف", aliases: ["هونيس", "Dieter Hoeness"] },
       { name: "أرين روبن", value: "144 هدف", aliases: ["روبن", "Arjen Robben"] },
+      { name: "جيوفاني إيلبر", value: "139 هدف", aliases: ["إيلبر", "Elber"] },
       { name: "فرانك ريبيري", value: "124 هدف", aliases: ["ريبيري", "Ribery"] },
-      { name: "ماريو غوميز", value: "113 هدف", aliases: ["غوميز", "Mario Gomez"] },
-      { name: "جيوفاني إيلبر", value: "92 هدف", aliases: ["إيلبر", "Elber"] }
+      { name: "ماريو غوميز", value: "113 هدف", aliases: ["غوميز", "Mario Gomez"] }
     ]
   },
   {
@@ -657,14 +653,14 @@ const questions = [
     type: "player",
     answers: [
       { name: "أليساندرو ديل بييرو", value: "290 هدف", aliases: ["ديل بييرو", "Del Piero"] },
-      { name: "جياموبييرو بونيبيرتي", value: "182 هدف", aliases: ["بونيبيرتي", "Boniperti"] },
-      { name: "روبرتو باجو", value: "115 هدف", aliases: ["باجو", "Baggio"] },
+      { name: "جيامبييرو بونيبيرتي", value: "182 هدف", aliases: ["بونيبيرتي", "Boniperti"] },
       { name: "ديفيد تريزيغيه", value: "171 هدف", aliases: ["تريزيغيه", "Trezeguet"] },
-      { name: "فيليبو إنزاغي", value: "89 هدف", aliases: ["إنزاغي", "Inzaghi"] },
       { name: "عمر سيفوري", value: "167 هدف", aliases: ["سيفوري", "Sivori"] },
-      { name: "ميشيل بلاتيني", value: "104 هدف", aliases: ["بلاتيني", "Platini"] },
-      { name: "كريستيانو رونالدو", value: "101 هدف", aliases: ["رونالدو", "CR7"] },
-      { name: "بابلو ديبالا", value: "115 هدف", aliases: ["ديبالا", "Dybala"] },
+      { name: "فيليس بورييل", value: "159 هدف", aliases: ["بورييل", "Borel"] },
+      { name: "روبرتو بيتيغا", value: "157 هدف", aliases: ["بيتيغا", "Bettega"] },
+      { name: "بيترو أناستاسي", value: "130 هدف", aliases: ["أناستاسي", "Anastasi"] },
+      { name: "روبرتو باجو", value: "115 هدف", aliases: ["باجو", "Baggio"] },
+      { name: "باولو ديبالا", value: "115 هدف", aliases: ["ديبالا", "Dybala"] },
       { name: "جون تشارلز", value: "105 هدف", aliases: ["تشارلز", "John Charles"] }
     ]
   },
@@ -696,38 +692,37 @@ const questions = [
     category: "منتخبات",
     type: "player",
     answers: [
-      { name: "كريستيانو رونالدو", value: "130+ هدف", aliases: ["رونالدو", "CR7"] },
+      { name: "كريستيانو رونالدو", value: "138 هدف", aliases: ["رونالدو", "CR7"] },
+      { name: "ليونيل ميسي", value: "112 هدف", aliases: ["ميسي", "Messi"] },
       { name: "علي دائي", value: "109 أهداف", aliases: ["دائي", "Ali Daei"] },
-      { name: "ليونيل ميسي", value: "108+ أهداف", aliases: ["ميسي", "Messi"] },
-      { name: "سونيل تشيتري", value: "94 هدف", aliases: ["تشيتري", "Sunil Chhetri"] },
-      { name: "علي مبخوت", value: "85+ هدف", aliases: ["مبخوت", "Ali Mabkhout"] },
-      { name: "روبرت ليفاندوفسكي", value: "82+ هدف", aliases: ["ليفاندوفسكي", "Lewandowski"] },
+      { name: "سونيل تشيتري", value: "95 هدف", aliases: ["تشيتري", "Sunil Chhetri"] },
+      { name: "مختار داهاري", value: "89 هدف", aliases: ["داهاري", "Mokhtar Dahari"] },
+      { name: "روميلو لوكاكو", value: "88 هدف", aliases: ["لوكاكو", "Lukaku"] },
+      { name: "علي مبخوت", value: "85 هدف", aliases: ["مبخوت", "Ali Mabkhout"] },
+      { name: "روبرت ليفاندوفسكي", value: "85 هدف", aliases: ["ليفاندوفسكي", "Lewandowski"] },
       { name: "نيمار", value: "79 هدف", aliases: ["Neymar"] },
-      { name: "حسين سعيد", value: "78 هدف", aliases: ["سعيد", "Hussein Saeed"] },
-      { name: "بيليه", value: "77 هدف", aliases: ["Pele"] },
-      { name: "لويس سواريز", value: "69 هدف", aliases: ["سواريز", "Luis Suarez"] }
+      { name: "حسين سعيد", value: "78 هدف", aliases: ["سعيد", "Hussein Saeed"] }
     ]
   },
-
   // ──────────────────────────────────
   // أسئلة متنوعة عن أندية
   // ──────────────────────────────────
   {
     id: 30,
-    question: "أكثر 10 أندية قيمةً سوقيةً في العالم حسب فوربس (2024)",
+    question: "أكثر 10 أندية قيمةً في العالم حسب فوربس (2026)",
     category: "أندية",
     type: "club",
     answers: [
-      { name: "ريال مدريد", value: "6.6 مليار $", aliases: ["الريال", "Real Madrid"] },
-      { name: "مانشستر يونايتد", value: "6.2 مليار $", aliases: ["يونايتد", "Man United"] },
-      { name: "برشلونة", value: "5.6 مليار $", aliases: ["البارسا", "Barcelona"] },
-      { name: "ليفربول", value: "5.4 مليار $", aliases: ["Liverpool"] },
-      { name: "مانشستر سيتي", value: "5.1 مليار $", aliases: ["سيتي", "Man City"] },
-      { name: "بايرن ميونخ", value: "4.9 مليار $", aliases: ["بايرن", "Bayern"] },
-      { name: "باريس سان جيرمان", value: "4.2 مليار $", aliases: ["باريس", "PSG"] },
-      { name: "تشيلسي", value: "3.9 مليار $", aliases: ["Chelsea"] },
-      { name: "توتنهام هوتسبير", value: "3.5 مليار $", aliases: ["توتنهام", "Tottenham"] },
-      { name: "آرسنال", value: "3.2 مليار $", aliases: ["Arsenal", "الآرسنال"] }
+      { name: "ريال مدريد", value: "9.5 مليار $", aliases: ["الريال", "Real Madrid"] },
+      { name: "برشلونة", value: "7.5 مليار $", aliases: ["البارسا", "Barcelona"] },
+      { name: "مانشستر يونايتد", value: "7.2 مليار $", aliases: ["يونايتد", "Man United"] },
+      { name: "ليفربول", value: "6.2 مليار $", aliases: ["Liverpool"] },
+      { name: "باريس سان جيرمان", value: "5.8 مليار $", aliases: ["باريس", "PSG"] },
+      { name: "بايرن ميونخ", value: "5.7 مليار $", aliases: ["بايرن", "Bayern"] },
+      { name: "مانشستر سيتي", value: "5.5 مليار $", aliases: ["سيتي", "Man City"] },
+      { name: "آرسنال", value: "5.4 مليار $", aliases: ["Arsenal", "الآرسنال"] },
+      { name: "تشيلسي", value: "4.2 مليار $", aliases: ["Chelsea"] },
+      { name: "توتنهام هوتسبير", value: "3.0 مليار $", aliases: ["توتنهام", "Tottenham"] }
     ]
   },
   {
@@ -739,13 +734,13 @@ const questions = [
       { name: "فرانك لامبارد", value: "211 هدف", aliases: ["لامبارد", "Lampard"] },
       { name: "بوبي تامبلينغ", value: "202 هدف", aliases: ["تامبلينغ", "Bobby Tambling"] },
       { name: "كيري ديكسون", value: "193 هدف", aliases: ["ديكسون", "Kerry Dixon"] },
-      { name: "ديديه دروغبا", value: "164 هدف", aliases: ["دروغبا", "Drogba"] },
+      { name: "ديدييه دروغبا", value: "164 هدف", aliases: ["دروغبا", "Drogba"] },
       { name: "روي بنتلي", value: "150 هدف", aliases: ["بنتلي", "Roy Bentley"] },
       { name: "بيتر أوسغود", value: "150 هدف", aliases: ["أوسغود", "Peter Osgood"] },
       { name: "جيمي غريفز", value: "132 هدف", aliases: ["غريفز", "Jimmy Greaves"] },
-      { name: "إيدين هازارد", value: "110 هدف", aliases: ["هازارد", "Eden Hazard"] },
-      { name: "جياولا فياللي", value: "59 هدف", aliases: ["فياللي", "Vialli"] },
-      { name: "جيانفرانكو زولا", value: "80 هدف", aliases: ["زولا", "Zola"] }
+      { name: "جورج ميلز", value: "125 هدف", aliases: ["ميلز", "George Mills"] },
+      { name: "إيدين هازارد", value: "110 أهداف", aliases: ["هازارد", "Eden Hazard"] },
+      { name: "جورج هيلسدون", value: "108 أهداف", aliases: ["هيلسدون", "George Hilsdon"] }
     ]
   },
   {
@@ -758,12 +753,12 @@ const questions = [
       { name: "أندريه شيفتشينكو", value: "175 هدف", aliases: ["شيفتشينكو", "Shevchenko"] },
       { name: "جياني ريفيرا", value: "164 هدف", aliases: ["ريفيرا", "Rivera"] },
       { name: "خوسيه ألتافيني", value: "161 هدف", aliases: ["ألتافيني", "Altafini"] },
-      { name: "ماركو فان باستن", value: "124 هدف", aliases: ["فان باستن", "Van Basten"] },
+      { name: "ألدو بوفي", value: "136 هدف", aliases: ["بوفي", "Aldo Boffi"] },
       { name: "فيليبو إنزاغي", value: "126 هدف", aliases: ["إنزاغي", "Inzaghi"] },
-      { name: "كاكا", value: "104 هدف", aliases: ["Kaka"] },
-      { name: "زلاتان إبراهيموفيتش", value: "93 هدف", aliases: ["زلاتان", "Zlatan"] },
-      { name: "أريس غرانت", value: "78 هدف", aliases: ["غرانت"] },
-      { name: "أوليفييه جيرو", value: "35 هدف", aliases: ["جيرو", "Giroud"] }
+      { name: "ماركو فان باستن", value: "125 هدف", aliases: ["فان باستن", "Van Basten"] },
+      { name: "جوزيبي سانتاغوستينو", value: "106 أهداف", aliases: ["سانتاغوستينو", "Santagostino"] },
+      { name: "كاكا", value: "104 أهداف", aliases: ["Kaka"] },
+      { name: "بييرينو براتي", value: "102 هدف", aliases: ["براتي", "Pierino Prati"] }
     ]
   },
 
@@ -781,10 +776,10 @@ const questions = [
       { name: "كلاوس فيشر", value: "268 هدف", aliases: ["فيشر", "Klaus Fischer"] },
       { name: "يوب هاينكس", value: "220 هدف", aliases: ["هاينكس", "Jupp Heynckes"] },
       { name: "مانفريد بورغسمولر", value: "213 هدف", aliases: ["بورغسمولر", "Burgsmüller"] },
-      { name: "كارل هاينتس رومينيغه", value: "162 هدف", aliases: ["رومينيغه", "Rummenigge"] },
-      { name: "شتيفان كونتس", value: "179 هدف", aliases: ["كونتس", "Kuntz"] },
       { name: "كلاوديو بيزارو", value: "197 هدف", aliases: ["بيزارو", "Claudio Pizarro"] },
-      { name: "توماس مولر", value: "150+ هدف", aliases: ["مولر", "Thomas Muller"] },
+      { name: "أولف كيرستن", value: "181 هدف", aliases: ["كيرستن", "Ulf Kirsten"] },
+      { name: "شتيفان كونتس", value: "179 هدف", aliases: ["كونتس", "Stefan Kuntz"] },
+      { name: "كلاوس ألوفس", value: "177 هدف", aliases: ["ألوفس", "Klaus Allofs"] },
       { name: "ديتر مولر", value: "177 هدف", aliases: ["ديتر", "Dieter Muller"] }
     ]
   },
@@ -797,13 +792,13 @@ const questions = [
       { name: "سيلفيو بيولا", value: "274 هدف", aliases: ["بيولا", "Silvio Piola"] },
       { name: "فرانشيسكو توتي", value: "250 هدف", aliases: ["توتي", "Totti"] },
       { name: "غونار نوردال", value: "225 هدف", aliases: ["نوردال", "Nordahl"] },
-      { name: "جوسيبي ميازا", value: "216 هدف", aliases: ["ميازا", "Meazza"] },
-      { name: "جوسيبي سينيوري", value: "188 هدف", aliases: ["سينيوري", "Signori"] },
-      { name: "روبرتو باجو", value: "205 هدف", aliases: ["باجو", "Baggio"] },
+      { name: "جوسيبي مياتزا", value: "216 هدف", aliases: ["مياتزا", "Meazza"] },
+      { name: "أنطونيو دي ناتالي", value: "209 أهداف", aliases: ["دي ناتالي", "Di Natale"] },
+      { name: "روبرتو باجيو", value: "205 أهداف", aliases: ["باجيو", "Baggio"] },
+      { name: "تشيرو إيموبيلي", value: "201 هدف", aliases: ["إيموبيلي", "Immobile"] },
       { name: "أليساندرو ديل بييرو", value: "188 هدف", aliases: ["ديل بييرو", "Del Piero"] },
-      { name: "شيرو إيموبيلي", value: "200+ هدف", aliases: ["إيموبيلي", "Immobile"] },
-      { name: "أنطونيو دي ناتالي", value: "209 هدف", aliases: ["دي ناتالي", "Di Natale"] },
-      { name: "ألبرتو جيلاردينو", value: "133 هدف", aliases: ["جيلاردينو", "Gilardino"] }
+      { name: "جوسيبي سينيوري", value: "188 هدف", aliases: ["سينيوري", "Signori"] },
+      { name: "ألبرتو جيلاردينو", value: "188 هدف", aliases: ["جيلاردينو", "Gilardino"] }
     ]
   },
 
@@ -818,14 +813,14 @@ const questions = [
     answers: [
       { name: "نيمار", value: "222 مليون €", aliases: ["Neymar"] },
       { name: "كيليان مبابي", value: "180 مليون €", aliases: ["مبابي", "Mbappe"] },
-      { name: "فيليبي كوتينيو", value: "160 مليون €", aliases: ["كوتينيو", "Coutinho"] },
-      { name: "أوسمان ديمبيلي", value: "140 مليون €", aliases: ["ديمبيلي", "Dembele"] },
+      { name: "فيليبي كوتينيو", value: "135 مليون €", aliases: ["كوتينيو", "Coutinho"] },
+      { name: "عثمان ديمبيلي", value: "135 مليون €", aliases: ["ديمبيلي", "Dembele"] },
+      { name: "جواو فيليكس", value: "127.2 مليون €", aliases: ["فيليكس", "Joao Felix"] },
+      { name: "إنزو فرنانديز", value: "121 مليون €", aliases: ["إنزو", "Enzo Fernandez"] },
       { name: "أنطوان غريزمان", value: "120 مليون €", aliases: ["غريزمان", "Griezmann"] },
-      { name: "جواو فيليكس", value: "127 مليون €", aliases: ["فيليكس", "Joao Felix"] },
-      { name: "جاك غريليش", value: "117 مليون €", aliases: ["غريليش", "Grealish"] },
-      { name: "روميلو لوكاكو", value: "113 مليون €", aliases: ["لوكاكو", "Lukaku"] },
-      { name: "غاريث بيل", value: "101 مليون €", aliases: ["بيل", "Gareth Bale"] },
-      { name: "كريستيانو رونالدو", value: "117 مليون €", aliases: ["رونالدو", "CR7"] }
+      { name: "جاك غريليش", value: "117.5 مليون €", aliases: ["غريليش", "Grealish"] },
+      { name: "كريستيانو رونالدو", value: "117 مليون €", aliases: ["رونالدو", "CR7"] },
+      { name: "روميلو لوكاكو", value: "113 مليون €", aliases: ["لوكاكو", "Lukaku"] }
     ]
   },
 
@@ -838,16 +833,16 @@ const questions = [
     category: "الدوري الإسباني",
     type: "club",
     answers: [
-      { name: "برشلونة", value: "31 لقب", aliases: ["البارسا", "Barcelona"] },
+      { name: "برشلونة", value: "32 لقب", aliases: ["البارسا", "Barcelona"] },
       { name: "أتلتيك بيلباو", value: "24 لقب", aliases: ["بيلباو", "Athletic Bilbao"] },
-      { name: "ريال مدريد", value: "20 لقب", aliases: ["الريال", "Real Madrid"] },
+      { name: "ريال مدريد", value: "21 لقب", aliases: ["الريال", "Real Madrid"] },
       { name: "أتلتيكو مدريد", value: "10 ألقاب", aliases: ["أتلتيكو", "Atletico"] },
       { name: "فالنسيا", value: "8 ألقاب", aliases: ["Valencia"] },
-      { name: "ريال سوسيداد", value: "3 ألقاب", aliases: ["سوسيداد", "Real Sociedad"] },
+      { name: "ريال سرقسطة", value: "6 ألقاب", aliases: ["سرقسطة", "Real Zaragoza"] },
       { name: "إشبيلية", value: "5 ألقاب", aliases: ["Sevilla"] },
-      { name: "ريال بيتيس", value: "3 ألقاب", aliases: ["بيتيس", "Real Betis"] },
       { name: "إسبانيول", value: "4 ألقاب", aliases: ["Espanyol"] },
-      { name: "سرقسطة", value: "6 ألقاب", aliases: ["Zaragoza"] }
+      { name: "ريال سوسيداد", value: "3 ألقاب", aliases: ["سوسيداد", "Real Sociedad"] },
+      { name: "ريال بيتيس", value: "3 ألقاب", aliases: ["بيتيس", "Real Betis"] }
     ]
   },
 
@@ -856,38 +851,38 @@ const questions = [
   // ──────────────────────────────────
   {
     id: 37,
-    question: "أكثر 10 هدافين في تاريخ مباريات الكلاسيكو (ريال مدريد vs برشلونة)",
+    question: "أكثر 10 هدافين في تاريخ مباريات الكلاسيكو (ريال مدريد × برشلونة)",
     category: "الكلاسيكو",
     type: "player",
     answers: [
       { name: "ليونيل ميسي", value: "26 هدف", aliases: ["ميسي", "Messi"] },
       { name: "ألفريدو دي ستيفانو", value: "18 هدف", aliases: ["دي ستيفانو", "Di Stefano"] },
       { name: "كريستيانو رونالدو", value: "18 هدف", aliases: ["رونالدو", "CR7"] },
+      { name: "كريم بنزيما", value: "16 هدف", aliases: ["بنزيما", "Benzema"] },
       { name: "راؤول غونزاليس", value: "15 هدف", aliases: ["راؤول", "Raul"] },
       { name: "سيزار رودريغيز", value: "14 هدف", aliases: ["سيزار", "Cesar"] },
       { name: "فرانسيسكو خينتو", value: "14 هدف", aliases: ["خينتو", "Gento"] },
-      { name: "كريم بنزيما", value: "11 هدف", aliases: ["بنزيما", "Benzema"] },
-      { name: "لاديسلاف كوبالا", value: "10 أهداف", aliases: ["كوبالا", "Kubala"] },
-      { name: "صامويل إيتو", value: "10 أهداف", aliases: ["إيتو", "Etoo"] },
-      { name: "لويس سواريز", value: "11 هدف", aliases: ["سواريز", "Suarez"] }
+      { name: "فيرينتس بوشكاش", value: "14 هدف", aliases: ["بوشكاش", "Puskas"] },
+      { name: "سانتيانا", value: "12 هدف", aliases: ["سانتيانا", "Santillana"] },
+      { name: "لويس سواريز", value: "11 هدف", aliases: ["سواريز", "Luis Suarez"] }
     ]
   },
   {
     id: 38,
-    question: "أكثر 10 لاعبين مشاركةً (ظهور) في تاريخ دوري أبطال أوروبا",
+    question: "أكثر 10 لاعبين مشاركةً في تاريخ دوري أبطال أوروبا",
     category: "دوري الأبطال",
     type: "player",
     answers: [
       { name: "كريستيانو رونالدو", value: "183 مباراة", aliases: ["رونالدو", "CR7"] },
       { name: "إيكر كاسياس", value: "177 مباراة", aliases: ["كاسياس", "Casillas"] },
       { name: "ليونيل ميسي", value: "163 مباراة", aliases: ["ميسي", "Messi"] },
-      { name: "تشافي هيرنانديز", value: "157 مباراة", aliases: ["تشافي", "Xavi"] },
+      { name: "توماس مولر", value: "163 مباراة", aliases: ["مولر", "Thomas Muller"] },
+      { name: "مانويل نوير", value: "157 مباراة", aliases: ["نوير", "Neuer"] },
       { name: "كريم بنزيما", value: "152 مباراة", aliases: ["بنزيما", "Benzema"] },
-      { name: "توماس مولر", value: "151 مباراة", aliases: ["مولر", "Thomas Muller"] },
+      { name: "تشافي هيرنانديز", value: "151 مباراة", aliases: ["تشافي", "Xavi"] },
+      { name: "توني كروس", value: "151 مباراة", aliases: ["كروس", "Toni Kroos"] },
       { name: "راؤول غونزاليس", value: "142 مباراة", aliases: ["راؤول", "Raul"] },
-      { name: "رايان غيغز", value: "145 مباراة", aliases: ["غيغز", "Ryan Giggs"] },
-      { name: "سيرجيو راموس", value: "142 مباراة", aliases: ["راموس", "Ramos"] },
-      { name: "مانويل نوير", value: "137 مباراة", aliases: ["نوير", "Neuer"] }
+      { name: "سيرخيو راموس", value: "142 مباراة", aliases: ["راموس", "Sergio Ramos"] }
     ]
   },
   {
@@ -896,16 +891,16 @@ const questions = [
     category: "بطولات الأندية",
     type: "club",
     answers: [
-      { name: "ريال مدريد", value: "8 ألقاب", aliases: ["الريال", "Real Madrid"] },
+      { name: "ريال مدريد", value: "9 ألقاب", aliases: ["الريال", "Real Madrid"] },
       { name: "إيه سي ميلان", value: "4 ألقاب", aliases: ["ميلان", "AC Milan"] },
-      { name: "بايرن ميونخ", value: "4 ألقاب", aliases: ["بايرن", "Bayern"] },
-      { name: "برشلونة", value: "3 ألقاب", aliases: ["البارسا", "Barcelona"] },
-      { name: "إنتر ميلان", value: "3 ألقاب", aliases: ["إنتر", "Inter"] },
-      { name: "ساو باولو", value: "3 ألقاب", aliases: ["Sao Paulo"] },
-      { name: "يوفنتوس", value: "2 لقب", aliases: ["يوفي", "Juventus"] },
-      { name: "سانتوس", value: "2 لقب", aliases: ["Santos"] },
+      { name: "بايرن ميونخ", value: "4 ألقاب", aliases: ["بايرن", "Bayern Munich"] },
       { name: "بوكا جونيورز", value: "3 ألقاب", aliases: ["بوكا", "Boca Juniors"] },
-      { name: "ليفربول", value: "لقب واحد", aliases: ["Liverpool"] }
+      { name: "برشلونة", value: "3 ألقاب", aliases: ["البارسا", "Barcelona"] },
+      { name: "ساو باولو", value: "3 ألقاب", aliases: ["ساو باولو", "Sao Paulo"] },
+      { name: "إنتر ميلان", value: "3 ألقاب", aliases: ["إنتر", "Inter"] },
+      { name: "ناسيونال", value: "3 ألقاب", aliases: ["Nacional"] },
+      { name: "بينيارول", value: "3 ألقاب", aliases: ["Penarol"] },
+      { name: "يوفنتوس", value: "2 لقب", aliases: ["يوفي", "Juventus"] }
     ]
   },
   {
@@ -914,6 +909,7 @@ const questions = [
     category: "الدوري الإنجليزي",
     type: "player",
     answers: [
+      { name: "جيمس ميلنر", value: "658 مباراة", aliases: ["ميلنر", "James Milner"] },
       { name: "غاريث باري", value: "653 مباراة", aliases: ["باري", "Gareth Barry"] },
       { name: "رايان غيغز", value: "632 مباراة", aliases: ["غيغز", "Ryan Giggs"] },
       { name: "فرانك لامبارد", value: "609 مباراة", aliases: ["لامبارد", "Lampard"] },
@@ -921,9 +917,8 @@ const questions = [
       { name: "غاري سبيد", value: "535 مباراة", aliases: ["سبيد", "Gary Speed"] },
       { name: "إيميل هيسكي", value: "516 مباراة", aliases: ["هيسكي", "Emile Heskey"] },
       { name: "مارك شوارزر", value: "514 مباراة", aliases: ["شوارزر", "Mark Schwarzer"] },
-      { name: "جيمس ميلنر", value: "572 مباراة", aliases: ["ميلنر", "James Milner"] },
-      { name: "فيل نيفيل", value: "505 مباراة", aliases: ["نيفيل", "Phil Neville"] },
-      { name: "واين روني", value: "491 مباراة", aliases: ["روني", "Wayne Rooney"] }
+      { name: "جيمي كاراغر", value: "508 مباريات", aliases: ["كاراغر", "Jamie Carragher"] },
+      { name: "فيل نيفيل", value: "505 مباريات", aliases: ["نيفيل", "Phil Neville"] }
     ]
   },
 
@@ -938,14 +933,14 @@ const questions = [
     answers: [
       { name: "ديليو أونيس", value: "299 هدف", aliases: ["أونيس", "Delio Onnis"] },
       { name: "برنارد لاكومب", value: "255 هدف", aliases: ["لاكومب", "Bernard Lacombe"] },
-      { name: "هيرفيه ريفيير", value: "216 هدف", aliases: ["ريفيير", "Herve Revelli"] },
-      { name: "روجيه كورتوا", value: "210 هدف", aliases: ["كورتوا", "Roger Courtois"] },
-      { name: "جوزيف أوجدا", value: "207 هدف", aliases: ["أوجدا", "Joseph Ujlaki"] },
-      { name: "كريستيانو رونالدو", value: "بدون أهداف بالليغ 1", aliases: [] },
-      { name: "فليران ثوفان", value: "178 هدف", aliases: ["ثوفان", "Thouvenel"] },
-      { name: "إدينسون كافاني", value: "138 هدف", aliases: ["كافاني", "Cavani"] },
-      { name: "كيليان مبابي", value: "189 هدف", aliases: ["مبابي", "Mbappe"] },
-      { name: "زلاتان إبراهيموفيتش", value: "113 هدف", aliases: ["زلاتان", "Zlatan"] }
+      { name: "هيرفي ريفيلي", value: "216 هدف", aliases: ["ريفيلي", "Hervé Revelli"] },
+      { name: "روجيه كورتوا", value: "210 أهداف", aliases: ["كورتوا", "Roger Courtois"] },
+      { name: "ثاديه تشيسوفسكي", value: "206 أهداف", aliases: ["تشيسوفسكي", "Thadée Cisowski"] },
+      { name: "روجيه بيانتوني", value: "203 أهداف", aliases: ["بيانتوني", "Roger Piantoni"] },
+      { name: "كيليان مبابي", value: "191 هدف", aliases: ["مبابي", "Mbappe"] },
+      { name: "جوزيف أوجلاكي", value: "190 هدف", aliases: ["أوجلاكي", "Joseph Ujlaki"] },
+      { name: "فلوري دي نالو", value: "187 هدف", aliases: ["دي نالو", "Fleury Di Nallo"] },
+      { name: "كارلوس بيانكي", value: "179 هدف", aliases: ["بيانكي", "Carlos Bianchi"] }
     ]
   },
   {
@@ -956,14 +951,14 @@ const questions = [
     answers: [
       { name: "جوسيبي ميازا", value: "284 هدف", aliases: ["ميازا", "Meazza"] },
       { name: "أليساندرو ألتوبيلي", value: "209 هدف", aliases: ["ألتوبيلي", "Altobelli"] },
+      { name: "لاوتارو مارتينيز", value: "175 هدف", aliases: ["لاوتارو", "Lautaro Martinez"] },
       { name: "روبرتو بونينسينيا", value: "171 هدف", aliases: ["بونينسينيا", "Boninsegna"] },
-      { name: "سندرو مازولا", value: "160 هدف", aliases: ["مازولا", "Mazzola"] },
-      { name: "لاوتارو مارتينيز", value: "130+ هدف", aliases: ["لاوتارو", "Lautaro Martinez"] },
-      { name: "لويجي سيرونه", value: "133 هدف", aliases: ["سيرونه", "Cevenini"] },
+      { name: "سندرو مازولا", value: "161 هدف", aliases: ["مازولا", "Mazzola"] },
+      { name: "لويجي سيفينيني", value: "158 هدف", aliases: ["سيفينيني", "Cevenini", "Luigi Cevenini"] },
+      { name: "بينيتو لورينزي", value: "143 هدف", aliases: ["لورينزي", "Lorenzi"] },
+      { name: "إشتفان نييرش", value: "133 هدف", aliases: ["نييرش", "Nyers", "Istvan Nyers"] },
       { name: "ماورو إيكاردي", value: "124 هدف", aliases: ["إيكاردي", "Icardi"] },
-      { name: "كريستيان فييري", value: "103 هدف", aliases: ["فييري", "Vieri"] },
-      { name: "دييغو ميليتو", value: "75 هدف", aliases: ["ميليتو", "Milito"] },
-      { name: "صامويل إيتو", value: "53 هدف", aliases: ["إيتو", "Etoo"] }
+      { name: "كريستيان فييري", value: "123 هدف", aliases: ["فييري", "Vieri"] }
     ]
   },
   {
@@ -973,15 +968,15 @@ const questions = [
     type: "player",
     answers: [
       { name: "سيرجيو أغويرو", value: "260 هدف", aliases: ["أغويرو", "Aguero"] },
-      { name: "إيريك بروك", value: "178 هدف", aliases: ["بروك", "Eric Brook"] },
+      { name: "إيريك بروك", value: "177 هدف", aliases: ["بروك", "Eric Brook"] },
       { name: "تومي جونسون", value: "166 هدف", aliases: ["جونسون", "Tommy Johnson"] },
       { name: "كولين بيل", value: "153 هدف", aliases: ["بيل", "Colin Bell"] },
       { name: "جو هايز", value: "152 هدف", aliases: ["هايز", "Joe Hayes"] },
-      { name: "بيلي ميريديث", value: "152 هدف", aliases: ["ميريديث", "Billy Meredith"] },
-      { name: "فرانك روبرتس", value: "130 هدف", aliases: ["روبرتس", "Frank Roberts"] },
-      { name: "رحيم ستيرلينغ", value: "131 هدف", aliases: ["ستيرلينغ", "Sterling"] },
-      { name: "إرلينغ هالاند", value: "100+ هدف", aliases: ["هالاند", "Haaland"] },
-      { name: "داود سيلفا", value: "77 هدف", aliases: ["سيلفا", "David Silva"] }
+      { name: "بيلي ميريديث", value: "151 هدف", aliases: ["ميريديث", "Billy Meredith"] },
+      { name: "فرانسيس لي", value: "148 هدف", aliases: ["فرانسيس لي", "Francis Lee"] },
+      { name: "تومي براويل", value: "139 هدف", aliases: ["براويل", "Tommy Browell"] },
+      { name: "إرلينغ هالاند", value: "138 هدف", aliases: ["هالاند", "Haaland", "Erling Haaland"] },
+      { name: "رحيم ستيرلينغ", value: "127 هدف", aliases: ["ستيرلينغ", "Sterling", "Raheem Sterling"] }
     ]
   },
   {
@@ -993,13 +988,13 @@ const questions = [
       { name: "بيتر تشيك", value: "202 مباراة", aliases: ["تشيك", "Petr Cech"] },
       { name: "ديفيد جيمس", value: "169 مباراة", aliases: ["جيمس", "David James"] },
       { name: "مارك شوارزر", value: "151 مباراة", aliases: ["شوارزر", "Schwarzer"] },
-      { name: "ديفيد دي خيا", value: "142 مباراة", aliases: ["دي خيا", "De Gea"] },
-      { name: "إدرسون", value: "112 مباراة", aliases: ["Ederson"] },
-      { name: "بيتر شمايكل", value: "128 مباراة", aliases: ["شمايكل", "Schmeichel"] },
-      { name: "نايجل مارتن", value: "137 مباراة", aliases: ["مارتن", "Nigel Martyn"] },
+      { name: "ديفيد دي خيا", value: "147 مباراة", aliases: ["دي خيا", "De Gea"] },
       { name: "ديفيد سيمان", value: "141 مباراة", aliases: ["سيمان", "David Seaman"] },
-      { name: "إيدوين فان دير سار", value: "133 مباراة", aliases: ["فان دير سار", "Van der Sar"] },
-      { name: "أليسون بيكر", value: "93 مباراة", aliases: ["أليسون", "Alisson"] }
+      { name: "نايجل مارتن", value: "137 مباراة", aliases: ["مارتن", "Nigel Martyn"] },
+      { name: "إيدوين فان دير سار", value: "132 مباراة", aliases: ["فان دير سار", "Van der Sar"] },
+      { name: "بيتر شمايكل", value: "128 مباراة", aliases: ["شمايكل", "Schmeichel"] },
+      { name: "إدرسون", value: "123 مباراة", aliases: ["إدرسون", "Ederson"] },
+      { name: "أليسون بيكر", value: "104 مباراة", aliases: ["أليسون", "Alisson", "Alisson Becker"] }
     ]
   },
   {
@@ -1008,16 +1003,16 @@ const questions = [
     category: "الدوري الإنجليزي",
     type: "player",
     answers: [
-      { name: "آلان شيرر", value: "11 هاتريك", aliases: ["شيرر", "Shearer"] },
       { name: "سيرجيو أغويرو", value: "12 هاتريك", aliases: ["أغويرو", "Aguero"] },
+      { name: "آلان شيرر", value: "11 هاتريك", aliases: ["شيرر", "Shearer"] },
       { name: "روبي فاولر", value: "9 هاتريك", aliases: ["فاولر", "Fowler"] },
       { name: "تييري هنري", value: "8 هاتريك", aliases: ["هنري", "Henry"] },
       { name: "مايكل أوين", value: "8 هاتريك", aliases: ["أوين", "Owen"] },
-      { name: "واين روني", value: "7 هاتريك", aliases: ["روني", "Rooney"] },
       { name: "هاري كين", value: "8 هاتريك", aliases: ["كين", "Harry Kane"] },
-      { name: "أندرو كول", value: "5 هاتريك", aliases: ["أندي كول", "Andy Cole"] },
-      { name: "ديديه دروغبا", value: "5 هاتريك", aliases: ["دروغبا", "Drogba"] },
-      { name: "إرلينغ هالاند", value: "6 هاتريك", aliases: ["هالاند", "Haaland"] }
+      { name: "إرلينغ هالاند", value: "8 هاتريك", aliases: ["هالاند", "Haaland", "Erling Haaland"] },
+      { name: "واين روني", value: "7 هاتريك", aliases: ["روني", "Rooney"] },
+      { name: "لويس سواريز", value: "6 هاتريك", aliases: ["سواريز", "Suarez", "Luis Suarez"] },
+      { name: "أندرو كول", value: "5 هاتريك", aliases: ["أندي كول", "Andrew Cole", "Andy Cole"] }
     ]
   },
   {
@@ -1030,12 +1025,12 @@ const questions = [
       { name: "جيمي غريفز", value: "266 هدف", aliases: ["غريفز", "Jimmy Greaves"] },
       { name: "بوبي سميث", value: "208 هدف", aliases: ["سميث", "Bobby Smith"] },
       { name: "مارتن تشيفرز", value: "174 هدف", aliases: ["تشيفرز", "Martin Chivers"] },
+      { name: "سون هيونغ مين", value: "173 هدف", aliases: ["سون", "Son Heung-min", "Heung-Min Son"] },
       { name: "كليف جونز", value: "159 هدف", aliases: ["جونز", "Cliff Jones"] },
+      { name: "جيرمين ديفو", value: "143 هدف", aliases: ["ديفو", "Defoe", "Jermain Defoe"] },
       { name: "جورج هانت", value: "138 هدف", aliases: ["هانت", "George Hunt"] },
-      { name: "لين دودن", value: "134 هدف", aliases: ["دودن", "Len Duquemin"] },
-      { name: "روبي كين", value: "122 هدف", aliases: ["كين", "Robbie Keane"] },
-      { name: "سون هيونغ مين", value: "164 هدف", aliases: ["سون", "Son Heung-min"] },
-      { name: "جيرمين ديفو", value: "143 هدف", aliases: ["ديفو", "Defoe"] }
+      { name: "لين دوكيمين", value: "134 هدف", aliases: ["دوكيمين", "Len Duquemin"] },
+      { name: "آلان جيلزين", value: "133 هدف", aliases: ["جيلزين", "Alan Gilzean"] }
     ]
   },
   {
@@ -1047,9 +1042,9 @@ const questions = [
       { name: "ريال مدريد", value: "6 ألقاب", aliases: ["الريال", "Real Madrid"] },
       { name: "إيه سي ميلان", value: "5 ألقاب", aliases: ["ميلان", "AC Milan"] },
       { name: "برشلونة", value: "5 ألقاب", aliases: ["البارسا", "Barcelona"] },
-      { name: "أتلتيكو مدريد", value: "3 ألقاب", aliases: ["أتلتيكو", "Atletico"] },
-      { name: "بايرن ميونخ", value: "2 لقب", aliases: ["بايرن", "Bayern"] },
-      { name: "ليفربول", value: "4 ألقاب", aliases: ["Liverpool"] },
+      { name: "ليفربول", value: "4 ألقاب", aliases: ["ليفربول", "Liverpool"] },
+      { name: "أتلتيكو مدريد", value: "3 ألقاب", aliases: ["أتلتيكو", "Atletico", "Atletico Madrid"] },
+      { name: "بايرن ميونخ", value: "2 لقب", aliases: ["بايرن", "Bayern Munich", "Bayern"] },
       { name: "أياكس أمستردام", value: "2 لقب", aliases: ["أياكس", "Ajax"] },
       { name: "يوفنتوس", value: "2 لقب", aliases: ["يوفي", "Juventus"] },
       { name: "أندرلخت", value: "2 لقب", aliases: ["Anderlecht"] },
@@ -1063,51 +1058,51 @@ const questions = [
     type: "player",
     answers: [
       { name: "ليونيل ميسي", value: "6 مرات", aliases: ["ميسي", "Messi"] },
-      { name: "كريستيانو رونالدو", value: "4 مرات", aliases: ["رونالدو", "CR7"] },
-      { name: "إيوسيبيو", value: "مرة واحدة", aliases: ["Eusebio"] },
-      { name: "لويس سواريز", value: "2 مرتان", aliases: ["سواريز", "Suarez"] },
-      { name: "روبرت ليفاندوفسكي", value: "مرة واحدة", aliases: ["ليفاندوفسكي", "Lewandowski"] },
-      { name: "تييري هنري", value: "2 مرتان", aliases: ["هنري", "Henry"] },
-      { name: "دييغو فورلان", value: "2 مرتان", aliases: ["فورلان", "Forlan"] },
-      { name: "شيرو إيموبيلي", value: "مرة واحدة", aliases: ["إيموبيلي", "Immobile"] },
-      { name: "محمد صلاح", value: "مرة واحدة", aliases: ["صلاح", "Salah"] },
-      { name: "إرلينغ هالاند", value: "مرة واحدة", aliases: ["هالاند", "Haaland"] }
+      { name: "كريستيانو رونالدو", value: "4 مرات", aliases: ["رونالدو", "CR7", "Cristiano Ronaldo"] },
+      { name: "محمد صلاح", value: "3 مرات", aliases: ["صلاح", "Salah", "Mohamed Salah"] },
+      { name: "لويس سواريز", value: "مرتان", aliases: ["سواريز", "Suarez", "Luis Suarez"] },
+      { name: "تييري هنري", value: "مرتان", aliases: ["هنري", "Henry"] },
+      { name: "دييغو فورلان", value: "مرتان", aliases: ["فورلان", "Forlan"] },
+      { name: "روبرت ليفاندوفسكي", value: "مرتان", aliases: ["ليفاندوفسكي", "Lewandowski"] },
+      { name: "غيرد مولر", value: "مرتان", aliases: ["مولر", "Gerd Muller"] },
+      { name: "ماريو جارديل", value: "مرتان", aliases: ["جارديل", "Mario Jardel"] },
+      { name: "فرناندو غوميز", value: "مرتان", aliases: ["غوميز", "Fernando Gomes"] }
     ]
   },
   {
     id: 49,
-    question: "أكثر 10 هدافين عرب في تاريخ الدوريات الأوروبية الخمس الكبرى",
-    category: "لاعبون عرب",
+    question: "أكثر 10 هدافين أجانب في تاريخ الدوري الإنجليزي الممتاز",
+    category: "الدوري الإنجليزي",
     type: "player",
     answers: [
-      { name: "محمد صلاح", value: "200+ هدف", aliases: ["صلاح", "Mohamed Salah"] },
-      { name: "رياض محرز", value: "90+ هدف", aliases: ["محرز", "Riyad Mahrez"] },
-      { name: "سفيان فيغولي", value: "51 هدف", aliases: ["فيغولي", "Feghouli"] },
-      { name: "يوسف النصيري", value: "60+ هدف", aliases: ["النصيري", "En-Nesyri"] },
-      { name: "حكيم زياش", value: "50+ هدف", aliases: ["زياش", "Ziyech"] },
-      { name: "نبيل بن طالب", value: "20+ هدف", aliases: ["بن طالب", "Bentaleb"] },
-      { name: "مروان فيلايني", value: "42 هدف", aliases: ["فيلايني", "Fellaini"] },
-      { name: "مروان الشماخ", value: "25+ هدف", aliases: ["الشماخ", "Chamakh"] },
-      { name: "إسلام سليماني", value: "50+ هدف", aliases: ["سليماني", "Slimani"] },
-      { name: "عمر مرموش", value: "30+ هدف", aliases: ["مرموش", "Marmoush"] }
+      { name: "محمد صلاح", value: "193 هدف", aliases: ["صلاح", "Mohamed Salah"] },
+      { name: "سيرجيو أغويرو", value: "184 هدف", aliases: ["أغويرو", "Aguero"] },
+      { name: "تييري هنري", value: "175 هدف", aliases: ["هنري", "Henry"] },
+      { name: "روبن فان بيرسي", value: "144 هدف", aliases: ["فان بيرسي", "Van Persie"] },
+      { name: "جيمي فلويد هاسلباينك", value: "127 هدف", aliases: ["هاسلباينك", "Hasselbaink"] },
+      { name: "سون هيونغ مين", value: "127 هدف", aliases: ["سون", "Son Heung-min"] },
+      { name: "روبي كين", value: "126 هدف", aliases: ["روبي كين", "Robbie Keane"] },
+      { name: "نيكولا أنيلكا", value: "125 هدف", aliases: ["أنيلكا", "Anelka"] },
+      { name: "دوايت يورك", value: "123 هدف", aliases: ["يورك", "Dwight Yorke"] },
+      { name: "روميلو لوكاكو", value: "121 هدف", aliases: ["لوكاكو", "Lukaku"] }
     ]
   },
   {
     id: 50,
     question: "أكثر 10 مدربين فوزاً بلقب دوري أبطال أوروبا",
     category: "دوري الأبطال",
-    type: "player",
+    type: "manager",
     answers: [
-      { name: "كارلو أنشيلوتي", value: "4 ألقاب", aliases: ["أنشيلوتي", "Ancelotti"] },
+      { name: "كارلو أنشيلوتي", value: "5 ألقاب", aliases: ["أنشيلوتي", "Ancelotti"] },
       { name: "بوب بيزلي", value: "3 ألقاب", aliases: ["بيزلي", "Bob Paisley"] },
       { name: "زين الدين زيدان", value: "3 ألقاب", aliases: ["زيدان", "Zidane"] },
-      { name: "ميغيل مونيوث", value: "2 لقب", aliases: ["مونيوث", "Miguel Munoz"] },
-      { name: "أليكس فيرغسون", value: "2 لقب", aliases: ["فيرغسون", "Alex Ferguson"] },
-      { name: "جوزيب غوارديولا", value: "2 لقب", aliases: ["غوارديولا", "Guardiola", "بيب"] },
-      { name: "بريان كلاف", value: "2 لقب", aliases: ["كلاف", "Brian Clough"] },
-      { name: "إرنست هابل", value: "2 لقب", aliases: ["هابل", "Ernst Happel"] },
-      { name: "أوتمار هيتسفيلد", value: "2 لقب", aliases: ["هيتسفيلد", "Hitzfeld"] },
-      { name: "جوزيه مورينيو", value: "2 لقب", aliases: ["مورينيو", "Mourinho"] }
+      { name: "جوزيب غوارديولا", value: "3 ألقاب", aliases: ["غوارديولا", "Guardiola", "بيب"] },
+      { name: "لويس إنريكي", value: "3 ألقاب", aliases: ["لويس إنريكي", "Luis Enrique"] },
+      { name: "ميغيل مونيوث", value: "لقبان", aliases: ["مونيوث", "Miguel Munoz"] },
+      { name: "أليكس فيرغسون", value: "لقبان", aliases: ["فيرغسون", "Alex Ferguson", "Sir Alex Ferguson"] },
+      { name: "بريان كلاف", value: "لقبان", aliases: ["كلاف", "Brian Clough"] },
+      { name: "إرنست هابل", value: "لقبان", aliases: ["هابل", "Ernst Happel"] },
+      { name: "أوتمار هيتسفيلد", value: "لقبان", aliases: ["هيتسفيلد", "Hitzfeld", "Ottmar Hitzfeld"] }
     ]
   },
   {
@@ -1148,20 +1143,20 @@ const questions = [
   },
   {
     id: 53,
-    question: "آخر 10 فرق فازوا بدوري أبطال آسيا",
+    question: "آخر 10 فرق فازت بدوري أبطال آسيا",
     category: "دوري أبطال آسيا",
     type: "club",
     answers: [
-      { name: "الأهلي السعودي", value: "لقب", aliases: ["Al-Ahli", "الأهلي"] },
-      { name: "العين الإماراتي", value: "لقب", aliases: ["Al-Ain", "العين"] },
-      { name: "أوراوا الياباني", value: "لقب", aliases: ["Urawa Red Diamonds", "أوراوا"] },
-      { name: "الهلال السعودي", value: "لقب", aliases: ["Al-Hilal", "الهلال"] },
-      { name: "أولسان هيونداي الكوري", value: "لقب", aliases: ["Ulsan Hyundai", "أولسان"] },
-      { name: "كاشيما أنتلرز الياباني", value: "لقب", aliases: ["Kashima Antlers", "كاشيما"] },
-      { name: "جيونبوك موتورز الكوري", value: "لقب", aliases: ["Jeonbuk Hyundai Motors", "جيونبوك"] },
-      { name: "جوانزو الصيني", value: "لقب", aliases: ["Guangzhou Evergrande", "جوانزو"] },
-      { name: "ويسترن سيدني الأسترالي", value: "لقب", aliases: ["Western Sydney Wanderers", "ويسترن"] },
-      { name: "السد القطري", value: "لقب", aliases: ["Al-Sadd", "السد"] }
+      { name: "الأهلي السعودي", value: "2025", aliases: ["Al-Ahli", "الأهلي", "Al Ahli"] },
+      { name: "العين الإماراتي", value: "2024", aliases: ["Al-Ain", "العين"] },
+      { name: "أوراوا ريد دايموندز", value: "2023", aliases: ["Urawa Red Diamonds", "أوراوا"] },
+      { name: "الهلال السعودي", value: "2021", aliases: ["Al-Hilal", "الهلال"] },
+      { name: "أولسان هيونداي", value: "2020", aliases: ["Ulsan Hyundai", "أولسان"] },
+      { name: "الهلال السعودي", value: "2019", aliases: ["Al-Hilal", "الهلال"] },
+      { name: "كاشيما أنتلرز", value: "2018", aliases: ["Kashima Antlers", "كاشيما"] },
+      { name: "أوراوا ريد دايموندز", value: "2017", aliases: ["Urawa Red Diamonds", "أوراوا"] },
+      { name: "جيونبوك هيونداي موتورز", value: "2016", aliases: ["Jeonbuk Hyundai Motors", "جيونبوك"] },
+      { name: "غوانغجو إيفرغراند", value: "2015", aliases: ["Guangzhou Evergrande", "جوانزو"] }
     ]
   },
   {
