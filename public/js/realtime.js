@@ -684,63 +684,61 @@ const RealtimeClient = {
   _setupVisibilityHandler() {
     document.addEventListener('visibilitychange', () => {
       if (document.hidden && this.roomRef && this._lastState === 'playing' && !this._blocked) {
-        // اللاعب خرج أثناء اللعب — إنذار!
-        this._handlePlayerLeave();
+        // اللاعب خرج أثناء اللعب — إنذار محلي فوري
+        this._warnings++;
+        console.log(`إنذار #${this._warnings} للاعب ${this.playerName}`);
+
+        if (this._warnings >= 3) {
+          this._blocked = true;
+        }
       } else if (!document.hidden && this.roomRef) {
-        // اللاعب عاد — إعادة تسجيل الحضور
-        this._reEstablishPresence();
+        // اللاعب عاد — مزامنة مع Firebase وعرض الإنذار
+        this._syncWarningsAndShow();
       }
     });
   },
 
   /**
-   * معالجة خروج اللاعب — إضافة إنذار
+   * مزامنة الإنذارات مع Firebase وعرض الرسالة عند العودة
    */
-  async _handlePlayerLeave() {
+  async _syncWarningsAndShow() {
     if (!this.roomRef || !this.playerId) return;
 
+    // إعادة تسجيل الحضور
+    const playerRef = this.roomRef.child('players').child(this.playerId);
     try {
-      const playerRef = this.roomRef.child('players').child(this.playerId);
+      await playerRef.update({ online: true });
+      playerRef.onDisconnect().update({ online: false });
+    } catch (e) {
+      console.error('خطأ في تحديث الحضور:', e);
+    }
 
-      // زيادة الإنذارات في Firebase
-      const result = await playerRef.child('warnings').transaction(current => {
-        return (current || 0) + 1;
-      });
+    // إذا لا توجد إنذارات، لا نفعل شيئاً
+    if (this._warnings <= 0 && !this._blocked) return;
 
-      const newWarnings = result.snapshot.val() || 0;
-      this._warnings = newWarnings;
+    // مزامنة العدد مع Firebase
+    try {
+      await playerRef.child('warnings').set(this._warnings);
 
-      console.log(`⚠️ إنذار #${newWarnings} للاعب ${this.playerName}`);
-
-      // التحقق من الحظر (3 إنذارات = حظر)
-      if (newWarnings >= 3) {
-        this._blocked = true;
+      if (this._blocked) {
         await playerRef.child('blocked').set(true);
         UI.elements.answerInput.disabled = true;
         if (window.autocomplete) window.autocomplete.clear();
         UI.showBlockOverlay();
+      } else {
+        const remaining = 3 - this._warnings;
+        UI.showWarningToast(this._warnings, remaining);
       }
     } catch (error) {
-      console.error('خطأ في تسجيل الإنذار:', error);
-    }
-  },
-
-  /**
-   * إعادة تسجيل حضور اللاعب بعد إعادة الاتصال
-   */
-  _reEstablishPresence() {
-    if (!this.roomRef || !this.playerId) return;
-
-    const playerRef = this.roomRef.child('players').child(this.playerId);
-    playerRef.update({ online: true });
-    playerRef.onDisconnect().update({ online: false });
-
-    // عرض رسالة الإنذار عند العودة
-    if (this._lastState === 'playing' && this._warnings > 0 && !this._blocked) {
-      const remaining = 3 - this._warnings;
-      UI.showWarningToast(this._warnings, remaining);
-    } else if (this._blocked) {
-      UI.showBlockOverlay();
+      console.error('خطأ في مزامنة الإنذارات:', error);
+      // حتى لو فشل Firebase، النظام المحلي يعمل
+      if (this._blocked) {
+        UI.elements.answerInput.disabled = true;
+        UI.showBlockOverlay();
+      } else if (this._warnings > 0) {
+        const remaining = 3 - this._warnings;
+        UI.showWarningToast(this._warnings, remaining);
+      }
     }
   },
 
