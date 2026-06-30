@@ -216,7 +216,7 @@ const RealtimeClient = {
 
     // التحقق من حالة الحظر
     if (this._blocked) {
-      UI.showToast('⛔ أنت محظور من الإجابة في هذه الجولة!', 2000);
+      UI.showToast('أنت محظور من الإجابة في هذه الجولة!', 2000);
       return;
     }
 

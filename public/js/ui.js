@@ -374,42 +374,48 @@ const UI = {
 
   // ─── إنذار الخروج ───
   showWarningToast(warningCount, remaining) {
-    // إنشاء عنصر الإنذار
+    // إزالة أي إنذار سابق
+    const prev = document.querySelector('.warning-toast-overlay');
+    if (prev) prev.remove();
+
     const overlay = document.createElement('div');
     overlay.className = 'warning-toast-overlay';
+
+    // بناء نقاط الإنذار
+    let dotsHtml = '';
+    for (let i = 0; i < 3; i++) {
+      dotsHtml += `<span class="warn-dot ${i < warningCount ? 'active' : ''}"></span>`;
+    }
+
     overlay.innerHTML = `
       <div class="warning-toast-box retro-border">
-        <div class="warning-icon-big">⚠️</div>
-        <div class="warning-title">إنذار!</div>
-        <div class="warning-message">
-          لقد خرجت من اللعبة أثناء الجولة!
+        <div class="warning-header">
+          <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+            <path d="M12 9v4"/><path d="M12 17h.01"/>
+          </svg>
+          <span class="warning-label">إنذار ${warningCount}/3</span>
         </div>
-        <div class="warning-count">
-          <span class="warning-dots">
-            ${'🔴'.repeat(warningCount)}${'⚪'.repeat(remaining)}
-          </span>
-          <span>إنذار ${warningCount} من 3</span>
-        </div>
+        <p class="warning-text">خرجت من اللعبة أثناء الجولة</p>
+        <div class="warning-dots-row">${dotsHtml}</div>
         ${remaining > 0 
-          ? `<div class="warning-remaining">⚠️ متبقي لك ${remaining} ${remaining === 1 ? 'إنذار' : 'إنذارات'} قبل الحظر</div>`
+          ? `<p class="warning-sub">${remaining === 1 ? 'إنذار واحد' : remaining + ' إنذارات'} متبقية قبل الحظر</p>`
           : ''
         }
-        <button class="btn btn-primary warning-dismiss-btn" onclick="this.closest('.warning-toast-overlay').remove()">
-          فهمت
+        <button class="btn btn-secondary btn-sm warning-dismiss-btn" onclick="this.closest('.warning-toast-overlay').remove()">
+          حسناً
         </button>
       </div>
     `;
     document.body.appendChild(overlay);
 
-    // إزالة تلقائية بعد 5 ثواني
     setTimeout(() => {
       if (overlay.parentNode) overlay.remove();
-    }, 5000);
+    }, 4500);
   },
 
   // ─── شاشة الحظر ───
   showBlockOverlay() {
-    // إزالة أي overlay سابق
     this.hideBlockOverlay();
 
     const overlay = document.createElement('div');
@@ -417,18 +423,27 @@ const UI = {
     overlay.className = 'block-overlay';
     overlay.innerHTML = `
       <div class="block-box retro-border">
-        <div class="block-icon">⛔</div>
-        <div class="block-title">تم حظرك!</div>
-        <div class="block-message">
-          حصلت على 3 إنذارات بسبب الخروج من اللعبة.<br>
-          لا يمكنك الإجابة حتى تنتهي هذه الجولة.
+        <div class="block-header">
+          <svg class="block-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21 21-4.35-4.35M19.56 11.36 13.2 4.99a2 2 0 0 0-2.83 0L5.64 9.72a2 2 0 0 0 0 2.83l6.36 6.36a2 2 0 0 0 2.83 0l4.73-4.73a2 2 0 0 0 0-2.82Z"/>
+          </svg>
         </div>
-        <div class="block-dots">🔴🔴🔴</div>
-        <div class="block-wait">انتظر الجولة القادمة...</div>
+        <span class="block-label">محظور من الإجابة</span>
+        <p class="block-text">حصلت على 3 إنذارات — انتظر الجولة القادمة</p>
+        <div class="block-dots-row">
+          <span class="warn-dot active blocked"></span>
+          <span class="warn-dot active blocked"></span>
+          <span class="warn-dot active blocked"></span>
+        </div>
+        <div class="block-wait-row">
+          <svg class="block-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+          </svg>
+          <span>الجولة القادمة ستبدأ قريباً</span>
+        </div>
       </div>
     `;
     
-    // إضافة الـ overlay فوق حقل الإدخال
     const gameScreen = document.getElementById('screen-game');
     if (gameScreen) {
       gameScreen.appendChild(overlay);

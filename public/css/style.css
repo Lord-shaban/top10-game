@@ -1770,16 +1770,16 @@ ul, ol {
    نظام الإنذارات والحظر
    ═══════════════════════════════════════════════ */
 
-/* ─── إنذار الخروج ─── */
+/* ─── Overlay مشترك ─── */
 .warning-toast-overlay {
   position: fixed;
   inset: 0;
   z-index: 10000;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.25s ease;
   padding: 20px;
 }
 
@@ -1788,79 +1788,94 @@ ul, ol {
   to { opacity: 1; }
 }
 
+/* ─── بطاقة الإنذار ─── */
 .warning-toast-box {
   text-align: center;
-  padding: 28px 24px;
-  max-width: 380px;
+  padding: 20px 22px;
+  max-width: 340px;
   width: 100%;
   border-color: var(--neon-yellow) !important;
-  box-shadow: var(--shadow-retro), 0 0 40px rgba(255, 230, 0, 0.25);
-  animation: warningPop 0.4s ease;
+  box-shadow: var(--shadow-retro), 0 0 20px rgba(255, 230, 0, 0.15);
+  animation: warningPop 0.3s ease;
 }
 
 @keyframes warningPop {
-  0% { transform: scale(0.8); opacity: 0; }
-  60% { transform: scale(1.05); }
+  0% { transform: scale(0.9); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-.warning-icon-big {
-  font-size: 3rem;
-  margin-bottom: 8px;
-  animation: warningShake 0.5s ease infinite;
-}
-
-@keyframes warningShake {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-12deg); }
-  75% { transform: rotate(12deg); }
-}
-
-.warning-title {
-  font-family: var(--font-pixel);
-  font-size: 1.2rem;
-  color: var(--neon-yellow);
-  text-shadow: 2px 2px 0 #000, 0 0 20px rgba(255, 230, 0, 0.5);
-  margin-bottom: 12px;
-}
-
-.warning-message {
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  font-weight: 600;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.warning-count {
+.warning-header {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.warning-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--neon-yellow);
+  filter: drop-shadow(0 0 6px rgba(255, 230, 0, 0.4));
+  flex-shrink: 0;
+}
+
+.warning-label {
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  color: var(--neon-yellow);
+  text-shadow: 1px 1px 0 #000;
+}
+
+.warning-text {
+  font-size: 0.88rem;
   color: var(--text-secondary);
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* ─── نقاط الإنذار (مشتركة) ─── */
+.warning-dots-row,
+.block-dots-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: 12px;
 }
 
-.warning-dots {
-  font-size: 1.2rem;
-  letter-spacing: 4px;
+.warn-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-.warning-remaining {
-  font-size: 0.85rem;
+.warn-dot.active {
+  background: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  box-shadow: 0 0 8px rgba(255, 230, 0, 0.5);
+}
+
+.warn-dot.active.blocked {
+  background: var(--neon-pink);
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 8px rgba(255, 45, 107, 0.5);
+}
+
+.warning-sub {
+  font-size: 0.78rem;
   color: var(--neon-orange);
   font-weight: 700;
-  margin-bottom: 16px;
-  padding: 8px 12px;
-  background: rgba(255, 111, 0, 0.1);
-  border: 1px solid rgba(255, 111, 0, 0.3);
-  border-radius: var(--radius);
+  margin-bottom: 14px;
 }
 
 .warning-dismiss-btn {
-  min-width: 140px;
+  min-width: 100px;
+  padding: 8px 20px !important;
+  font-size: 0.85rem !important;
 }
 
 /* ─── شاشة الحظر ─── */
@@ -1870,14 +1885,14 @@ ul, ol {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 10, 18, 0.95);
-  backdrop-filter: blur(8px);
-  padding: 20px;
+  background: rgba(10, 10, 18, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slideUpBlock 0.5s ease;
-  border-top: 3px solid var(--neon-pink);
+  animation: slideUpBlock 0.4s ease;
+  border-top: 2px solid var(--neon-pink);
 }
 
 @keyframes slideUpBlock {
@@ -1887,57 +1902,56 @@ ul, ol {
 
 .block-box {
   text-align: center;
-  padding: 24px 20px;
+  padding: 18px 16px;
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
   border-color: var(--neon-pink) !important;
-  box-shadow: var(--shadow-retro), 0 0 30px rgba(255, 45, 107, 0.2);
+  box-shadow: var(--shadow-retro-sm), 0 0 15px rgba(255, 45, 107, 0.15);
 }
 
-.block-icon {
-  font-size: 2.5rem;
+.block-header {
   margin-bottom: 8px;
 }
 
-.block-title {
-  font-family: var(--font-pixel);
-  font-size: 1.1rem;
+.block-icon {
+  width: 28px;
+  height: 28px;
   color: var(--neon-pink);
-  text-shadow: 2px 2px 0 #000, 0 0 20px rgba(255, 45, 107, 0.5);
-  margin-bottom: 12px;
+  filter: drop-shadow(0 0 6px rgba(255, 45, 107, 0.4));
+  margin: 0 auto;
 }
 
-.block-message {
-  font-size: 0.9rem;
+.block-label {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--neon-pink);
+  text-shadow: 1px 1px 0 #000;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.block-text {
+  font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 12px;
 }
 
-.block-dots {
-  font-size: 1.3rem;
-  letter-spacing: 6px;
-  margin-bottom: 10px;
-}
-
-.block-wait {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 700;
+.block-wait-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
 }
 
-.block-wait::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--neon-pink);
-  border-top-color: transparent;
-  border-radius: 50%;
+.block-spinner {
+  width: 14px;
+  height: 14px;
+  color: var(--neon-pink);
   animation: spin 1s linear infinite;
-  display: inline-block;
+  flex-shrink: 0;
 }
