@@ -18,6 +18,8 @@ const RealtimeClient = {
   localPlayers: {},
   _lastRound: -2,
   _lastState: null,
+  _warnings: 0,
+  _blocked: false,
 
   /**
    * تهيئة الاتصال
@@ -25,14 +27,19 @@ const RealtimeClient = {
   init() {
     this.playerId = generatePlayerId();
 
-    // مراقبة حالة الاتصال بـ Firebase
+    // مراقبة حالة الاتصال بـ Firebase — إعادة التسجيل عند العودة
     db.ref('.info/connected').on('value', (snap) => {
       if (snap.val() === false) {
         console.log('🔴 انقطع الاتصال بـ Firebase');
       } else {
         console.log('🟢 متصل بـ Firebase');
+        // إعادة تسجيل الحضور عند إعادة الاتصال
+        this._reEstablishPresence();
       }
     });
+
+    // نظام مراقبة الخروج من التطبيق (الإنذارات)
+    this._setupVisibilityHandler();
   },
 
   // ═══════════════════════════════════
@@ -72,8 +79,9 @@ const RealtimeClient = {
 
       await this.roomRef.set(roomData);
 
-      // حذف اللاعب تلقائياً عند قطع الاتصال
-      this.roomRef.child('players').child(this.playerId).onDisconnect().remove();
+      // عند قطع الاتصال: فقط تحديث حالة الاتصال (لا نحذف اللاعب)
+      this.roomRef.child('players').child(this.playerId)
+        .onDisconnect().update({ online: false });
 
       // إعداد المستمعين
       this._setupListeners();
@@ -136,11 +144,13 @@ const RealtimeClient = {
         name: playerName,
         score: 0,
         roundScore: 0,
-        isHost: false
+        isHost: false,
+        online: true
       });
 
-      // حذف اللاعب عند قطع الاتصال
-      this.roomRef.child('players').child(this.playerId).onDisconnect().remove();
+      // عند قطع الاتصال: فقط تحديث حالة الاتصال (لا نحذف اللاعب)
+      this.roomRef.child('players').child(this.playerId)
+        .onDisconnect().update({ online: false });
 
       // إعداد المستمعين
       this._setupListeners();
@@ -203,6 +213,12 @@ const RealtimeClient = {
    */
   async submitAnswer(answer) {
     if (!this.currentQuestion) return;
+
+    // التحقق من حالة الحظر
+    if (this._blocked) {
+      UI.showToast('⛔ أنت محظور من الإجابة في هذه الجولة!', 2000);
+      return;
+    }
 
     const result = checkAnswerAgainstQuestion(
       answer,
@@ -309,11 +325,13 @@ const RealtimeClient = {
         return;
       }
 
-      // إعادة تعيين نقاط الجولة
+      // إعادة تعيين نقاط الجولة + إنذارات اللاعبين
       const updates = {};
       const players = roomData.players || {};
       Object.keys(players).forEach(pid => {
         updates['players/' + pid + '/roundScore'] = 0;
+        updates['players/' + pid + '/warnings'] = 0;
+        updates['players/' + pid + '/blocked'] = false;
       });
 
       updates['currentRound'] = nextRound;
@@ -447,6 +465,11 @@ const RealtimeClient = {
         this.currentRound = round;
         this.questionIds = roomData.questionIds;
 
+        // إعادة تعيين الإنذارات والحظر لكل جولة جديدة
+        this._warnings = 0;
+        this._blocked = false;
+        UI.hideBlockOverlay();
+
         // البحث عن السؤال محلياً
         const questionId = roomData.questionIds[round];
         this.currentQuestion = questions.find(q => q.id === questionId);
@@ -475,6 +498,7 @@ const RealtimeClient = {
         }
 
         UI.showScreen('game');
+        UI.elements.answerInput.disabled = false;
         UI.elements.answerInput.focus();
 
         // بدء المؤقت بناءً على roundStartTime
@@ -647,6 +671,76 @@ const RealtimeClient = {
       UI.showScreen('final');
     } catch (error) {
       console.error('خطأ في عرض النتائج النهائية:', error);
+    }
+  },
+
+  // ═══════════════════════════════════
+  // نظام الإنذارات والحظر
+  // ═══════════════════════════════════
+
+  /**
+   * مراقبة خروج اللاعب من المتصفح (visibilitychange)
+   */
+  _setupVisibilityHandler() {
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && this.roomRef && this._lastState === 'playing' && !this._blocked) {
+        // اللاعب خرج أثناء اللعب — إنذار!
+        this._handlePlayerLeave();
+      } else if (!document.hidden && this.roomRef) {
+        // اللاعب عاد — إعادة تسجيل الحضور
+        this._reEstablishPresence();
+      }
+    });
+  },
+
+  /**
+   * معالجة خروج اللاعب — إضافة إنذار
+   */
+  async _handlePlayerLeave() {
+    if (!this.roomRef || !this.playerId) return;
+
+    try {
+      const playerRef = this.roomRef.child('players').child(this.playerId);
+
+      // زيادة الإنذارات في Firebase
+      const result = await playerRef.child('warnings').transaction(current => {
+        return (current || 0) + 1;
+      });
+
+      const newWarnings = result.snapshot.val() || 0;
+      this._warnings = newWarnings;
+
+      console.log(`⚠️ إنذار #${newWarnings} للاعب ${this.playerName}`);
+
+      // التحقق من الحظر (3 إنذارات = حظر)
+      if (newWarnings >= 3) {
+        this._blocked = true;
+        await playerRef.child('blocked').set(true);
+        UI.elements.answerInput.disabled = true;
+        if (window.autocomplete) window.autocomplete.clear();
+        UI.showBlockOverlay();
+      }
+    } catch (error) {
+      console.error('خطأ في تسجيل الإنذار:', error);
+    }
+  },
+
+  /**
+   * إعادة تسجيل حضور اللاعب بعد إعادة الاتصال
+   */
+  _reEstablishPresence() {
+    if (!this.roomRef || !this.playerId) return;
+
+    const playerRef = this.roomRef.child('players').child(this.playerId);
+    playerRef.update({ online: true });
+    playerRef.onDisconnect().update({ online: false });
+
+    // عرض رسالة الإنذار عند العودة
+    if (this._lastState === 'playing' && this._warnings > 0 && !this._blocked) {
+      const remaining = 3 - this._warnings;
+      UI.showWarningToast(this._warnings, remaining);
+    } else if (this._blocked) {
+      UI.showBlockOverlay();
     }
   },
 

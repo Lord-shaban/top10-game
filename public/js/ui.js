@@ -370,5 +370,73 @@ const UI = {
     setTimeout(() => {
       this.elements.answerInput.classList.remove('shake');
     }, 400);
+  },
+
+  // ─── إنذار الخروج ───
+  showWarningToast(warningCount, remaining) {
+    // إنشاء عنصر الإنذار
+    const overlay = document.createElement('div');
+    overlay.className = 'warning-toast-overlay';
+    overlay.innerHTML = `
+      <div class="warning-toast-box retro-border">
+        <div class="warning-icon-big">⚠️</div>
+        <div class="warning-title">إنذار!</div>
+        <div class="warning-message">
+          لقد خرجت من اللعبة أثناء الجولة!
+        </div>
+        <div class="warning-count">
+          <span class="warning-dots">
+            ${'🔴'.repeat(warningCount)}${'⚪'.repeat(remaining)}
+          </span>
+          <span>إنذار ${warningCount} من 3</span>
+        </div>
+        ${remaining > 0 
+          ? `<div class="warning-remaining">⚠️ متبقي لك ${remaining} ${remaining === 1 ? 'إنذار' : 'إنذارات'} قبل الحظر</div>`
+          : ''
+        }
+        <button class="btn btn-primary warning-dismiss-btn" onclick="this.closest('.warning-toast-overlay').remove()">
+          فهمت
+        </button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    // إزالة تلقائية بعد 5 ثواني
+    setTimeout(() => {
+      if (overlay.parentNode) overlay.remove();
+    }, 5000);
+  },
+
+  // ─── شاشة الحظر ───
+  showBlockOverlay() {
+    // إزالة أي overlay سابق
+    this.hideBlockOverlay();
+
+    const overlay = document.createElement('div');
+    overlay.id = 'block-overlay';
+    overlay.className = 'block-overlay';
+    overlay.innerHTML = `
+      <div class="block-box retro-border">
+        <div class="block-icon">⛔</div>
+        <div class="block-title">تم حظرك!</div>
+        <div class="block-message">
+          حصلت على 3 إنذارات بسبب الخروج من اللعبة.<br>
+          لا يمكنك الإجابة حتى تنتهي هذه الجولة.
+        </div>
+        <div class="block-dots">🔴🔴🔴</div>
+        <div class="block-wait">انتظر الجولة القادمة...</div>
+      </div>
+    `;
+    
+    // إضافة الـ overlay فوق حقل الإدخال
+    const gameScreen = document.getElementById('screen-game');
+    if (gameScreen) {
+      gameScreen.appendChild(overlay);
+    }
+  },
+
+  hideBlockOverlay() {
+    const existing = document.getElementById('block-overlay');
+    if (existing) existing.remove();
   }
 };
