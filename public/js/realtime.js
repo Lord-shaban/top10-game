@@ -190,6 +190,9 @@ const RealtimeClient = {
       const selectedQuestions = getRandomQuestions(5);
       this.questionIds = selectedQuestions.map(q => q.id);
 
+      // زيادة إجمالي المباريات الملعوبة
+      db.ref('stats/totalMatchesPlayed').transaction(s => (s || 0) + 1);
+
       // زيادة شعبية الأسئلة المختارة إجمالاً
       this.questionIds.forEach(id => {
         db.ref('stats/popularQuestions/' + id).transaction(s => (s || 0) + 1);
@@ -270,6 +273,11 @@ const RealtimeClient = {
 
           // زيادة عدد الإجابات المكتشفة إجمالاً
           db.ref('stats/totalAnswersDiscovered').transaction(s => (s || 0) + 1);
+
+          // تحديث إحصائيات الإجابات المكتشفة للسؤال الحالي
+          if (this.currentQuestion && this.currentQuestion.id) {
+            db.ref('stats/questionStats/' + this.currentQuestion.id + '/answersDiscovered').transaction(s => (s || 0) + 1);
+          }
         }
       } catch (error) {
         console.error('خطأ في إرسال الإجابة:', error);
@@ -359,6 +367,15 @@ const RealtimeClient = {
       updates['discoveredAnswers'] = null;
 
       await this.roomRef.update(updates);
+
+      // زيادة إجمالي الأسئلة المطروحة
+      db.ref('stats/totalQuestionsAsked').transaction(s => (s || 0) + 1);
+      
+      // تحديث مرات طرح هذا السؤال للتحليل (أسهل وأصعب الأسئلة)
+      const questionId = roomData.questionIds[nextRound];
+      if (questionId) {
+        db.ref('stats/questionStats/' + questionId + '/timesAsked').transaction(s => (s || 0) + 1);
+      }
     } catch (error) {
       console.error('خطأ في بدء الجولة:', error);
     }

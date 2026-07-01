@@ -114,6 +114,28 @@
           <span id="stat-total-answers" class="stat-val">0</span>
         </div>
       </div>
+
+      <!-- إجمالي المباريات الملعوبة -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-purple">
+          <i data-lucide="gamepad-2"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">إجمالي المباريات الملعوبة</span>
+          <span id="stat-total-matches" class="stat-val">0</span>
+        </div>
+      </div>
+
+      <!-- إجمالي الأسئلة المطروحة -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-cyan">
+          <i data-lucide="help-circle"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">إجمالي الأسئلة المطروحة</span>
+          <span id="stat-total-questions" class="stat-val">0</span>
+        </div>
+      </div>
     </section>
 
     <!-- بطاقات التحليل الفوري والنشاط -->
@@ -213,8 +235,23 @@
         </div>
 
         <h3 class="sub-section-title"><i data-lucide="help-circle" class="icon-xs"></i> الأسئلة الفردية الأكثر شعبية</h3>
-        <div id="popular-questions-list" class="popular-list">
+        <div id="popular-questions-list" class="popular-list" style="margin-bottom: 25px;">
           <div class="list-empty">لا توجد إحصائيات لعب مسجلة بعد.</div>
+        </div>
+
+        <div class="difficulty-split">
+          <div class="diff-col">
+            <h3 class="sub-section-title" style="color: var(--neon-green);"><i data-lucide="smile" class="icon-xs"></i> أسهل 5 أسئلة</h3>
+            <div id="easiest-questions-list" class="popular-list">
+              <div class="list-empty">لا توجد تحليلات كافية بعد.</div>
+            </div>
+          </div>
+          <div class="diff-col" style="margin-top: 25px;">
+            <h3 class="sub-section-title" style="color: var(--neon-red);"><i data-lucide="frown" class="icon-xs"></i> أصعب 5 أسئلة</h3>
+            <div id="hardest-questions-list" class="popular-list">
+              <div class="list-empty">لا توجد تحليلات كافية بعد.</div>
+            </div>
+          </div>
         </div>
       </div>
 

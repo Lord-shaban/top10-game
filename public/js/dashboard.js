@@ -25,6 +25,8 @@
     statTotalPlayers: document.getElementById('stat-total-players'),
     statTotalFinished: document.getElementById('stat-total-finished'),
     statTotalAnswers: document.getElementById('stat-total-answers'),
+    statTotalMatches: document.getElementById('stat-total-matches'),
+    statTotalQuestions: document.getElementById('stat-total-questions'),
 
     // الإحصائيات اللحظية والتحليلات المضافة
     liveActiveRooms: document.getElementById('live-active-rooms'),
@@ -37,6 +39,8 @@
     // الغرف والأسئلة الشائعة
     activeRoomsTbody: document.getElementById('active-rooms-tbody'),
     popularQuestionsList: document.getElementById('popular-questions-list'),
+    easiestQuestionsList: document.getElementById('easiest-questions-list'),
+    hardestQuestionsList: document.getElementById('hardest-questions-list'),
 
     // مودال تفاصيل الغرفة
     roomDetailModal: document.getElementById('room-detail-modal'),
@@ -137,6 +141,8 @@
     elements.statTotalPlayers.textContent = statsData.totalPlayersJoined || 0;
     elements.statTotalFinished.textContent = statsData.totalGamesFinished || 0;
     elements.statTotalAnswers.textContent = statsData.totalAnswersDiscovered || 0;
+    elements.statTotalMatches.textContent = statsData.totalMatchesPlayed || 0;
+    elements.statTotalQuestions.textContent = statsData.totalQuestionsAsked || 0;
 
     // معالجة الأسئلة الأكثر شعبية والـ categories
     const popularQs = statsData.popularQuestions || {};
@@ -213,6 +219,72 @@
       `;
       elements.popularQuestionsList.appendChild(div);
     });
+
+    // ─── تحليل أسهل وأصعب الأسئلة ───
+    const qStats = statsData.questionStats || {};
+    const analyzedQs = [];
+    
+    Object.entries(qStats).forEach(([id, data]) => {
+      const timesAsked = data.timesAsked || 0;
+      const answersDiscovered = data.answersDiscovered || 0;
+      
+      // حساب النسبة إذا طرح السؤال مرة واحدة على الأقل
+      if (timesAsked > 0) {
+        const totalPossibleAnswers = timesAsked * 10;
+        const discoveryRatio = (answersDiscovered / totalPossibleAnswers);
+        
+        const qObj = questions.find(q => q.id === id);
+        if (qObj) {
+          analyzedQs.push({
+            text: qObj.question,
+            ratio: discoveryRatio,
+            percentage: Math.round(discoveryRatio * 100)
+          });
+        }
+      }
+    });
+
+    elements.easiestQuestionsList.innerHTML = '';
+    elements.hardestQuestionsList.innerHTML = '';
+
+    if (analyzedQs.length === 0) {
+      elements.easiestQuestionsList.innerHTML = '<div class="list-empty">لا توجد تحليلات كافية بعد.</div>';
+      elements.hardestQuestionsList.innerHTML = '<div class="list-empty">لا توجد تحليلات كافية بعد.</div>';
+    } else {
+      // الأسهل (أعلى نسبة اكتشاف)
+      const easiestQs = [...analyzedQs].sort((a, b) => b.ratio - a.ratio).slice(0, 5);
+      easiestQs.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'popular-item';
+        div.innerHTML = `
+          <div class="popular-item-info">
+            <span class="popular-item-name" title="${item.text}">${item.text}</span>
+            <span class="popular-item-count" style="color:var(--neon-green)">${item.percentage}% مكتشفة</span>
+          </div>
+          <div class="popular-item-bar-bg">
+            <div class="popular-item-bar-fg" style="width: ${item.percentage}%; background: var(--neon-green)"></div>
+          </div>
+        `;
+        elements.easiestQuestionsList.appendChild(div);
+      });
+
+      // الأصعب (أقل نسبة اكتشاف)
+      const hardestQs = [...analyzedQs].sort((a, b) => a.ratio - b.ratio).slice(0, 5);
+      hardestQs.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'popular-item';
+        div.innerHTML = `
+          <div class="popular-item-info">
+            <span class="popular-item-name" title="${item.text}">${item.text}</span>
+            <span class="popular-item-count" style="color:var(--neon-red)">${item.percentage}% مكتشفة</span>
+          </div>
+          <div class="popular-item-bar-bg">
+            <div class="popular-item-bar-fg" style="width: ${item.percentage}%; background: var(--neon-red)"></div>
+          </div>
+        `;
+        elements.hardestQuestionsList.appendChild(div);
+      });
+    }
   }
 
   // حساب الأرقام اللحظية (غرف نشطة ولاعبين متصلين)
