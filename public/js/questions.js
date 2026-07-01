@@ -1143,20 +1143,20 @@ const questions = [
   },
   {
     id: 53,
-    question: "آخر 10 فرق فازت بدوري أبطال آسيا",
+    question: "آخر 10 فرق فازوا بدوري أبطال آسيا",
     category: "دوري أبطال آسيا",
     type: "club",
     answers: [
-      { name: "الأهلي السعودي", value: "2025", aliases: ["Al-Ahli", "الأهلي", "Al Ahli"] },
-      { name: "العين الإماراتي", value: "2024", aliases: ["Al-Ain", "العين"] },
-      { name: "أوراوا ريد دايموندز", value: "2023", aliases: ["Urawa Red Diamonds", "أوراوا"] },
-      { name: "الهلال السعودي", value: "2021", aliases: ["Al-Hilal", "الهلال"] },
-      { name: "أولسان هيونداي", value: "2020", aliases: ["Ulsan Hyundai", "أولسان"] },
-      { name: "الهلال السعودي", value: "2019", aliases: ["Al-Hilal", "الهلال"] },
-      { name: "كاشيما أنتلرز", value: "2018", aliases: ["Kashima Antlers", "كاشيما"] },
-      { name: "أوراوا ريد دايموندز", value: "2017", aliases: ["Urawa Red Diamonds", "أوراوا"] },
-      { name: "جيونبوك هيونداي موتورز", value: "2016", aliases: ["Jeonbuk Hyundai Motors", "جيونبوك"] },
-      { name: "غوانغجو إيفرغراند", value: "2015", aliases: ["Guangzhou Evergrande", "جوانزو"] }
+      { name: "الأهلي السعودي", value: "لقب", aliases: ["Al-Ahli", "الأهلي"] },
+      { name: "العين الإماراتي", value: "لقب", aliases: ["Al-Ain", "العين"] },
+      { name: "أوراوا الياباني", value: "لقب", aliases: ["Urawa Red Diamonds", "أوراوا"] },
+      { name: "الهلال السعودي", value: "لقب", aliases: ["Al-Hilal", "الهلال"] },
+      { name: "أولسان هيونداي الكوري", value: "لقب", aliases: ["Ulsan Hyundai", "أولسان"] },
+      { name: "كاشيما أنتلرز الياباني", value: "لقب", aliases: ["Kashima Antlers", "كاشيما"] },
+      { name: "جيونبوك موتورز الكوري", value: "لقب", aliases: ["Jeonbuk Hyundai Motors", "جيونبوك"] },
+      { name: "جوانزو الصيني", value: "لقب", aliases: ["Guangzhou Evergrande", "جوانزو"] },
+      { name: "ويسترن سيدني الأسترالي", value: "لقب", aliases: ["Western Sydney Wanderers", "ويسترن"] },
+      { name: "السد القطري", value: "لقب", aliases: ["Al-Sadd", "السد"] }
     ]
   },
   {
@@ -1305,7 +1305,7 @@ function getRandomQuestions(count = 5) {
 
   // استرجاع سلة الأسئلة (Deck) من التخزين المحلي
   let deck = JSON.parse(localStorage.getItem('top10_question_deck') || '[]');
-  
+
   // إذا كانت السلة فارغة أو لا تحتوي على أسئلة كافية للجولة، نقوم بإعادة تعبئتها
   if (deck.length < count) {
     let allIds = questions.map(q => q.id);
