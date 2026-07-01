@@ -81,6 +81,9 @@ const RealtimeClient = {
 
       // زيادة عدد الغرف المنشأة إجمالاً
       db.ref('stats/totalRoomsCreated').transaction(s => (s || 0) + 1);
+      
+      // المضيف هو أول لاعب، فيتم احتسابه كلاعب منضم جديد
+      db.ref('stats/totalPlayersJoined').transaction(s => (s || 0) + 1);
 
       // عند قطع الاتصال: فقط تحديث حالة الاتصال (لا نحذف اللاعب)
       this.roomRef.child('players').child(this.playerId)

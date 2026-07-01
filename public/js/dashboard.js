@@ -476,9 +476,9 @@
           `;
         } else {
           slotDiv.innerHTML = `
-            <div class="m-ans-rank">${index + 1}. ???</div>
-            <div class="m-ans-name">لم تُكتشف بعد</div>
-            <div class="m-ans-discoverer" style="color:var(--text-muted)">قيمة: ${index + 1}pt</div>
+            <div class="m-ans-rank">${index + 1}. ${ans.value}</div>
+            <div class="m-ans-name">${ans.name}</div>
+            <div class="m-ans-discoverer" style="color:var(--text-muted)">قيمة الإجابة: ${index + 1} نقاط (لم تكتشف)</div>
           `;
         }
         elements.modalAnswersGrid.appendChild(slotDiv);
