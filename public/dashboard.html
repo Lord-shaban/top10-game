@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم والإحصائيات — Top 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- CRT Scanline Overlay -->
+  <div class="crt-overlay"></div>
+  <div class="crt-flicker"></div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- شاشة الدخول وحماية لوحة التحكم     -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="login-gate" class="login-gate active">
+    <div class="login-box retro-border">
+      <div class="logo">
+        <span class="logo-top">ADMIN</span>
+        <span class="logo-number">GATE</span>
+      </div>
+      <p class="login-subtitle">يرجى إدخال رمز المرور الإداري للوصول</p>
+      
+      <div class="input-group">
+        <label for="admin-passcode">رمز المرور</label>
+        <div class="retro-input-wrapper">
+          <i data-lucide="lock" class="input-icon"></i>
+          <input type="password" id="admin-passcode" placeholder="أدخل رمز المرور الإداري..." autocomplete="off">
+        </div>
+      </div>
+      
+      <button id="btn-login-admin" class="btn btn-primary btn-lg btn-pulse">
+        <i data-lucide="log-in" class="btn-ic"></i>
+        دخول لوحة التحكم
+      </button>
+      <p class="passcode-hint">ملاحظة: رمز المرور الافتراضي هو: <code>lord</code></p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- اللوحة الرئيسية للوحة التحكم       -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="dashboard-content" class="dashboard-container">
+    
+    <!-- الشريط العلوي للوحة التحكم -->
+    <header class="db-header retro-border">
+      <div class="db-brand">
+        <div class="db-logo">TOP 10</div>
+        <div class="db-title-badge">لوحة التحكم والمراقبة</div>
+      </div>
+      
+      <div class="db-header-actions">
+        <button id="btn-clean-db" class="btn btn-secondary btn-sm" title="حذف جميع الغرف التي مضى عليها أكثر من 3 ساعات">
+          <i data-lucide="trash-2" class="btn-ic"></i>
+          تنظيف الغرف الخاملة
+        </button>
+        <button id="btn-logout" class="btn btn-danger btn-sm">
+          <i data-lucide="log-out" class="btn-ic"></i>
+          قفل اللوحة
+        </button>
+      </div>
+    </header>
+
+    <!-- بطاقات الإحصائيات الإجمالية والفورية -->
+    <h3 class="stats-title-section"><i data-lucide="database" class="icon-xs"></i> إحصائيات الاستخدام التراكمية (الانتشار والنجاح)</h3>
+    <section class="stats-grid">
+      <!-- إجمالي الغرف التاريخية -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-blue">
+          <i data-lucide="folder-heart"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">إجمالي الغرف تاريخياً</span>
+          <span id="stat-total-rooms" class="stat-val">0</span>
+        </div>
+      </div>
+
+      <!-- إجمالي اللاعبين التاريخي -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-green">
+          <i data-lucide="users"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">إجمالي المستخدمين</span>
+          <span id="stat-total-players" class="stat-val">0</span>
+        </div>
+      </div>
+
+      <!-- إجمالي الألعاب المكتملة -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-yellow">
+          <i data-lucide="award"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">ألعاب اكتملت بنجاح</span>
+          <span id="stat-total-finished" class="stat-val">0</span>
+        </div>
+      </div>
+
+      <!-- إجمالي التخمينات الصحيحة -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-pink">
+          <i data-lucide="check-circle-2"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">إجمالي التخمينات الناجحة</span>
+          <span id="stat-total-answers" class="stat-val">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- بطاقات التحليل الفوري والنشاط -->
+    <h3 class="stats-title-section"><i data-lucide="line-chart" class="icon-xs"></i> تحليلات التفاعل والنشاط اللحظي</h3>
+    <section class="stats-grid analytics-grid-row">
+      <!-- متوسط اللاعبين في الغرفة -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-purple">
+          <i data-lucide="bar-chart-2"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">متوسط اللاعبين / غرفة</span>
+          <span id="stat-avg-players" class="stat-val">0</span>
+        </div>
+      </div>
+
+      <!-- الغرفة الأكثر نشاطاً -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-cyan">
+          <i data-lucide="flame"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">الغرفة الأكثر تفاعلاً</span>
+          <span id="stat-hottest-room" class="stat-val">لا توجد</span>
+        </div>
+      </div>
+
+      <!-- نسبة الغرف في جولة نشطة -->
+      <div class="stat-card retro-border-sm">
+        <div class="stat-icon neon-yellow">
+          <i data-lucide="activity"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">غرف تلعب حالياً (نسبة)</span>
+          <span id="stat-playing-ratio" class="stat-val">0 / 0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- مؤشرات الأنشطة النشطة الآن -->
+    <div class="realtime-status-row">
+      <div class="live-indicator-card retro-border-sm">
+        <span class="pulse-dot"></span>
+        <span class="live-text">الغرف النشطة حالياً: <strong id="live-active-rooms">0</strong></span>
+      </div>
+      <div class="live-indicator-card retro-border-sm">
+        <span class="pulse-dot green"></span>
+        <span class="live-text">اللاعبون المتصلون الآن: <strong id="live-online-players">0</strong></span>
+      </div>
+    </div>
+
+    <!-- المحتوى الرئيسي: الغرف النشطة والأسئلة الأكثر شعبية -->
+    <div class="db-main-grid">
+      
+      <!-- قسم الغرف النشطة -->
+      <div class="db-section rooms-section retro-border">
+        <div class="section-header">
+          <i data-lucide="monitor-play" class="icon-sm"></i>
+          <h2>الغرف النشطة حالياً في قاعدة البيانات</h2>
+        </div>
+        
+        <div class="table-container">
+          <table class="db-table">
+            <thead>
+              <tr>
+                <th>كود الغرفة</th>
+                <th>المضيف (Host)</th>
+                <th>الحالة</th>
+                <th>الجولة</th>
+                <th>عدد اللاعبين</th>
+                <th>تاريخ الإنشاء</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="active-rooms-tbody">
+              <tr>
+                <td colspan="7" class="table-loading">
+                  <i data-lucide="loader" class="icon-spin"></i>
+                  جاري تحميل بيانات الغرف...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- قسم الأسئلة الأكثر شعبية والتحليلات -->
+      <div class="db-section popular-section retro-border">
+        <div class="section-header">
+          <i data-lucide="bar-chart-3" class="icon-sm"></i>
+          <h2>التحليلات ومعدلات الشعبية</h2>
+        </div>
+        
+        <h3 class="sub-section-title"><i data-lucide="tag" class="icon-xs"></i> تصنيفات الأسئلة الأكثر لعباً</h3>
+        <div id="popular-categories-list" class="popular-list" style="margin-bottom: 25px;">
+          <div class="list-empty">لا توجد إحصائيات لعب مسجلة بعد.</div>
+        </div>
+
+        <h3 class="sub-section-title"><i data-lucide="help-circle" class="icon-xs"></i> الأسئلة الفردية الأكثر شعبية</h3>
+        <div id="popular-questions-list" class="popular-list">
+          <div class="list-empty">لا توجد إحصائيات لعب مسجلة بعد.</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- نافذة منبثقة لتفاصيل الغرفة وإدارتها -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="room-detail-modal" class="modal-overlay">
+    <div class="modal-box retro-border">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i data-lucide="settings" class="icon"></i>
+          <span>تفاصيل الغرفة: <strong id="modal-room-code" class="neon-text">------</strong></span>
+        </div>
+        <button id="btn-close-modal" class="btn-close-modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- تفاصيل الجولة والسؤال -->
+        <div class="modal-info-card retro-border-sm">
+          <div class="info-row">
+            <span><strong>حالة الغرفة:</strong> <span id="modal-room-state" class="badge">---</span></span>
+            <span><strong>الجولة:</strong> <span id="modal-room-round">---</span></span>
+          </div>
+          <div id="modal-question-block" class="question-block" style="display: none;">
+            <div class="category-indicator"><i data-lucide="tag" class="icon-xs"></i> <span id="modal-question-category">---</span></div>
+            <div id="modal-question-text" class="question-desc">---</div>
+          </div>
+        </div>
+
+        <div class="modal-columns">
+          
+          <!-- قائمة اللاعبين وإدارتهم -->
+          <div class="modal-col">
+            <h3 class="col-title"><i data-lucide="users" class="icon-xs"></i> قائمة اللاعبين</h3>
+            <div class="modal-table-wrapper">
+              <table class="modal-table">
+                <thead>
+                  <tr>
+                    <th>اللاعب</th>
+                    <th>الحالة</th>
+                    <th>النقاط</th>
+                    <th>الإنذارات</th>
+                    <th>إجراءات</th>
+                  </tr>
+                </thead>
+                <tbody id="modal-players-tbody">
+                  <!-- ديناميكي -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- لوحة الإجابات المكتشفة -->
+          <div class="modal-col">
+            <h3 class="col-title"><i data-lucide="list-ordered" class="icon-xs"></i> الإجابات المكتشفة في الجولة</h3>
+            <div id="modal-answers-grid" class="modal-answers-grid">
+              <!-- ديناميكي -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <div class="admin-danger-actions">
+          <button id="btn-modal-force-end" class="btn btn-secondary">
+            <i data-lucide="arrow-right-to-line" class="btn-ic"></i>
+            إنهاء الجولة الحالية قسرياً
+          </button>
+          <button id="btn-modal-delete-room" class="btn btn-danger">
+            <i data-lucide="trash-2" class="btn-ic"></i>
+            حذف وإغلاق الغرفة بالكامل
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- نافذة التأكيد المخصصة (Confirm Modal) -->
+  <!-- ═══════════════════════════════════ -->
+  <div id="custom-confirm-modal" class="modal-overlay confirm-overlay">
+    <div class="modal-box confirm-box retro-border">
+      <div class="modal-header confirm-header">
+        <div class="modal-title">
+          <i data-lucide="alert-triangle" class="warn-icon-yellow" style="color: var(--neon-yellow)"></i>
+          <span>تأكيد الإجراء الإداري</span>
+        </div>
+      </div>
+      <div class="modal-body confirm-body">
+        <p id="confirm-message-text" class="confirm-text">هل أنت متأكد من تنفيذ هذا الإجراء؟</p>
+      </div>
+      <div class="modal-footer confirm-footer">
+        <button id="btn-confirm-cancel" class="btn btn-secondary btn-sm">إلغاء</button>
+        <button id="btn-confirm-ok" class="btn btn-danger btn-sm">موافق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <i data-lucide="alert-circle" class="toast-icon"></i>
+    <span class="toast-text"></span>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+  <!-- Scripts -->
+  <script src="/js/firebase-config.js"></script>
+  <script src="/js/questions.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <script>
+    // تهيئة أيقونات Lucide
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>

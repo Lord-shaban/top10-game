@@ -79,6 +79,9 @@ const RealtimeClient = {
 
       await this.roomRef.set(roomData);
 
+      // زيادة عدد الغرف المنشأة إجمالاً
+      db.ref('stats/totalRoomsCreated').transaction(s => (s || 0) + 1);
+
       // عند قطع الاتصال: فقط تحديث حالة الاتصال (لا نحذف اللاعب)
       this.roomRef.child('players').child(this.playerId)
         .onDisconnect().update({ online: false });
@@ -148,6 +151,9 @@ const RealtimeClient = {
         online: true
       });
 
+      // زيادة عدد اللاعبين المنضمين إجمالاً
+      db.ref('stats/totalPlayersJoined').transaction(s => (s || 0) + 1);
+
       // عند قطع الاتصال: فقط تحديث حالة الاتصال (لا نحذف اللاعب)
       this.roomRef.child('players').child(this.playerId)
         .onDisconnect().update({ online: false });
@@ -180,6 +186,11 @@ const RealtimeClient = {
       // اختيار 5 أسئلة عشوائية
       const selectedQuestions = getRandomQuestions(5);
       this.questionIds = selectedQuestions.map(q => q.id);
+
+      // زيادة شعبية الأسئلة المختارة إجمالاً
+      this.questionIds.forEach(id => {
+        db.ref('stats/popularQuestions/' + id).transaction(s => (s || 0) + 1);
+      });
 
       // إعادة تعيين نقاط اللاعبين
       const playersSnapshot = await this.roomRef.child('players').once('value');
@@ -253,6 +264,9 @@ const RealtimeClient = {
           const playerRef = this.roomRef.child('players').child(this.playerId);
           await playerRef.child('score').transaction(s => (s || 0) + result.points);
           await playerRef.child('roundScore').transaction(s => (s || 0) + result.points);
+
+          // زيادة عدد الإجابات المكتشفة إجمالاً
+          db.ref('stats/totalAnswersDiscovered').transaction(s => (s || 0) + 1);
         }
       } catch (error) {
         console.error('خطأ في إرسال الإجابة:', error);
@@ -322,6 +336,8 @@ const RealtimeClient = {
       if (nextRound >= roomData.questionIds.length) {
         // انتهت جميع الجولات
         await this.roomRef.update({ state: 'finished' });
+        // زيادة عدد الألعاب المكتملة إجمالاً
+        db.ref('stats/totalGamesFinished').transaction(s => (s || 0) + 1);
         return;
       }
 
@@ -373,6 +389,18 @@ const RealtimeClient = {
     const playersRef = this.roomRef.child('players');
     const playersCallback = playersRef.on('value', (snapshot) => {
       const players = snapshot.val() || {};
+
+      // التحقق مما إذا تم طرد هذا اللاعب من قبل الإدارة
+      if (this.roomRef && this._lastState !== null && !players[this.playerId]) {
+        this._cleanupListeners();
+        this.roomRef = null;
+        this.roomCode = null;
+        this._lastState = null;
+        UI.showToast('لقد تم طردك من الغرفة من قبل الإدارة 🚪', 4000);
+        UI.showScreen('home');
+        return;
+      }
+
       const oldPlayers = this.localPlayers;
       this.localPlayers = players;
 
