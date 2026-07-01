@@ -1292,8 +1292,41 @@ const questions = [
 // ═══════════════════════════════════════════════
 
 function getRandomQuestions(count = 5) {
-  const shuffled = [...questions].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, Math.min(count, questions.length));
+  // خوارزمية Fisher-Yates لخلط المصفوفة بشكل عشوائي تماماً
+  function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+    return array;
+  }
+
+  // استرجاع سلة الأسئلة (Deck) من التخزين المحلي
+  let deck = JSON.parse(localStorage.getItem('top10_question_deck') || '[]');
+  
+  // إذا كانت السلة فارغة أو لا تحتوي على أسئلة كافية للجولة، نقوم بإعادة تعبئتها
+  if (deck.length < count) {
+    let allIds = questions.map(q => q.id);
+    // إزالة الأسئلة المتبقية في السلة حالياً لتجنب تكرارها في نفس التعبئة
+    let newItems = allIds.filter(id => !deck.includes(id));
+    // خلط الأسئلة الجديدة وإضافتها للسلة
+    newItems = shuffle(newItems);
+    deck = deck.concat(newItems);
+  }
+
+  // سحب الأسئلة من السلة
+  const selectedIds = [];
+  for (let i = 0; i < count; i++) {
+    selectedIds.push(deck.pop());
+  }
+
+  // حفظ السلة المحدثة في التخزين المحلي
+  localStorage.setItem('top10_question_deck', JSON.stringify(deck));
+
+  // إرجاع كائنات الأسئلة بناءً على المعرفات المسحوبة
+  return selectedIds.map(id => questions.find(q => q.id === id)).filter(Boolean);
 }
 
 function getSuggestionList(question) {
