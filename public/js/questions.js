@@ -1284,8 +1284,1515 @@ const questions = [
       { name: "كارلوس بيلاردو", value: "1990", aliases: ["Carlos Bilardo", "بيلاردو"] },
       { name: "فرانز بيكنباور", value: "1986", aliases: ["Franz Beckenbauer", "بيكنباور"] }
     ]
+  },
+  {
+    id: 61,
+    question: "أول 10 هدافي الدوري الإنجليزي الممتاز (البريميرليغ) موسم 2025/2026",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "إيرلينغ هالاند", value: "27 هدف", aliases: ["هالاند", "Haaland", "ارلينغ هالاند"] },
+      { name: "إيغور تياغو", value: "22 هدف", aliases: ["تياغو", "تياجو", "Thiago", "Igor Thiago"] },
+      { name: "أنطوان سيمينيو", value: "17 هدف", aliases: ["سيمينيو", "Semenyo", "انطوان سيمينيو"] },
+      { name: "أولي واتكينز", value: "16 هدف", aliases: ["واتكينز", "Watkins", "اولي واتكينز"] },
+      { name: "جواو بيدرو", value: "15 هدف", aliases: ["بيدرو", "Joao Pedro", "جواو بريدرو"] },
+      { name: "مورغان غيبس وايت", value: "15 هدف", aliases: ["غيبس وايت", "Gibbs-White", "مورغان غيبس"] },
+      { name: "دومينيك كالفيرت لوين", value: "14 هدف", aliases: ["كالفيرت لوين", "Calvert-Lewin", "لوين"] },
+      { name: "فيكتور غيوكيرس", value: "14 هدف", aliases: ["غيوكيرس", "جيوكيرس", "Gyokeres", "فيكتور جيوكيرس"] },
+      { name: "داني ويلبيك", value: "13 هدف", aliases: ["ويلبيك", "Welbeck", "داني وبليك"] },
+      { name: "إيلي جونيور كروبي", value: "13 هدف", aliases: ["كروبي", "Kroupi", "ايلي كروبي"] }
+    ]
+  },
+  {
+    id: 62,
+    question: "أول 10 هدافي الدوري الإسباني (لا ليغا) موسم 2025/2026",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "كيليان مبابي", value: "25 هدف", aliases: ["مبابي", "Mbappe", "كيليان مبابى"] },
+      { name: "فيدات موريقي", value: "23 هدف", aliases: ["موريقي", "موريجي", "Muriqi", "فيدان موريقي"] },
+      { name: "أنتي بوديمير", value: "17 هدف", aliases: ["بوديمير", "Budimir", "انتي بوديمير"] },
+      { name: "فيران توريس", value: "16 هدف", aliases: ["توريس", "Ferran Torres"] },
+      { name: "لامين يامال", value: "16 هدف", aliases: ["يامال", "Lamine Yamal", "لامين جمال"] },
+      { name: "فينيسيوس جونيور", value: "16 هدف", aliases: ["فينيسيوس", "فيني", "Vinicius", "Vini"] },
+      { name: "ميكيل أويارزابال", value: "15 هدف", aliases: ["أويارزابال", "Oyarzabal", "ميكيل اويارزابال"] },
+      { name: "توني مارتينيز", value: "14 هدف", aliases: ["مارتينيز", "Toni Martinez"] },
+      { name: "روبرت ليفاندوفسكي", value: "14 هدف", aliases: ["ليفاندوفسكي", "ليفا", "Lewandowski"] },
+      { name: "بورخا إيغليسياس", value: "14 هدف", aliases: ["إيغليسياس", "Iglesias", "بورخا ايغليسياس"] }
+    ]
+  },
+  {
+    id: 63,
+    question: "أول 10 هدافي الدوري الإيطالي (سيري آ) موسم 2025/2026",
+    category: "الدوري الإيطالي",
+    type: "player",
+    answers: [
+      { name: "لاوتارو مارتينيز", value: "17 هدف", aliases: ["مارتينيز", "لاوتارو", "Lautaro"] },
+      { name: "دونيل مالين", value: "14 هدف", aliases: ["مالين", "Malen", "دونيل مالين"] },
+      { name: "أناستاسيوس دوفيكاس", value: "14 هدف", aliases: ["دوفيكاس", "Douvikas", "اناستاسيوس دوفيكاس"] },
+      { name: "ماركوس تورام", value: "13 هدف", aliases: ["تورام", "Thuram", "ماركوس تورام"] },
+      { name: "نيكو باز", value: "12 هدف", aliases: ["باز", "Nico Paz", "نيكو باز"] },
+      { name: "راسموس هويلوند", value: "12 هدف", aliases: ["هويلوند", "Hojlund", "راسموس هيلوند"] },
+      { name: "جيوفاني سيميوني", value: "11 هدف", aliases: ["سيميوني", "Simeone", "جيوفاني سيميونى"] },
+      { name: "نيكولا كرستوفيتش", value: "10 هدف", aliases: ["كرستوفيتش", "Krstovic", "نيكولا كرستوفيتش"] },
+      { name: "سكوت مكتوميناي", value: "10 هدف", aliases: ["مكتوميناي", "McTominay", "سكوت ماكتوميناي"] },
+      { name: "كينان يلدز", value: "10 هدف", aliases: ["يلدز", "Yildiz", "كينان يلدز"] }
+    ]
+  },
+  {
+    id: 64,
+    question: "أول 10 هدافي الدوري الألماني (البوندسليغا) موسم 2025/2026",
+    category: "الدوري الألماني",
+    type: "player",
+    answers: [
+      { name: "هاري كين", value: "36 هدف", aliases: ["كين", "Harry Kane", "هارى كين"] },
+      { name: "دينيز أونداف", value: "19 هدف", aliases: ["أونداف", "Undav", "دينيز اونداف"] },
+      { name: "سيرهو غيراسي", value: "17 هدف", aliases: ["غيراسي", "Guirassy", "سيرهو جيراسي"] },
+      { name: "باتريك شيك", value: "16 هدف", aliases: ["شيك", "Schick", "باتريك شيك"] },
+      { name: "لويس دياز", value: "15 هدف", aliases: ["دياز", "Luis Diaz", "لويس دياز"] },
+      { name: "مايكل أوليز", value: "15 هدف", aliases: ["أوليز", "Olise", "مايكل اوليز"] },
+      { name: "أندري كراماريتش", value: "14 هدف", aliases: ["كراماريتش", "Kramaric", "اندري كراماريتش"] },
+      { name: "كريستوف بومغارتنر", value: "13 هدف", aliases: ["بومغارتنر", "Baumgartner", "كريستوف بومغارتنر"] },
+      { name: "هاريس تاباكوفيتش", value: "13 هدف", aliases: ["تاباكوفيتش", "Tabakovic", "هاريس تاباكوفيتش"] },
+      { name: "سعيد الملا", value: "13 هدف", aliases: ["الملا", "Al Mulla", "سعيد الملا"] }
+    ]
+  },
+  {
+    id: 65,
+    question: "أول 10 هدافي الدوري الفرنسي (ليغ 1) موسم 2025/2026",
+    category: "الدوري الفرنسي",
+    type: "player",
+    answers: [
+      { name: "إستيبان ليبول", value: "21 هدف", aliases: ["ليبول", "Lepaul", "استيبان ليبول"] },
+      { name: "ميسون غرينوود", value: "16 هدف", aliases: ["غرينوود", "Greenwood", "ميسون جرينوود"] },
+      { name: "خواكين بانيتشيلي", value: "16 هدف", aliases: ["بانيتشيلي", "Panichelli", "خواكين بانيشلي"] },
+      { name: "فولارين بالوغون", value: "13 هدف", aliases: ["بالوغون", "Balogun", "فولارين بالوجون"] },
+      { name: "أودسون إدوارد", value: "12 هدف", aliases: ["إدوارد", "Edouard", "اودسون ادوارد"] },
+      { name: "وسام سعيد", value: "12 هدف", aliases: ["سعيد", "Saïd", "وسام سعيد"] },
+      { name: "لاسينا سينايوكو", value: "12 هدف", aliases: ["سينايوكو", "Sinayoko", "لاسينا سينايوكو"] },
+      { name: "فلوريان توفان", value: "11 هدف", aliases: ["توفان", "Thauvin", "فلوريان توفان"] },
+      { name: "أنسو فاتي", value: "11 هدف", aliases: ["فاتي", "Fati", "انسو فاتي"] },
+      { name: "كورينتين توليسو", value: "11 هدف", aliases: ["توليسو", "Tolisso", "كورينتين توليسو"] }
+    ]
+  },
+  {
+    id: 66,
+    question: "آخر 10 لاعبين مختلفين فازوا بجائزة أفضل لاعب في إفريقيا (CAF)",
+    category: "كرة قدم إفريقية",
+    type: "player",
+    answers: [
+      { name: "أشرف حكيمي", value: "2025", aliases: ["حكيمي", "Achraf Hakimi", "أشرف حكيمي"] },
+      { name: "أديمولا لوكمان", value: "2024", aliases: ["لوكمان", "Lookman", "أديمولا"] },
+      { name: "فيكتور أوسيمين", value: "2023", aliases: ["أوسيمين", "Osimhen"] },
+      { name: "ساديو ماني", value: "2022", aliases: ["ماني", "Mane", "ساديو مانى"] },
+      { name: "محمد صلاح", value: "2018", aliases: ["صلاح", "Salah", "Mo Salah"] },
+      { name: "رياض محرز", value: "2016", aliases: ["محرز", "Mahrez", "رياض محرز"] },
+      { name: "بيير إيميريك أوباميانغ", value: "2015", aliases: ["أوباميانغ", "Aubameyang", "اوباميانج"] },
+      { name: "يايا توريه", value: "2014", aliases: ["توريه", "Yaya Toure"] },
+      { name: "ديدييه دروغبا", value: "2009", aliases: ["دروغبا", "Drogba", "دروجبا"] },
+      { name: "إيمانويل أديبايور", value: "2008", aliases: ["أديبايور", "Adebayor"] }
+    ]
+  },
+  {
+    id: 67,
+    question: "آخر 10 لاعبين مختلفين فازوا بهداف الدوري الإنجليزي الممتاز (البريميرليغ)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "إيرلينغ هالاند", value: "2026", aliases: ["هالاند", "Haaland", "ارلينغ هالاند"] },
+      { name: "محمد صلاح", value: "2025", aliases: ["صلاح", "Salah", "Mo Salah"] },
+      { name: "سون هيونغ مين", value: "2022", aliases: ["سون", "Son", "سون هيونج مين"] },
+      { name: "هاري كين", value: "2021", aliases: ["كين", "Kane", "هاري كين"] },
+      { name: "جيمي فاردي", value: "2020", aliases: ["فاردي", "Vardy", "جيمي فاردي"] },
+      { name: "بيير إيميريك أوباميانغ", value: "2019", aliases: ["أوباميانغ", "Aubameyang", "اوباميانج"] },
+      { name: "ساديو ماني", value: "2019", aliases: ["ماني", "Mane"] },
+      { name: "روميلو لوكاكو", value: "2017", aliases: ["لوكاكو", "Lukaku"] },
+      { name: "لويس سواريز", value: "2014", aliases: ["سواريز", "Suarez"] },
+      { name: "روبين فان بيرسي", value: "2013", aliases: ["فان بيرسي", "Van Persie"] }
+    ]
+  },
+  {
+    id: 68,
+    question: "آخر 10 لاعبين مختلفين فازوا بهداف الدوري الإسباني (البيتشيتشي)",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "كيليان مبابي", value: "2026", aliases: ["مبابي", "Mbappe", "كيليان مبابى"] },
+      { name: "روبرت ليفاندوفسكي", value: "2025", aliases: ["ليفاندوفسكي", "ليفا", "Lewandowski"] },
+      { name: "أرتيم دوفبيك", value: "2024", aliases: ["دوفبيك", "Dovbyk", "ارتيم دوفبيك"] },
+      { name: "كريم بنزيما", value: "2022", aliases: ["بنزيما", "Benzema", "كريم بنزيمة"] },
+      { name: "ليونيل ميسي", value: "2021", aliases: ["ميسي", "Messi", "البرغوث"] },
+      { name: "لويس سواريز", value: "2016", aliases: ["سواريز", "Suarez"] },
+      { name: "كريستيانو رونالدو", value: "2015", aliases: ["رونالدو", "Cristiano", "CR7"] },
+      { name: "دييغو فورلان", value: "2009", aliases: ["فورلان", "Forlan", "دييجو فورلان"] },
+      { name: "دانييل غويزا", value: "2008", aliases: ["غويزا", "Guiza"] },
+      { name: "رود فان نيستلروي", value: "2007", aliases: ["نيستلروي", "Van Nistelrooy"] }
+    ]
+  },
+  {
+    id: 69,
+    question: "آخر 10 لاعبين مختلفين فازوا بهداف الدوري الإيطالي (الكابوكانونييري)",
+    category: "الدوري الإيطالي",
+    type: "player",
+    answers: [
+      { name: "لاوتارو مارتينيز", value: "2026", aliases: ["مارتينيز", "لاوتارو", "Lautaro"] },
+      { name: "دوشان فلاهوفيتش", value: "2025", aliases: ["فلاهوفيتش", "Vlahovic", "دوشان فلاهوفيتش"] },
+      { name: "فيكتور أوسيمين", value: "2023", aliases: ["أوسيمين", "Osimhen"] },
+      { name: "تشيرو إيموبيلي", value: "2022", aliases: ["إيموبيلي", "Immobile"] },
+      { name: "كريستيانو رونالدو", value: "2021", aliases: ["رونالدو", "Cristiano", "CR7"] },
+      { name: "فابيو كوالياريلا", value: "2019", aliases: ["كوالياريلا", "Quagliarella"] },
+      { name: "ماورو إيكاردي", value: "2018", aliases: ["إيكاردي", "Icardi"] },
+      { name: "إدين دجيكو", value: "2017", aliases: ["دجيكو", "Dzeko"] },
+      { name: "غونزالو هيغواين", value: "2016", aliases: ["هيغواين", "Higuain", "هيجواين"] },
+      { name: "لوكا توني", value: "2015", aliases: ["توني", "Toni"] }
+    ]
+  },
+  {
+    id: 70,
+    question: "آخر 10 لاعبين مختلفين فازوا بهداف الدوري الألماني (مدفع الهدافين)",
+    category: "الدوري الألماني",
+    type: "player",
+    answers: [
+      { name: "هاري كين", value: "2026", aliases: ["كين", "Kane", "هاري كين"] },
+      { name: "لوئيس أوبيندا", value: "2025", aliases: ["أوبيندا", "Openda", "لويس أوبيندا"] },
+      { name: "كريستوفر نكونكو", value: "2023", aliases: ["نكونكو", "Nkunku"] },
+      { name: "نيكلاس فولكروج", value: "2023", aliases: ["فولكروج", "Fullkrug", "نيكلاس فولكروغ"] },
+      { name: "روبرت ليفاندوفسكي", value: "2022", aliases: ["ليفاندوفسكي", "ليفا", "Lewandowski"] },
+      { name: "بيير إيميريك أوباميانغ", value: "2017", aliases: ["أوباميانغ", "Aubameyang", "اوباميانج"] },
+      { name: "ألكسندر ماير", value: "2015", aliases: ["ماير", "Meier", "ألكسندر ميركل"] },
+      { name: "ستيفان كيسلينغ", value: "2013", aliases: ["كيسلينغ", "Kiessling"] },
+      { name: "كلاس يان هونتيلار", value: "2012", aliases: ["هونتيلار", "Huntelaar"] },
+      { name: "ماريو غوميز", value: "2011", aliases: ["غوميز", "Gomez", "ماريو جوميز"] }
+    ]
+  },
+  {
+    id: 71,
+    question: "آخر 10 لاعبين مختلفين فازوا بهداف الدوري الفرنسي",
+    category: "الدوري الفرنسي",
+    type: "player",
+    answers: [
+      { name: "إستيبان ليبول", value: "2026", aliases: ["ليبول", "Lepaul", "استيبان ليبول"] },
+      { name: "جوناثان ديفيد", value: "2025", aliases: ["ديفيد", "David", "جوناثان ديفيد"] },
+      { name: "كيليان مبابي", value: "2024", aliases: ["مبابي", "Mbappe", "كيليان مبابى"] },
+      { name: "إدينسون كافاني", value: "2018", aliases: ["كافاني", "Cavani"] },
+      { name: "أليكساندر لاكازيت", value: "2015", aliases: ["لاكازيت", "Lacazette"] },
+      { name: "زلاتان إبراهيموفيتش", value: "2016", aliases: ["إبراهيموفيتش", "زلاتان", "Ibrahimovic"] },
+      { name: "أوليفيه جيرو", value: "2012", aliases: ["جيرو", "Giroud"] },
+      { name: "نيني", value: "2012", aliases: ["نيني", "Nene", "غارسيا"] },
+      { name: "موسى سو", value: "2011", aliases: ["سو", "Sow"] },
+      { name: "مامادو نيانغ", value: "2010", aliases: ["نيانغ", "Niang"] }
+    ]
+  },
+  {
+    id: 72,
+    question: "آخر 10 لاعبين مختلفين فازوا بهداف الدوري المصري الممتاز",
+    category: "الدوري المصري",
+    type: "player",
+    answers: [
+      { name: "أحمد ياسر ريان", value: "2026", aliases: ["ريان", "Ahmed Yasser Rayan", "أحمد ياسر ريان"] },
+      { name: "وسام أبو علي", value: "2025", aliases: ["عاشور", "إمام", "Emam Ashour", "إمام عاشور"] },
+      { name: "وسام أبو علي", value: "2024", aliases: ["أبو علي", "وسام", "Wessam Abou Ali", "وسام ابو علي"] },
+      { name: "مابولولو", value: "2023", aliases: ["مابولولو", "Mabululu"] },
+      { name: "أحمد سيد زيزو", value: "2022", aliases: ["زيزو", "Zizo", "أحمد سيد زيزو"] },
+      { name: "محمد شريف", value: "2021", aliases: ["شريف", "محمد شريف"] },
+      { name: "عبد الله السعيد", value: "2020", aliases: ["السعيد", "عبدالله السعيد"] },
+      { name: "أحمد علي", value: "2019", aliases: ["أحمد علي", "احمد علي"] },
+      { name: "وليد أزارو", value: "2018", aliases: ["أزارو", "ازارو", "Azaro"] },
+      { name: "أحمد الشيخ", value: "2017", aliases: ["الشيخ", "أحمد الشيخ"] },
+      { name: "حسام باولو", value: "2016", aliases: ["باولو", "حسام سلامة"] }
+    ]
+  },
+  {
+    id: 73,
+    question: "آخر 10 لاعبين مختلفين فازوا بجائزة الكرة الذهبية (Ballon d'Or)",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "عثمان ديمبيلي", value: "2025", aliases: ["ديمبيلي", "عثمان ديمبيلي", "Dembele", "Ousmane Dembele", "Ousmane Dembélé"] },
+      { name: "رودري", value: "2024", aliases: ["رودري", "Rodri"] },
+      { name: "ليونيل ميسي", value: "2023", aliases: ["ميسي", "ليو ميسي", "Messi", "Lionel Messi"] },
+      { name: "كريم بنزيما", value: "2022", aliases: ["بنزيما", "Benzema", "Karim Benzema"] },
+      { name: "لوكا مودريتش", value: "2018", aliases: ["مودريتش", "Modric", "Luka Modric"] },
+      { name: "كريستيانو رونالدو", value: "2017", aliases: ["رونالدو", "كريستيانو", "CR7", "Cristiano Ronaldo"] },
+      { name: "كاكا", value: "2007", aliases: ["كاكا", "Kaka"] },
+      { name: "فابيو كانافارو", value: "2006", aliases: ["كانافارو", "Cannavaro", "Fabio Cannavaro"] },
+      { name: "رونالدينيو", value: "2005", aliases: ["رونالدينيو", "Ronaldinho"] },
+      { name: "أندري شيفتشينكو", value: "2004", aliases: ["شيفتشينكو", "Shevchenko", "Andriy Shevchenko"] }
+    ]
+  },
+  {
+    id: 74,
+    question: "آخر اللاعبين المختلفين الفائزين بجائزة أفضل لاعب في العالم من الفيفا (The Best FIFA Men's Player)",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "عثمان ديمبيلي", value: "2025", aliases: ["ديمبيلي", "عثمان ديمبيلي", "Dembele", "Ousmane Dembele", "Ousmane Dembélé"] },
+      { name: "فينيسيوس جونيور", value: "2024", aliases: ["فينيسيوس", "فيني", "Vinicius", "Vinicius Junior", "Vini"] },
+      { name: "ليونيل ميسي", value: "2023", aliases: ["ميسي", "ليو ميسي", "Messi", "Lionel Messi"] },
+      { name: "روبرت ليفاندوفسكي", value: "2021", aliases: ["ليفاندوفسكي", "ليفا", "Lewandowski", "Robert Lewandowski"] },
+      { name: "لوكا مودريتش", value: "2018", aliases: ["مودريتش", "Modric", "Luka Modric"] },
+      { name: "كريستيانو رونالدو", value: "2017", aliases: ["رونالدو", "كريستيانو", "CR7", "Cristiano Ronaldo"] }
+    ]
+  },
+  {
+    id: 75,
+    question: "آخر 10 لاعبين مختلفين فازوا بجائزة نقابة اللاعبين المحترفين (PFA) لأفضل لاعب في الدوري الإنجليزي الممتاز",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "محمد صلاح", value: "2025", aliases: ["صلاح", "Salah", "مو صلاح"] },
+      { name: "فيل فودين", value: "2024", aliases: ["فودين", "Foden", "فيل فودين"] },
+      { name: "إيرلينغ هالاند", value: "2023", aliases: ["هالاند", "Haaland", "ارلينغ هالاند"] },
+      { name: "كيفين دي بروين", value: "2021", aliases: ["دي بروين", "De Bruyne", "كيفن دي بروين"] },
+      { name: "فيرجيل فان دايك", value: "2019", aliases: ["فان دايك", "Van Dijk", "فيرجيل فان دايك"] },
+      { name: "نغولو كانتي", value: "2017", aliases: ["كانتي", "Kante", "نجولو كانتي"] },
+      { name: "رياض محرز", value: "2016", aliases: ["محرز", "Mahrez", "رياض محرز"] },
+      { name: "إيدن هازارد", value: "2015", aliases: ["هازارد", "Hazard", "إيدن هازارد"] },
+      { name: "لويس سواريز", value: "2014", aliases: ["سواريز", "Suarez", "لويس سواريز"] },
+      { name: "غاريث بيل", value: "2013", aliases: ["بيل", "Bale", "غاريث بيل"] }
+    ]
+  },
+  {
+    id: 76,
+    question: "اذكر جميع الفائزين المختلفين (9 لاعبين) بجائزة أفضل لاعب في الدوري الإسباني (LaLiga Best Player / MVP) منذ انطلاق الجائزة عام 2008",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "لامين يامال", value: "2026", aliases: ["يامال", "Yamal", "لامين يامال"] },
+      { name: "رافينيا", value: "2025", aliases: ["رافينيا", "Raphinha"] },
+      { name: "جود بيلينغهام", value: "2024", aliases: ["بيلينغهام", "بيلنجهام", "Bellingham"] },
+      { name: "مارك أندريه تير شتيغن", value: "2023", aliases: ["تير شتيغن", "Ter Stegen", "تير ستيغن"] },
+      { name: "كريم بنزيما", value: "2022", aliases: ["بنزيما", "Benzema", "كريم بنزيمة"] },
+      { name: "يان أوبلاك", value: "2021", aliases: ["أوبلاك", "Oblak", "جان أوبلاك"] },
+      { name: "ليونيل ميسي", value: "2019", aliases: ["ميسي", "Messi", "البرغوث", "ليو ميسي"] },
+      { name: "أنطوان غريزمان", value: "2016", aliases: ["غريزمان", "Griezmann"] },
+      { name: "كريستيانو رونالدو", value: "2014", aliases: ["رونالدو", "Ronaldo", "كريستيانو"] }
+    ]
+  },
+  {
+    id: 77,
+    question: "آخر 10 لاعبين مختلفين فازوا بجائزة لاعب الشهر في الدوري الإنجليزي الممتاز (حتى أبريل 2026)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "مورغان غيبس-وايت", value: "أبريل 2026", aliases: ["غيبس وايت", "Gibbs-White", "مورغان جيبس وايت"] },
+      { name: "برونو فرنانديز", value: "مارس 2026", aliases: ["برونو", "فرنانديز", "Bruno Fernandes"] },
+      { name: "أنطوان سيمينيو", value: "فبراير 2026", aliases: ["سيمينيو", "Semenyo", "أنطوان سيمينيو"] },
+      { name: "إيغور تياغو", value: "يناير 2026", aliases: ["تياغو", "Igor Thiago", "إيغور تياجو"] },
+      { name: "دومينيك كالفيرت-لوين", value: "ديسمبر 2025", aliases: ["كالفيرت لوين", "Calvert-Lewin", "دومينيك كالفيرت لوين"] },
+      { name: "براين مبيومو", value: "أكتوبر 2025", aliases: ["مبيومو", "Mbeumo", "براين مبيومو"] },
+      { name: "إيرلينغ هالاند", value: "سبتمبر 2025", aliases: ["هالاند", "Haaland", "ارلينغ هالاند"] },
+      { name: "جاك غريليش", value: "أغسطس 2025", aliases: ["غريليش", "Grealish", "جاك جريليش"] },
+      { name: "أليكسيس ماك أليستر", value: "أبريل 2025", aliases: ["ماك أليستر", "Mac Allister", "أليكسيس ماك أليستر"] },
+      { name: "محمد صلاح", value: "فبراير 2025", aliases: ["صلاح", "Salah", "مو صلاح"] }
+    ]
+  },
+  {
+    id: 78,
+    question: "جميع الفائزين المختلفين (8 حراس مرمى) بجائزة أفضل حارس مرمى في العالم من الفيفا (The Best FIFA Men's Goalkeeper) منذ انطلاق الجائزة عام 2017",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "جانلويجي دوناروما", value: "2025", aliases: ["دوناروما", "Donnarumma", "جيانلويجي دوناروما"] },
+      { name: "إميليانو مارتينيز", value: "2024", aliases: ["مارتينيز", "إميليانو مارتينيز", "Martinez"] },
+      { name: "إيديرسون موراييس", value: "2023", aliases: ["إيديرسون", "Ederson", "إيديرسون موراييس"] },
+      { name: "إدوارد ميندي", value: "2021", aliases: ["ميندي", "Mendy", "إدوارد ميندي"] },
+      { name: "مانويل نوير", value: "2020", aliases: ["نوير", "Neuer", "مانويل نوير"] },
+      { name: "أليسون بيكر", value: "2019", aliases: ["أليسون", "Alisson", "أليسون بيكر"] },
+      { name: "تيبو كورتوا", value: "2018", aliases: ["كورتوا", "Courtois", "تيبو كورتوا"] },
+      { name: "جانلويجي بوفون", value: "2017", aliases: ["بوفون", "Buffon", "جانلويجي بوفون"] }
+    ]
+  },
+  {
+    id: 79,
+    question: "آخر 10 لاعبين مختلفين فازوا بجائزة أفضل مهاجم / لاعب الموسم في دوري أبطال أوروبا (ملاحظة: الجائزة توقفت بين 2010 و2016)",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "خفيتشا كفاراتسخيليا", value: "2025-26", aliases: ["كفاراتسخيليا", "Kvaratskhelia", "خفيتشا كفاراتسخيليا"] },
+      { name: "عثمان ديمبلي", value: "2024-25", aliases: ["ديمبلي", "دومبيلي", "Dembele", "عثمان ديمبلي"] },
+      { name: "فينيسيوس جونيور", value: "2023-24", aliases: ["فينيسيوس", "Vinicius", "فينيسيوس جونيور"] },
+      { name: "رودري", value: "2022-23", aliases: ["رودري", "Rodri"] },
+      { name: "كريم بنزيما", value: "2021-22", aliases: ["بنزيما", "Benzema", "كريم بنزيمة"] },
+      { name: "إيرلينغ هالاند", value: "2020-21", aliases: ["هالاند", "Haaland", "ارلينغ هالاند"] },
+      { name: "روبرت ليفاندوفسكي", value: "2019-20", aliases: ["ليفاندوفسكي", "ليفا", "Lewandowski"] },
+      { name: "ليونيل ميسي", value: "2018-19", aliases: ["ميسي", "Messi", "البرغوث"] },
+      { name: "كريستيانو رونالدو", value: "2017-18", aliases: ["رونالدو", "CR7", "كريستيانو رونالدو"] },
+      { name: "دييغو ميليتو", value: "2009-10", aliases: ["ميليتو", "Milito", "دييغو ميليتو"] }
+    ]
+  },
+  {
+    id: 80,
+    question: "أكثر 10 مدربين تحقيقاً للألقاب في تاريخ كرة القدم (وفق إحصائيات 2026؛ الأرقام تقريبية وتختلف بحسب المصدر ومعايير احتساب الألقاب)",
+    category: "مدربون",
+    type: "manager",
+    answers: [
+      { name: "أليكس فيرغسون", value: "49 لقب", aliases: ["السير أليكس", "فيرغسون", "Ferguson"] },
+      { name: "بيب غوارديولا", value: "40 لقب", aliases: ["غوارديولا", "جوارديولا", "Guardiola", "بيب"] },
+      { name: "ميرتشا لوتشيسكو", value: "38 لقب", aliases: ["لوتشيسكو", "Lucescu"] },
+      { name: "فاليري لوبانوفسكي", value: "30 لقب", aliases: ["لوبانوفسكي", "Lobanovskyi"] },
+      { name: "كارلو أنشيلوتي", value: "30 لقب", aliases: ["أنشيلوتي", "Ancelotti", "كارليتو"] },
+      { name: "بيل ستروث", value: "30 لقب", aliases: ["ستروث", "Struth", "بيل ستروث"] },
+      { name: "جوزيه مورينيو", value: "26 لقب", aliases: ["مورينيو", "Mourinho", "السبيشال وان"] },
+      { name: "لويس فيليب سكولاري", value: "26 لقب", aliases: ["سكولاري", "Scolari"] },
+      { name: "جوك ستين", value: "26 لقب", aliases: ["ستين", "Stein"] },
+      { name: "أوتمار هيتسفيلد", value: "26 لقب", aliases: ["هيتسفيلد", "Hitzfeld"] }
+    ]
+  },
+  {
+    id: 81,
+    question: "آخر 10 فائزين بجائزة بوشكاش لأفضل هدف (FIFA Puskás Award)",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "سانتياغو مونتييل", value: "2025", aliases: ["مونتييل", "Montiel", "سانتياغو مونتييل"] },
+      { name: "أليخاندرو غارناتشو", value: "2024", aliases: ["غارناتشو", "Garnacho", "أليخاندرو غارناتشو"] },
+      { name: "غويليرم مادروغا", value: "2023", aliases: ["مادروغا", "Madruga"] },
+      { name: "مارسين أوليكسي", value: "2022", aliases: ["أوليكسي", "Oleksy"] },
+      { name: "إريك لاميلا", value: "2021", aliases: ["لاميلا", "Lamela"] },
+      { name: "سون هيونغ مين", value: "2020", aliases: ["سون", "Son"] },
+      { name: "دانييل زسوري", value: "2019", aliases: ["زسوري", "Zsóri"] },
+      { name: "محمد صلاح", value: "2018", aliases: ["صلاح", "Salah"] },
+      { name: "أوليفييه جيرو", value: "2017", aliases: ["جيرو", "Giroud"] },
+      { name: "محمد فايز صبري", value: "2016", aliases: ["صبري", "Subri"] }
+    ]
+  },
+  {
+    id: 82,
+    question: "أعلى 10 لاعبين أجراً في العالم (حسب فوربس 2026)",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "كريستيانو رونالدو", value: "300 مليون$", aliases: ["رونالدو", "CR7"] },
+      { name: "ليونيل ميسي", value: "140 مليون$", aliases: ["ميسي", "Messi"] },
+      { name: "كيليان مبابي", value: "95 مليون$", aliases: ["مبابي", "Mbappe"] },
+      { name: "إيرلينغ هالاند", value: "80 مليون$", aliases: ["هالاند", "Haaland"] },
+      { name: "فينيسيوس جونيور", value: "60 مليون$", aliases: ["فينيسيوس", "Vini"] },
+      { name: "محمد صلاح", value: "55 مليون$", aliases: ["صلاح", "Salah"] },
+      { name: "ساديو ماني", value: "54 مليون$", aliases: ["ماني", "Mane"] },
+      { name: "جود بيلينغهام", value: "44 مليون$", aliases: ["بيلينغهام", "بيلنجهام", "Bellingham"] },
+      { name: "لامين يامال", value: "43 مليون$", aliases: ["يامال", "Yamal"] },
+      { name: "هاري كين", value: "41 مليون$", aliases: ["كين", "Kane", "هاري كين"] }
+    ]
+  },
+  {
+    id: 83,
+    question: "آخر 10 أندية مختلفة فازت بالدوري الإيطالي (سيري آ) عبر التاريخ",
+    category: "الدوري الإيطالي",
+    type: "club",
+    answers: [
+      { name: "إنتر ميلان", value: "2026", aliases: ["الإنتر", "Inter", "إنترناسيونالي"] },
+      { name: "نابولي", value: "2025", aliases: ["Napoli"] },
+      { name: "ميلان", value: "2022", aliases: ["إي سي ميلان", "AC Milan"] },
+      { name: "يوفنتوس", value: "2020", aliases: ["اليوفي", "Juventus"] },
+      { name: "روما", value: "2001", aliases: ["إيه إس روما", "AS Roma"] },
+      { name: "لاتسيو", value: "2000", aliases: ["Lazio", "إس إس لاتسيو"] },
+      { name: "سامبدوريا", value: "1991", aliases: ["Sampdoria"] },
+      { name: "فيرونا", value: "1985", aliases: ["هيلاس فيرونا", "Verona", "Hellas Verona"] },
+      { name: "تورينو", value: "1976", aliases: ["Torino"] },
+      { name: "كالياري", value: "1970", aliases: ["Cagliari"] }
+    ]
+  },
+  {
+    id: 84,
+    question: "آخر 10 دول استضافت كأس أمم أوروبا (اليورو)",
+    category: "بطولات المنتخبات",
+    type: "country",
+    answers: [
+      { name: "ألمانيا", value: "2024", aliases: ["Germany"] },
+      { name: "فرنسا", value: "2016", aliases: ["France"] },
+      { name: "بولندا", value: "2012", aliases: ["Poland"] },
+      { name: "أوكرانيا", value: "2012", aliases: ["Ukraine"] },
+      { name: "النمسا", value: "2008", aliases: ["Austria"] },
+      { name: "سويسرا", value: "2008", aliases: ["Switzerland"] },
+      { name: "البرتغال", value: "2004", aliases: ["Portugal"] },
+      { name: "هولندا", value: "2000", aliases: ["Netherlands"] },
+      { name: "بلجيكا", value: "2000", aliases: ["Belgium"] },
+      { name: "إنجلترا", value: "1996", aliases: ["England"] }
+    ]
+  },
+  {
+    id: 85,
+    question: "آخر 10 منتخبات فازت بكأس أمم آسيا",
+    category: "بطولات المنتخبات",
+    type: "country",
+    answers: [
+      { name: "قطر", value: "2023", aliases: ["Qatar"] },
+      { name: "قطر", value: "2019", aliases: ["Qatar"] },
+      { name: "أستراليا", value: "2015", aliases: ["Australia"] },
+      { name: "اليابان", value: "2011", aliases: ["Japan"] },
+      { name: "العراق", value: "2007", aliases: ["Iraq"] },
+      { name: "اليابان", value: "2004", aliases: ["Japan"] },
+      { name: "اليابان", value: "2000", aliases: ["Japan"] },
+      { name: "السعودية", value: "1996", aliases: ["KSA", "Saudi Arabia"] },
+      { name: "اليابان", value: "1992", aliases: ["Japan"] },
+      { name: "السعودية", value: "1988", aliases: ["KSA"] }
+    ]
+  },
+  {
+    id: 86,
+    question: "أكثر 10 لاعبين صناعة للأهداف في تاريخ دوري أبطال أوروبا",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "ريان غيغز", value: "41 أسيست", aliases: ["غيغز", "Giggs", "جيجز"] },
+      { name: "كريستيانو رونالدو", value: "41 أسيست", aliases: ["رونالدو", "CR7"] },
+      { name: "ليونيل ميسي", value: "40 أسيست", aliases: ["ميسي", "Messi"] },
+      { name: "كيفن دي بروين", value: "35 أسيست", aliases: ["دي بروين", "De Bruyne"] },
+      { name: "أنخيل دي ماريا", value: "35 أسيست", aliases: ["دي ماريا", "Di Maria"] },
+      { name: "ديفيد بيكهام", value: "36 أسيست", aliases: ["بيكهام", "Beckham"] },
+      { name: "تشافي هيرنانديز", value: "30 أسيست", aliases: ["تشافي", "Xavi"] },
+      { name: "توماس مولر", value: "30 أسيست", aliases: ["مولر", "Muller"] },
+      { name: "أندريس إنييستا", value: "29 أسيست", aliases: ["إنييستا", "Iniesta"] },
+      { name: "نيمار", value: "33 أسيست", aliases: ["نيمار", "Neymar"] }
+    ]
+  },
+  {
+    id: 87,
+    question: "آخر 10 مدربين فازوا بدوري أبطال أوروبا",
+    category: "دوري أبطال أوروبا",
+    type: "manager",
+    answers: [
+      { name: "كارلو أنشيلوتي", value: "2024", aliases: ["أنشيلوتي", "Ancelotti", "كارليتو"] },
+      { name: "بيب غوارديولا", value: "2023", aliases: ["غوارديولا", "Guardiola", "بيب"] },
+      { name: "كارلو أنشيلوتي", value: "2022", aliases: ["أنشيلوتي", "Ancelotti"] },
+      { name: "توماس توخيل", value: "2021", aliases: ["توخيل", "Tuchel"] },
+      { name: "هانزي فليك", value: "2020", aliases: ["فليك", "Flick"] },
+      { name: "يورغن كلوب", value: "2019", aliases: ["كلوب", "Klopp", "يورجن"] },
+      { name: "زين الدين زيدان", value: "2018", aliases: ["زيدان", "Zidane", "زيزو"] },
+      { name: "زين الدين زيدان", value: "2017", aliases: ["زيدان", "Zidane"] },
+      { name: "زين الدين زيدان", value: "2016", aliases: ["زيدان", "Zidane"] },
+      { name: "لويس إنريكي", value: "2015", aliases: ["إنريكي", "Enrique"] }
+    ]
+  },
+  {
+    id: 88,
+    question: "أغلى 10 صفقات انتقال في تاريخ الدوري الإنجليزي الممتاز (البريميرليغ)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "إنزو فرنانديز", value: "121 مليون يورو", aliases: ["إنزو", "Fernandez"] },
+      { name: "جاك غريليش", value: "117 مليون يورو", aliases: ["غريليش", "جريليش", "Grealish"] },
+      { name: "ديكلان رايس", value: "116 مليون يورو", aliases: ["رايس", "Rice"] },
+      { name: "مويسيس كايسيدو", value: "116 مليون يورو", aliases: ["كايسيدو", "Caicedo"] },
+      { name: "روميلو لوكاكو", value: "113 مليون يورو", aliases: ["لوكاكو", "Lukaku"] },
+      { name: "بول بوغبا", value: "105 مليون يورو", aliases: ["بوغبا", "بوجبا", "Pogba"] },
+      { name: "أنتوني", value: "95 مليون يورو", aliases: ["أنتوني", "Antony"] },
+      { name: "يوشكو غفارديول", value: "90 مليون يورو", aliases: ["غفارديول", "جفارديول", "Gvardiol"] },
+      { name: "هاري ماغواير", value: "87 مليون يورو", aliases: ["ماغواير", "ماجواير", "Maguire"] },
+      { name: "جادون سانشو", value: "85 مليون يورو", aliases: ["سانشو", "Sancho"] }
+    ]
+  },
+  {
+    id: 89,
+    question: "أكثر 10 لاعبين صناعة للأهداف (أسيست) في تاريخ الدوري الإسباني",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "192 أسيست", aliases: ["ميسي", "Messi", "البرغوث"] },
+      { name: "تشافي هيرنانديز", value: "130 أسيست", aliases: ["تشافي", "Xavi"] },
+      { name: "كريم بنزيما", value: "119 أسيست", aliases: ["بنزيما", "Benzema", "الحكومة"] },
+      { name: "كريستيانو رونالدو", value: "96 أسيست", aliases: ["رونالدو", "CR7", "الدون"] },
+      { name: "كوكي", value: "88 أسيست", aliases: ["كوكي", "Koke"] },
+      { name: "أندريس إنييستا", value: "86 أسيست", aliases: ["إنييستا", "Iniesta", "الرسام"] },
+      { name: "أنطوان غريزمان", value: "85 أسيست", aliases: ["غريزمان", "جريزمان", "Griezmann"] },
+      { name: "داني ألفيس", value: "83 أسيست", aliases: ["ألفيس", "Alves"] },
+      { name: "إيفان راكيتيتش", value: "75 أسيست", aliases: ["راكيتيتش", "Rakitic"] },
+      { name: "أنخيل دي ماريا", value: "72 أسيست", aliases: ["دي ماريا", "Di Maria"] }
+    ]
+  },
+  {
+    id: 90,
+    question: "أول 10 منتخبات في تصنيف الفيفا العالمي (صدارة عام 2024)",
+    category: "بطولات المنتخبات",
+    type: "country",
+    answers: [
+      { name: "الأرجنتين", value: "المركز 1", aliases: ["Argentina", "التانغو"] },
+      { name: "فرنسا", value: "المركز 2", aliases: ["France", "الديوك"] },
+      { name: "إسبانيا", value: "المركز 3", aliases: ["Spain", "الماتادور"] },
+      { name: "إنجلترا", value: "المركز 4", aliases: ["England", "الأسود الثلاثة"] },
+      { name: "البرازيل", value: "المركز 5", aliases: ["Brazil", "السامبا"] },
+      { name: "بلجيكا", value: "المركز 6", aliases: ["Belgium", "الشياطين الحمر"] },
+      { name: "هولندا", value: "المركز 7", aliases: ["Netherlands", "الطواحين"] },
+      { name: "البرتغال", value: "المركز 8", aliases: ["Portugal", "برازيل أوروبا"] },
+      { name: "كولومبيا", value: "المركز 9", aliases: ["Colombia"] },
+      { name: "إيطاليا", value: "المركز 10", aliases: ["Italy", "الآتزوري"] }
+    ]
+  },
+  {
+    id: 91,
+    question: "آخر 10 أندية عربية فازت بدوري أبطال أفريقيا",
+    category: "كرة قدم إفريقية",
+    type: "club",
+    answers: [
+      { name: "الأهلي المصري", value: "2024", aliases: ["الأهلي", "Al Ahly", "المارد الأحمر"] },
+      { name: "الأهلي المصري", value: "2023", aliases: ["الأهلي", "Al Ahly", "نادي القرن"] },
+      { name: "الوداد المغربي", value: "2022", aliases: ["الوداد", "Wydad", "وداد الأمة"] },
+      { name: "الأهلي المصري", value: "2021", aliases: ["الأهلي", "Al Ahly"] },
+      { name: "الأهلي المصري", value: "2020", aliases: ["الأهلي", "Al Ahly", "القاضية ممكن"] },
+      { name: "الترجي التونسي", value: "2019", aliases: ["الترجي", "Esperance", "المكشخة"] },
+      { name: "الترجي التونسي", value: "2018", aliases: ["الترجي", "Esperance"] },
+      { name: "الوداد المغربي", value: "2017", aliases: ["الوداد", "Wydad"] },
+      { name: "وفاق سطيف الجزائري", value: "2014", aliases: ["وفاق سطيف", "Setif"] },
+      { name: "الأهلي المصري", value: "2013", aliases: ["الأهلي", "Al Ahly"] }
+    ]
+  },
+  {
+    id: 92,
+    question: "آخر 10 أندية فازت ببطولة كأس الكونفدرالية الأفريقية",
+    category: "كرة قدم إفريقية",
+    type: "club",
+    answers: [
+      { name: "الزمالك المصري", value: "2024", aliases: ["الزمالك", "Zamalek", "مدرسة الفن والهندسة"] },
+      { name: "اتحاد العاصمة الجزائري", value: "2023", aliases: ["اتحاد العاصمة", "USM Alger"] },
+      { name: "نهضة بركان المغربي", value: "2022", aliases: ["نهضة بركان", "Berkane"] },
+      { name: "الرجاء المغربي", value: "2021", aliases: ["الرجاء", "Raja", "النسور الخضر"] },
+      { name: "نهضة بركان المغربي", value: "2020", aliases: ["نهضة بركان", "Berkane"] },
+      { name: "الزمالك المصري", value: "2019", aliases: ["الزمالك", "Zamalek", "الفارس الأبيض"] },
+      { name: "الرجاء المغربي", value: "2018", aliases: ["الرجاء", "Raja"] },
+      { name: "تي بي مازيمبي", value: "2017", aliases: ["مازيمبي", "Mazembe"] },
+      { name: "تي بي مازيمبي", value: "2016", aliases: ["مازيمبي", "Mazembe"] },
+      { name: "النجم الساحلي التونسي", value: "2015", aliases: ["النجم الساحلي", "Etoile du Sahel"] }
+    ]
+  },
+  {
+    id: 93,
+    question: "أكثر 10 حراس مرمى حفاظاً على نظافة الشباك في تاريخ دوري أبطال أوروبا",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "مانويل نوير", value: "58 مباراة", aliases: ["نوير", "Neuer", "الجدار"] },
+      { name: "إيكر كاسياس", value: "57 مباراة", aliases: ["كاسياس", "Casillas", "القديس"] },
+      { name: "جانلويجي بوفون", value: "52 مباراة", aliases: ["بوفون", "Buffon", "جيجي"] },
+      { name: "إدوين فان دير سار", value: "51 مباراة", aliases: ["فان دير سار", "Van der Sar"] },
+      { name: "بيتر تشيك", value: "49 مباراة", aliases: ["تشيك", "Cech"] },
+      { name: "فيكتور فالديس", value: "45 مباراة", aliases: ["فالديس", "Valdes"] },
+      { name: "ديدا", value: "35 مباراة", aliases: ["ديدا", "Dida"] },
+      { name: "أوليفر كان", value: "34 مباراة", aliases: ["أوليفر كان", "Kahn"] },
+      { name: "مارك أندريه تير شتيغن", value: "33 مباراة", aliases: ["تير شتيغن", "Ter Stegen", "شتيجن"] },
+      { name: "يان أوبلاك", value: "33 مباراة", aliases: ["أوبلاك", "Oblak"] }
+    ]
+  },
+  {
+    id: 94,
+    question: "أكثر 10 لاعبين إفارقة تسجيلاً للأهداف في تاريخ الدوري الإنجليزي الممتاز (البريميرليغ)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "محمد صلاح", value: "157+ هدف", aliases: ["صلاح", "Salah", "مو صلاح"] },
+      { name: "ساديو ماني", value: "111 هدف", aliases: ["ماني", "Mane"] },
+      { name: "ديدييه دروغبا", value: "104 هدف", aliases: ["دروغبا", "Drogba", "دروجبا"] },
+      { name: "إيمانويل أديبايور", value: "97 هدف", aliases: ["أديبايور", "Adebayor"] },
+      { name: "ياكوبو إيغبيني", value: "95 هدف", aliases: ["ياكوبو", "Yakubu"] },
+      { name: "رياض محرز", value: "82 هدف", aliases: ["محرز", "Mahrez"] },
+      { name: "بيير إيميريك أوباميانغ", value: "69 هدف", aliases: ["أوباميانغ", "Aubameyang", "اوباميانج"] },
+      { name: "يحيى توريه", value: "62 هدف", aliases: ["يحيى توريه", "Yaya Toure", "يايا توريه"] },
+      { name: "نوانكو كانو", value: "54 هدف", aliases: ["كانو", "Kanu"] },
+      { name: "إيفان إيكوكو", value: "52 هدف", aliases: ["إيكوكو", "Ekoku"] }
+    ]
+  },
+  {
+    id: 95,
+    question: "آخر 10 أندية فازت بكأس السوبر الأوروبي",
+    category: "دوري أبطال أوروبا",
+    type: "club",
+    answers: [
+      { name: "ريال مدريد", value: "2024", aliases: ["الريال", "Real Madrid", "الملكي"] },
+      { name: "مانشستر سيتي", value: "2023", aliases: ["السيتي", "Man City", "مان سيتي"] },
+      { name: "ريال مدريد", value: "2022", aliases: ["الريال", "Real Madrid"] },
+      { name: "تشيلسي", value: "2021", aliases: ["البلوز", "Chelsea"] },
+      { name: "بايرن ميونخ", value: "2020", aliases: ["البايرن", "Bayern Munich"] },
+      { name: "ليفربول", value: "2019", aliases: ["الريدز", "Liverpool"] },
+      { name: "أتلتيكو مدريد", value: "2018", aliases: ["الأتليتي", "Atletico Madrid"] },
+      { name: "ريال مدريد", value: "2017", aliases: ["الريال", "Real Madrid"] },
+      { name: "ريال مدريد", value: "2016", aliases: ["الريال", "Real Madrid"] },
+      { name: "برشلونة", value: "2015", aliases: ["البرسا", "Barcelona", "برشلونه"] }
+    ]
+  },
+  {
+    id: 96,
+    question: "أكثر 10 منتخبات تحقيقاً لبطولة كأس أمم إفريقيا",
+    category: "كرة قدم إفريقية",
+    type: "country",
+    answers: [
+      { name: "مصر", value: "7 ألقاب", aliases: ["Egypt", "الفراعنة"] },
+      { name: "الكاميرون", value: "5 ألقاب", aliases: ["Cameroon", "الأسود غير المروضة"] },
+      { name: "غانا", value: "4 ألقاب", aliases: ["Ghana", "النجوم السوداء"] },
+      { name: "نيجيريا", value: "3 ألقاب", aliases: ["Nigeria", "النسور الخضر"] },
+      { name: "كوت ديفوار", value: "3 ألقاب", aliases: ["ساحل العاج", "Ivory Coast", "الأفيال"] },
+      { name: "الجزائر", value: "2 لقب", aliases: ["Algeria", "محاربو الصحراء"] },
+      { name: "الكونغو الديمقراطية", value: "2 لقب", aliases: ["DR Congo", "زائير"] },
+      { name: "السنغال", value: "1 لقب", aliases: ["Senegal", "أسود التيرانغا"] },
+      { name: "تونس", value: "1 لقب", aliases: ["Tunisia", "نسور قرطاج"] },
+      { name: "المغرب", value: "1 لقب", aliases: ["Morocco", "أسود الأطلس"] }
+    ]
+  },
+  {
+    id: 97,
+    question: "أكثر 10 لاعبين خوضاً للمباريات في تاريخ الدوري الإسباني (الليغا)",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "أندوني زوبيزاريتا", value: "622 مباراة", aliases: ["زوبيزاريتا", "Zubizarreta"] },
+      { name: "خواكين سانشيز", value: "622 مباراة", aliases: ["خواكين", "Joaquin"] },
+      { name: "راؤول غارسيا", value: "609 مباراة", aliases: ["راؤول غارسيا", "Garcia"] },
+      { name: "راؤول غونزاليس", value: "550 مباراة", aliases: ["راؤول", "Raul"] },
+      { name: "أوزيبيو ساكريستان", value: "543 مباراة", aliases: ["أوزيبيو", "Eusebio"] },
+      { name: "فرانسيسكو بويو", value: "542 مباراة", aliases: ["بويو", "Buyo"] },
+      { name: "سيرجيو راموس", value: "536 مباراة", aliases: ["راموس", "Ramos"] },
+      { name: "مانويل سانشيز", value: "523 مباراة", aliases: ["سانشيز", "Sanchis"] },
+      { name: "ليونيل ميسي", value: "520 مباراة", aliases: ["ميسي", "Messi"] },
+      { name: "خيسوس نافاس", value: "501 مباراة", aliases: ["نافاس", "Navas"] }
+    ]
+  },
+  {
+    id: 98,
+    question: "10 لاعبين فازوا بجائزة (أفضل لاعب شاب) في كأس العالم",
+    category: "كأس العالم",
+    type: "player",
+    answers: [
+      { name: "إنزو فرنانديز", value: "2022", aliases: ["إنزو", "Enzo"] },
+      { name: "كيليان مبابي", value: "2018", aliases: ["مبابي", "Mbappe"] },
+      { name: "بول بوغبا", value: "2014", aliases: ["بوغبا", "Pogba"] },
+      { name: "توماس مولر", value: "2010", aliases: ["مولر", "Muller"] },
+      { name: "لوكاس بودولسكي", value: "2006", aliases: ["بودولسكي", "Podolski"] },
+      { name: "لاندون دونوفان", value: "2002", aliases: ["دونوفان", "Donovan"] },
+      { name: "مايكل أوين", value: "1998", aliases: ["أوين", "Owen"] },
+      { name: "مارك أوفرمارس", value: "1994", aliases: ["أوفرمارس", "Overmars"] },
+      { name: "روبرت بروزينيكي", value: "1990", aliases: ["بروزينيكي", "Prosinecki"] },
+      { name: "إنزو شيفو", value: "1986", aliases: ["شيفو", "Scifo"] }
+    ]
+  },
+  {
+    id: 99,
+    question: "10 لاعبين حققوا جائزة (الحذاء الذهبي) لهداف كأس العالم",
+    category: "كأس العالم",
+    type: "player",
+    answers: [
+      { name: "كيليان مبابي", value: "2022", aliases: ["مبابي", "Mbappe"] },
+      { name: "هاري كين", value: "2018", aliases: ["كين", "Kane"] },
+      { name: "خاميس رودريغيز", value: "2014", aliases: ["خاميس", "James"] },
+      { name: "توماس مولر", value: "2010", aliases: ["مولر", "Muller"] },
+      { name: "ميروسلاف كلوزه", value: "2006", aliases: ["كلوزه", "Klose"] },
+      { name: "رونالدو الظاهرة", value: "2002", aliases: ["رونالدو", "الظاهرة", "R9"] },
+      { name: "دافور شوكر", value: "1998", aliases: ["شوكر", "Suker"] },
+      { name: "خريستو ستويتشكوف", value: "1994", aliases: ["ستويتشكوف", "Stoichkov"] },
+      { name: "سالفاتوري سكيلاتشي", value: "1990", aliases: ["سكيلاتشي", "Schillaci"] },
+      { name: "غاري لينيكر", value: "1986", aliases: ["لينيكر", "Lineker"] }
+    ]
+  },
+  {
+    id: 100,
+    question: "10 أندية إنجليزية مختلفة لعبت في دوري أبطال أوروبا (دور المجموعات)",
+    category: "أندية عالمية",
+    type: "club",
+    answers: [
+      { name: "مانشستر يونايتد", value: "بطل 3 مرات", aliases: ["اليونايتد", "Man United"] },
+      { name: "أرسنال", value: "تأهل متكرر", aliases: ["أرسنال", "Arsenal"] },
+      { name: "تشيلسي", value: "بطل مرتين", aliases: ["تشيلسي", "Chelsea"] },
+      { name: "ليفربول", value: "بطل 6 مرات", aliases: ["ليفربول", "Liverpool"] },
+      { name: "مانشستر سيتي", value: "بطل مرة واحدة", aliases: ["السيتي", "Man City"] },
+      { name: "توتنهام هوتسبير", value: "وصل للنهائي 2019", aliases: ["توتنهام", "Tottenham"] },
+      { name: "نيوكاسل يونايتد", value: "تأهل 2023", aliases: ["نيوكاسل", "Newcastle"] },
+      { name: "أستون فيلا", value: "بطل 1982 وتأهل 2024", aliases: ["أستون فيلا", "Aston Villa"] },
+      { name: "ليستر سيتي", value: "وصل ربع النهائي 2017", aliases: ["ليستر", "Leicester"] },
+      { name: "ليدز يونايتد", value: "وصل نصف النهائي 2001", aliases: ["ليدز", "Leeds"] }
+    ]
+  },
+  {
+    id: 101,
+    question: "10 لاعبين ارتدوا قميصي الغريمين (ريال مدريد وبرشلونة) عبر التاريخ",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "لويس فيغو", value: "انتقل 2000", aliases: ["فيغو", "Figo"] },
+      { name: "رونالدو الظاهرة (R9)", value: "برشلونة ثم ريال", aliases: ["رونالدو", "الظاهرة", "R9"] },
+      { name: "لويس إنريكي", value: "ريال ثم برشلونة", aliases: ["إنريكي", "Enrique"] },
+      { name: "مايكل لاودروب", value: "برشلونة ثم ريال", aliases: ["لاودروب", "Laudrup"] },
+      { name: "صامويل إيتو", value: "ريال ثم برشلونة", aliases: ["إيتو", "Eto'o"] },
+      { name: "خافيير سافيولا", value: "برشلونة ثم ريال", aliases: ["سافيولا", "Saviola"] },
+      { name: "بيرند شوستر", value: "برشلونة ثم ريال", aliases: ["شوستر", "Schuster"] },
+      { name: "جورجي هاجي", value: "ريال ثم برشلونة", aliases: ["هاجي", "Hagi"] },
+      { name: "روبرت بروزينيكي", value: "ريال ثم برشلونة", aliases: ["بروزينيكي", "Prosinecki"] },
+      { name: "جولين لوبيتيغي", value: "ريال ثم برشلونة", aliases: ["لوبيتيغي", "Lopetegui"] }
+    ]
+  },
+  {
+    id: 102,
+    question: "أكثر 10 أندية تتويجاً ببطولة كأس ليبرتادوريس (قارة أمريكا الجنوبية)",
+    category: "أندية عالمية",
+    type: "club",
+    answers: [
+      { name: "إنديبندينتي (الأرجنتين)", value: "7 ألقاب", aliases: ["إنديبندينتي", "Independiente"] },
+      { name: "بوكا جونيورز (الأرجنتين)", value: "6 ألقاب", aliases: ["بوكا", "Boca Juniors", "بوكا جونيورز"] },
+      { name: "بينارول (أوروغواي)", value: "5 ألقاب", aliases: ["بينارول", "Penarol"] },
+      { name: "ريفر بليت (الأرجنتين)", value: "4 ألقاب", aliases: ["ريفر بليت", "River Plate"] },
+      { name: "إستوديانتيس (الأرجنتين)", value: "4 ألقاب", aliases: ["إستوديانتيس", "Estudiantes"] },
+      { name: "أوليمبيا (باراغواي)", value: "3 ألقاب", aliases: ["أوليمبيا", "Olimpia"] },
+      { name: "ناسيونال (أوروغواي)", value: "3 ألقاب", aliases: ["ناسيونال", "Nacional"] },
+      { name: "ساو باولو (البرازيل)", value: "3 ألقاب", aliases: ["ساو باولو", "Sao Paulo"] },
+      { name: "بالميراس (البرازيل)", value: "3 ألقاب", aliases: ["بالميراس", "Palmeiras"] },
+      { name: "سانتوس (البرازيل)", value: "3 ألقاب", aliases: ["سانتوس", "Santos"] }
+    ]
+  },
+  {
+    id: 103,
+    question: "أكثر 10 لاعبين إنجليز تسجيلاً للأهداف في تاريخ البريميرليغ",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "آلان شيرر", value: "260 هدف", aliases: ["شيرر", "Shearer"] },
+      { name: "هاري كين", value: "213 هدف", aliases: ["كين", "Kane"] },
+      { name: "واين روني", value: "208 هدف", aliases: ["روني", "Rooney"] },
+      { name: "أندي كول", value: "187 هدف", aliases: ["كول", "Cole"] },
+      { name: "فرانك لامبارد", value: "177 هدف", aliases: ["لامبارد", "Lampard"] },
+      { name: "روبي فاولر", value: "163 هدف", aliases: ["فاولر", "Fowler"] },
+      { name: "جيرمين ديفو", value: "162 هدف", aliases: ["ديفو", "Defoe"] },
+      { name: "مايكل أوين", value: "150 هدف", aliases: ["أوين", "Owen"] },
+      { name: "ليس فيرديناند", value: "149 هدف", aliases: ["فيرديناند", "Ferdinand"] },
+      { name: "تيدي شيرينغهام", value: "146 هدف", aliases: ["شيرينغهام", "Sheringham"] }
+    ]
+  },
+  {
+    id: 104,
+    question: "أكثر 10 لاعبين أفارقة مشاركة في تاريخ دوري أبطال أوروبا (عدد المباريات)",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "ديدييه دروغبا", value: "94 مباراة", aliases: ["دروغبا", "Drogba"] },
+      { name: "محمد صلاح", value: "89 مباراة", aliases: ["صلاح", "Salah", "مو صلاح"] },
+      { name: "صامويل إيتو", value: "78 مباراة", aliases: ["إيتو", "Eto'o"] },
+      { name: "مايكل إيسيان", value: "76 مباراة", aliases: ["إيسيان", "Essien"] },
+      { name: "يايا توريه", value: "72 مباراة", aliases: ["يايا توريه", "Yaya Toure", "توريه"] },
+      { name: "كولو توريه", value: "67 مباراة", aliases: ["كولو توريه", "Kolo Toure"] },
+      { name: "ساديو ماني", value: "63 مباراة", aliases: ["ماني", "Mane"] },
+      { name: "نوانكو كانو", value: "60 مباراة", aliases: ["كانو", "Kanu"] },
+      { name: "سيدو كيتا", value: "59 مباراة", aliases: ["كيتا", "Keita"] },
+      { name: "رياض محرز", value: "55 مباراة", aliases: ["محرز", "Mahrez"] }
+    ]
+  },
+  {
+    id: 105,
+    question: "10 لاعبين فازوا بجائزة (الكرة الذهبية) دون تحقيق لقب دوري أبطال أوروبا مطلقاً",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "رونالدو الظاهرة (R9)", value: "الكرة الذهبية (1997، 2002)", aliases: ["رونالدو", "R9", "الظاهرة"] },
+      { name: "روبرتو باجيو", value: "الكرة الذهبية (1993)", aliases: ["باجيو", "Baggio"] },
+      { name: "لوثار ماتيوس", value: "الكرة الذهبية (1990)", aliases: ["ماتيوس", "Matthaus"] },
+      { name: "بافل نيدفيد", value: "الكرة الذهبية (2003)", aliases: ["نيدفيد", "Nedved"] },
+      { name: "فابيو كانافارو", value: "الكرة الذهبية (2006)", aliases: ["كانافارو", "Cannavaro"] },
+      { name: "مايكل أوين", value: "الكرة الذهبية (2001)", aliases: ["أوين", "Owen"] },
+      { name: "جورج ويا", value: "الكرة الذهبية (1995)", aliases: ["جورج ويا", "Weah", "ويا"] },
+      { name: "كيفن كيغان", value: "الكرة الذهبية (1978، 1979)", aliases: ["كيغان", "Keegan"] },
+      { name: "آلان سيمونسن", value: "الكرة الذهبية (1977)", aliases: ["سيمونسن", "Simonsen"] },
+      { name: "أولغ بلوخين", value: "الكرة الذهبية (1975)", aliases: ["بلوخين", "Blokhin"] }
+    ]
+  },
+  {
+    id: 106,
+    question: "10 أندية حققت دوري اللّا هزيمة (موسم كامل بالدوري بدون خسارة) تاريخياً",
+    category: "إحصائيات متنوعة",
+    type: "club",
+    answers: [
+      { name: "أرسنال", value: "إنجلترا (2004)", aliases: ["الجانرز", "Arsenal"] },
+      { name: "يوفنتوس", value: "إيطاليا (2012)", aliases: ["اليوفي", "Juventus"] },
+      { name: "ميلان", value: "إيطاليا (1992)", aliases: ["ميلان", "AC Milan"] },
+      { name: "باير ليفركوزن", value: "ألمانيا (2024)", aliases: ["ليفركوزن", "Leverkusen"] },
+      { name: "بريستون نورث إند", value: "إنجلترا (1889)", aliases: ["بريستون", "Preston"] },
+      { name: "سيلتيك", value: "اسكتلندا", aliases: ["سيلتيك", "Celtic"] },
+      { name: "رينجرز", value: "اسكتلندا", aliases: ["رينجرز", "Rangers"] },
+      { name: "بورتو", value: "البرتغال", aliases: ["بورتو", "Porto"] },
+      { name: "أياكس", value: "هولندا (1995)", aliases: ["أياكس", "Ajax"] },
+      { name: "بنفيكا", value: "البرتغال (1973)", aliases: ["بنفيكا", "Benfica"] }
+    ]
+  },
+  {
+    id: 107,
+    question: "أكثر 10 مدربين تحقيقاً للانتصارات في تاريخ الدوري الإنجليزي (البريميرليغ)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "السير أليكس فيرغسون", value: "528 فوز", aliases: ["فيرغسون", "Ferguson", "السير"] },
+      { name: "أرسين فينغر", value: "476 فوز", aliases: ["فينغر", "Wenger", "ارسين"] },
+      { name: "ديفيد مويس", value: "269 فوز", aliases: ["مويس", "Moyes"] },
+      { name: "هاري ريدناب", value: "236 فوز", aliases: ["ريدناب", "Redknapp"] },
+      { name: "بيب غوارديولا", value: "225 فوز", aliases: ["غوارديولا", "Guardiola", "بيب"] },
+      { name: "جوزيه مورينيو", value: "217 فوز", aliases: ["مورينيو", "Mourinho"] },
+      { name: "يورغن كلوب", value: "208 فوز", aliases: ["كلوب", "Klopp"] },
+      { name: "سام ألاردايس", value: "178 فوز", aliases: ["ألاردايس", "Allardyce", "سام"] },
+      { name: "مارك هيوز", value: "158 فوز", aliases: ["هيوز", "Hughes"] },
+      { name: "مارتن أونيل", value: "130 فوز", aliases: ["أونيل", "O'Neill"] }
+    ]
+  },
+  {
+    id: 108,
+    question: "أكثر 10 حراس مرمى خوضاً للمباريات الدولية مع منتخباتهم عبر التاريخ",
+    category: "بطولات المنتخبات",
+    type: "player",
+    answers: [
+      { name: "محمد الدعيع", value: "السعودية (178 مباراة)", aliases: ["الدعيع", "Al-Deayea"] },
+      { name: "جيانلويجي بوفون", value: "إيطاليا (176 مباراة)", aliases: ["بوفون", "Buffon"] },
+      { name: "إيكر كاسياس", value: "إسبانيا (167 مباراة)", aliases: ["كاسياس", "Casillas"] },
+      { name: "عصام الحضري", value: "مصر (159 مباراة)", aliases: ["الحضري", "El Hadary"] },
+      { name: "غييرمو أوتشوا", value: "المكسيك (150 مباراة)", aliases: ["أوتشوا", "Ochoa"] },
+      { name: "كلاوديو برافو", value: "تشيلي (150 مباراة)", aliases: ["برافو", "Bravo"] },
+      { name: "هوغو لوريس", value: "فرنسا (145 مباراة)", aliases: ["لوريس", "Lloris"] },
+      { name: "فرناندو موسليرا", value: "أوروغواي (133 مباراة)", aliases: ["موسليرا", "Muslera"] },
+      { name: "بيتر شمايكل", value: "الدنمارك (129 مباراة)", aliases: ["شمايكل", "Schmeichel"] },
+      { name: "بيتر تشيك", value: "التشيك (124 مباراة)", aliases: ["تشيك", "Cech"] }
+    ]
+  },
+  {
+    id: 109,
+    question: "أعلى 10 لاعبين قيمة سوقية في العالم (حسب موقع Transfermarkt لعام 2024)",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "جود بيلينغهام", value: "180 مليون يورو", aliases: ["بيلينغهام", "Bellingham"] },
+      { name: "كيليان مبابي", value: "180 مليون يورو", aliases: ["مبابي", "Mbappe"] },
+      { name: "إيرلينغ هالاند", value: "180 مليون يورو", aliases: ["هالاند", "Haaland"] },
+      { name: "فينيسيوس جونيور", value: "180 مليون يورو", aliases: ["فينيسيوس", "Vini"] },
+      { name: "فيل فودين", value: "150 مليون يورو", aliases: ["فودين", "Foden"] },
+      { name: "بوكايو ساكا", value: "140 مليون يورو", aliases: ["ساكا", "Saka"] },
+      { name: "فلوريان فيرتز", value: "130 مليون يورو", aliases: ["فيرتز", "Wirtz"] },
+      { name: "جمال موسيالا", value: "120 مليون يورو", aliases: ["موسيالا", "Musiala"] },
+      { name: "رودري", value: "120 مليون يورو", aliases: ["رودري", "Rodri"] },
+      { name: "ديكلان رايس", value: "110 مليون يورو", aliases: ["رايس", "Rice"] }
+    ]
+  },
+  {
+    id: 110,
+    question: "أكثر 10 منتخبات تتويجاً ببطولة كأس الأمم الإفريقية",
+    category: "بطولات المنتخبات",
+    type: "national",
+    answers: [
+      { name: "مصر", value: "7 ألقاب", aliases: ["مصر", "Egypt"] },
+      { name: "الكاميرون", value: "5 ألقاب", aliases: ["الكاميرون", "Cameroon"] },
+      { name: "غانا", value: "4 ألقاب", aliases: ["غانا", "Ghana"] },
+      { name: "نيجيريا", value: "3 ألقاب", aliases: ["نيجيريا", "Nigeria"] },
+      { name: "ساحل العاج (كوت ديفوار)", value: "3 ألقاب", aliases: ["ساحل العاج", "كوت ديفوار", "Ivory Coast"] },
+      { name: "الجزائر", value: "2 لقب", aliases: ["الجزائر", "Algeria"] },
+      { name: "الكونغو الديمقراطية", value: "2 لقب", aliases: ["الكونغو", "DR Congo"] },
+      { name: "تونس", value: "1 لقب", aliases: ["تونس", "Tunisia"] },
+      { name: "السنغال", value: "1 لقب", aliases: ["السنغال", "Senegal"] },
+      { name: "المغرب", value: "1 لقب", aliases: ["المغرب", "Morocco"] }
+    ]
+  },
+  {
+    id: 111,
+    question: "10 لاعبين فازوا بجائزة (بوشكاش) لأفضل هدف في العالم",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "كريستيانو رونالدو", value: "2009", aliases: ["رونالدو", "CR7"] },
+      { name: "حميد ألتينتوب", value: "2010", aliases: ["ألتينتوب", "Altintop"] },
+      { name: "نيمار جونيور", value: "2011", aliases: ["نيمار", "Neymar"] },
+      { name: "ميروسلاف ستوتش", value: "2012", aliases: ["ستوتش", "Stoch"] },
+      { name: "زلاتان إبراهيموفيتش", value: "2013", aliases: ["زلاتان", "Zlatan", "إبراهيموفيتش"] },
+      { name: "خاميس رودريغيز", value: "2014", aliases: ["خاميس", "James"] },
+      { name: "وينديل ليرا", value: "2015", aliases: ["وينديل", "Lira"] },
+      { name: "أوليفييه جيرو", value: "2017", aliases: ["جيرو", "Giroud"] },
+      { name: "محمد صلاح", value: "2018", aliases: ["صلاح", "Salah", "مو صلاح"] },
+      { name: "سون هيونغ مين", value: "2020", aliases: ["سون", "Son"] }
+    ]
+  },
+  {
+    id: 112,
+    question: "10 لاعبين سجلوا 4 أهداف (سوبر هاتريك) أو أكثر في مباراة واحدة بدوري أبطال أوروبا",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "ضد ليفركوزن وأرسنال", aliases: ["ميسي", "Messi"] },
+      { name: "لويز أدريانو", value: "ضد باتي بوريسوف", aliases: ["أدريانو", "Adriano"] },
+      { name: "إيرلينغ هالاند", value: "ضد لايبزيج", aliases: ["هالاند", "Haaland"] },
+      { name: "روبرت ليفاندوفسكي", value: "ضد ريال مدريد", aliases: ["ليفاندوفسكي", "Lewandowski", "ليفا"] },
+      { name: "كريستيانو رونالدو", value: "ضد مالمو", aliases: ["رونالدو", "CR7"] },
+      { name: "ماريو غوميز", value: "ضد بازل", aliases: ["غوميز", "Gomez"] },
+      { name: "بافيتيمبي غوميز", value: "ضد دينامو زغرب", aliases: ["بافيتيمبي غوميز", "Gomis"] },
+      { name: "زلاتان إبراهيموفيتش", value: "ضد أندرلخت", aliases: ["زلاتان", "Zlatan", "إبراهيموفيتش"] },
+      { name: "سيرج غنابري", value: "ضد توتنهام", aliases: ["غنابري", "Gnabry"] },
+      { name: "يوسيب إيليتشيتش", value: "ضد فالنسيا", aliases: ["إيليتشيتش", "Ilicic"] }
+    ]
+  },
+  {
+    id: 113,
+    question: "أكثر 10 أندية تتويجاً ببطولة دوري أبطال آسيا",
+    category: "أندية عالمية",
+    type: "club",
+    answers: [
+      { name: "الهلال السعودي", value: "4 ألقاب", aliases: ["الهلال", "Al Hilal"] },
+      { name: "بوهانغ ستيلرز الكوري", value: "3 ألقاب", aliases: ["بوهانغ", "بوهانج", "Pohang"] },
+      { name: "أوراوا رد دايموندز الياباني", value: "3 ألقاب", aliases: ["أوراوا", "Urawa"] },
+      { name: "العين الإماراتي", value: "2 لقب", aliases: ["العين", "Al Ain"] },
+      { name: "الاتحاد السعودي", value: "2 لقب", aliases: ["الاتحاد", "Al Ittihad"] },
+      { name: "السد القطري", value: "2 لقب", aliases: ["السد", "Al Sadd"] },
+      { name: "استقلال طهران الإيراني", value: "2 لقب", aliases: ["استقلال", "Esteghlal"] },
+      { name: "تشونبوك موتورز الكوري", value: "2 لقب", aliases: ["تشونبوك", "Jeonbuk"] },
+      { name: "سوون بلووينغز الكوري", value: "2 لقب", aliases: ["سوون", "Suwon"] },
+      { name: "غوانغجو الصيني", value: "2 لقب", aliases: ["غوانغجو", "Guangzhou"] }
+    ]
+  },
+  {
+    id: 114,
+    question: "أكثر 10 لاعبين خوضاً للمباريات في تاريخ نهائيات كأس العالم",
+    category: "كأس العالم",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "26 مباراة", aliases: ["ميسي", "Messi"] },
+      { name: "لوتار ماتيوس", value: "25 مباراة", aliases: ["ماتيوس", "Matthaus"] },
+      { name: "ميروسلاف كلوزه", value: "24 مباراة", aliases: ["كلوزه", "Klose"] },
+      { name: "باولو مالديني", value: "23 مباراة", aliases: ["مالديني", "Maldini"] },
+      { name: "كريستيانو رونالدو", value: "22 مباراة", aliases: ["رونالدو", "CR7"] },
+      { name: "دييغو مارادونا", value: "21 مباراة", aliases: ["مارادونا", "Maradona"] },
+      { name: "أوفه زيلر", value: "21 مباراة", aliases: ["زيلر", "Seeler"] },
+      { name: "فلاديسلاف زمودا", value: "21 مباراة", aliases: ["زمودا", "Zmuda"] },
+      { name: "كافو", value: "20 مباراة", aliases: ["كافو", "Cafu"] },
+      { name: "فيليب لام", value: "20 مباراة", aliases: ["لام", "Lahm"] }
+    ]
+  },
+  {
+    id: 115,
+    question: "أكبر 10 ملاعب كرة قدم في العالم (من حيث السعة الجماهيرية)",
+    category: "إحصائيات متنوعة",
+    type: "stadium",
+    answers: [
+      { name: "ملعب رونغرادو ماي دي (كوريا ش)", value: "114,000", aliases: ["رونغرادو", "ماي دي", "Rungrado"] },
+      { name: "ملعب كامب نو (إسبانيا)", value: "99,354", aliases: ["كامب نو", "Camp Nou"] },
+      { name: "ملعب البنك الوطني الأول (جنوب أفريقيا)", value: "94,736", aliases: ["FNB", "البنك الوطني الأول"] },
+      { name: "ملعب ويمبلي (إنجلترا)", value: "90,000", aliases: ["ويمبلي", "Wembley"] },
+      { name: "ملعب أزتيكا (المكسيك)", value: "87,523", aliases: ["أزتيكا", "Azteca"] },
+      { name: "ملعب بوكيت جليل (ماليزيا)", value: "87,411", aliases: ["بوكيت جليل", "Bukit Jalil"] },
+      { name: "ملعب برج العرب (مصر)", value: "86,000", aliases: ["برج العرب", "Borg El Arab"] },
+      { name: "ملعب لوسيل (قطر)", value: "88,966", aliases: ["لوسيل", "Lusail"] },
+      { name: "ملعب المونومنتال (الأرجنتين)", value: "84,567", aliases: ["المونومنتال", "Monumental"] },
+      { name: "ملعب سانتياغو برنابيو (إسبانيا)", value: "81,044", aliases: ["برنابيو", "Bernabeu"] }
+    ]
+  },
+  {
+    id: 116,
+    question: "أكثر 10 لاعبين برازيليين تسجيلاً للأهداف في دوري أبطال أوروبا",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "نيمار جونيور", value: "43 هدف", aliases: ["نيمار", "Neymar"] },
+      { name: "ريكاردو كاكا", value: "30 هدف", aliases: ["كاكا", "Kaka"] },
+      { name: "ريفالدو", value: "27 هدف", aliases: ["ريفالدو", "Rivaldo"] },
+      { name: "ماريو جارديل", value: "25 هدف", aliases: ["جارديل", "Jardel"] },
+      { name: "جيوفاني إلبر", value: "25 هدف", aliases: ["إلبر", "Elber"] },
+      { name: "غابرييل خيسوس", value: "24 هدف", aliases: ["خيسوس", "Jesus"] },
+      { name: "فينيسيوس جونيور", value: "24 هدف", aliases: ["فينيسيوس", "Vini", "فيني"] },
+      { name: "روبرتو فيرمينو", value: "22 هدف", aliases: ["فيرمينو", "Firmino"] },
+      { name: "لويز أدريانو", value: "21 هدف", aliases: ["لويز أدريانو", "Adriano"] },
+      { name: "روماريو", value: "20 هدف", aliases: ["روماريو", "Romario"] }
+    ]
+  },
+  {
+    id: 117,
+    question: "أول 10 لاعبين تتويجاً بجائزة الفتى الذهبي (Golden Boy) منذ 2003",
+    category: "جوائز عالمية",
+    type: "player",
+    answers: [
+      { name: "رافاييل فان دير فارت", value: "2003", aliases: ["فان دير فارت", "Van der Vaart"] },
+      { name: "واين روني", value: "2004", aliases: ["روني", "Rooney"] },
+      { name: "ليونيل ميسي", value: "2005", aliases: ["ميسي", "Messi"] },
+      { name: "سيسك فابريغاس", value: "2006", aliases: ["فابريغاس", "Fabregas"] },
+      { name: "سيرجيو أغويرو", value: "2007", aliases: ["أغويرو", "Aguero", "اجويرو"] },
+      { name: "أندرسون أوليفيرا", value: "2008", aliases: ["أندرسون", "Anderson"] },
+      { name: "ألكسندر باتو", value: "2009", aliases: ["باتو", "Pato"] },
+      { name: "ماريو بالوتيلي", value: "2010", aliases: ["بالوتيلي", "Balotelli"] },
+      { name: "ماريو غوتزه", value: "2011", aliases: ["غوتزه", "Gotze", "جوتزه"] },
+      { name: "إيسكو ألاركون", value: "2012", aliases: ["إيسكو", "Isco"] }
+    ]
+  },
+  {
+    id: 118,
+    question: "آخر 10 أندية فازت بالدوري الألماني (البوندسليغا) تاريخياً",
+    category: "أندية عالمية",
+    type: "club",
+    answers: [
+      { name: "باير ليفركوزن", value: "2024", aliases: ["ليفركوزن", "Leverkusen"] },
+      { name: "بايرن ميونخ", value: "2023", aliases: ["بايرن ميونخ", "Bayern"] },
+      { name: "بوروسيا دورتموند", value: "2012", aliases: ["دورتموند", "Dortmund"] },
+      { name: "فولفسبورغ", value: "2009", aliases: ["فولفسبورغ", "Wolfsburg"] },
+      { name: "شتوتغارت", value: "2007", aliases: ["شتوتغارت", "Stuttgart"] },
+      { name: "فيردر بريمن", value: "2004", aliases: ["فيردر بريمن", "Werder Bremen"] },
+      { name: "كايزرسلاوترن", value: "1998", aliases: ["كايزرسلاوترن", "Kaiserslautern"] },
+      { name: "هامبورغ", value: "1983", aliases: ["هامبورغ", "Hamburg"] },
+      { name: "كولن", value: "1978", aliases: ["كولن", "Koln", "Cologne"] },
+      { name: "بوروسيا مونشنغلادباخ", value: "1977", aliases: ["مونشنغلادباخ", "مونشنجلادباخ", "Monchengladbach"] }
+    ]
+  },
+  {
+    id: 119,
+    question: "أغلى 10 مدافعين في تاريخ كرة القدم",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "يوشكو غفارديول", value: "90 مليون", aliases: ["غفارديول", "جفارديول", "Gvardiol"] },
+      { name: "هاري ماغواير", value: "87 مليون", aliases: ["ماغواير", "Maguire"] },
+      { name: "ماتيس دي ليخت", value: "85 مليون", aliases: ["دي ليخت", "De Ligt"] },
+      { name: "فيرجيل فان دايك", value: "84.6 مليون", aliases: ["فان دايك", "Van Dijk"] },
+      { name: "ويسلي فوفانا", value: "80.4 مليون", aliases: ["فوفانا", "Fofana"] },
+      { name: "لوكاس هيرنانديز", value: "80 مليون", aliases: ["لوكاس هيرنانديز", "Hernandez"] },
+      { name: "أشرف حكيمي", value: "68 مليون", aliases: ["حكيمي", "Hakimi"] },
+      { name: "روبن دياز", value: "68 مليون", aliases: ["دياز", "روبن دياز", "Dias"] },
+      { name: "إيميريك لابورت", value: "65 مليون", aliases: ["لابورت", "Laporte"] },
+      { name: "جواو كانسيلو", value: "65 مليون", aliases: ["كانسيلو", "Cancelo"] }
+    ]
+  },
+  {
+    id: 120,
+    question: "آخر 10 دول استضافت بطولة كوبا أمريكا",
+    category: "بطولات المنتخبات",
+    type: "country",
+    answers: [
+      { name: "الولايات المتحدة", value: "2024", aliases: ["أمريكا", "USA"] },
+      { name: "البرازيل", value: "2021 / 2019", aliases: ["البرازيل", "Brazil"] },
+      { name: "تشيلي", value: "2015", aliases: ["تشيلي", "Chile"] },
+      { name: "الأرجنتين", value: "2011", aliases: ["الأرجنتين", "Argentina"] },
+      { name: "فنزويلا", value: "2007", aliases: ["فنزويلا", "Venezuela"] },
+      { name: "بيرو", value: "2004", aliases: ["بيرو", "Peru"] },
+      { name: "كولومبيا", value: "2001", aliases: ["كولومبيا", "Colombia"] },
+      { name: "باراغواي", value: "1999", aliases: ["باراغواي", "Paraguay"] },
+      { name: "بوليفيا", value: "1997", aliases: ["بوليفيا", "Bolivia"] },
+      { name: "أوروغواي", value: "1995", aliases: ["أوروغواي", "Uruguay"] }
+    ]
+  },
+  {
+    id: 121,
+    question: "أكثر 10 لاعبين فرنسيين تسجيلاً للأهداف في تاريخ المنتخب",
+    category: "بطولات المنتخبات",
+    type: "player",
+    answers: [
+      { name: "أوليفييه جيرو", value: "57 هدف", aliases: ["جيرو", "Giroud"] },
+      { name: "تييري هنري", value: "51 هدف", aliases: ["هنري", "Henry"] },
+      { name: "كيليان مبابي", value: "48 هدف", aliases: ["مبابي", "Mbappe"] },
+      { name: "أنطوان غريزمان", value: "44 هدف", aliases: ["غريزمان", "جريزمان", "Griezmann"] },
+      { name: "ميشيل بلاتيني", value: "41 هدف", aliases: ["بلاتيني", "Platini"] },
+      { name: "كريم بنزيما", value: "37 هدف", aliases: ["بنزيما", "Benzema", "الحكومة"] },
+      { name: "ديفيد تريزيغيه", value: "34 هدف", aliases: ["تريزيغيه", "تريزيجيه", "Trezeguet"] },
+      { name: "زين الدين زيدان", value: "31 هدف", aliases: ["زيدان", "Zidane", "زيزو"] },
+      { name: "جوست فونتين", value: "30 هدف", aliases: ["فونتين", "Fontaine"] },
+      { name: "جان بيير بابان", value: "30 هدف", aliases: ["بابان", "Papin"] }
+    ]
+  },
+  {
+    id: 122,
+    question: "أكثر 10 لاعبين ألمان تسجيلاً للأهداف في تاريخ المنتخب",
+    category: "بطولات المنتخبات",
+    type: "player",
+    answers: [
+      { name: "ميروسلاف كلوزه", value: "71 هدف", aliases: ["كلوزه", "Klose"] },
+      { name: "غيرد مولر", value: "68 هدف", aliases: ["مولر", "Muller", "جيرد مولر"] },
+      { name: "لوكاس بودولسكي", value: "49 هدف", aliases: ["بودولسكي", "Podolski"] },
+      { name: "رودي فولر", value: "47 هدف", aliases: ["فولر", "Voller"] },
+      { name: "يورغن كلينسمان", value: "47 هدف", aliases: ["كلينسمان", "Klinsmann"] },
+      { name: "كارل هاينز رومينيغه", value: "45 هدف", aliases: ["رومينيغه", "Rummenigge"] },
+      { name: "توماس مولر", value: "45 هدف", aliases: ["توماس مولر", "Muller", "مولر"] },
+      { name: "أوفه زيلر", value: "43 هدف", aliases: ["زيلر", "Seeler"] },
+      { name: "مايكل بالاك", value: "42 هدف", aliases: ["بالاك", "Ballack"] },
+      { name: "أوليفر بيرهوف", value: "37 هدف", aliases: ["بيرهوف", "Bierhoff"] }
+    ]
+  },
+  {
+    id: 123,
+    question: "آخر 10 أندية فازت بالدوري الفرنسي (Ligue 1) تاريخياً",
+    category: "أندية عالمية",
+    type: "club",
+    answers: [
+      { name: "باريس سان جيرمان", value: "2024", aliases: ["باريس", "PSG"] },
+      { name: "ليل", value: "2021", aliases: ["ليل", "Lille"] },
+      { name: "موناكو", value: "2017", aliases: ["موناكو", "Monaco"] },
+      { name: "مونبلييه", value: "2012", aliases: ["مونبلييه", "Montpellier"] },
+      { name: "مارسيليا", value: "2010", aliases: ["مارسيليا", "Marseille"] },
+      { name: "بوردو", value: "2009", aliases: ["بوردو", "Bordeaux"] },
+      { name: "ليون", value: "2008", aliases: ["ليون", "Lyon"] },
+      { name: "نانت", value: "2001", aliases: ["نانت", "Nantes"] },
+      { name: "لانس", value: "1998", aliases: ["لانس", "Lens"] },
+      { name: "أوكسير", value: "1996", aliases: ["أوكسير", "Auxerre"] }
+    ]
+  },
+  {
+    id: 124,
+    question: "أكثر 10 لاعبين إيطاليين تسجيلاً للأهداف في تاريخ المنتخب",
+    category: "بطولات المنتخبات",
+    type: "player",
+    answers: [
+      { name: "لويجي ريفا", value: "35 هدف", aliases: ["ريفا", "Riva"] },
+      { name: "جوزيبي مياتزا", value: "33 هدف", aliases: ["مياتزا", "Meazza"] },
+      { name: "سيلفيو بيولا", value: "30 هدف", aliases: ["بيولا", "Piola"] },
+      { name: "أليساندرو ديل بييرو", value: "27 هدف", aliases: ["ديل بييرو", "Del Piero"] },
+      { name: "روبرتو باجيو", value: "27 هدف", aliases: ["باجيو", "Baggio"] },
+      { name: "أليساندرو ألتوبيلي", value: "25 هدف", aliases: ["ألتوبيلي", "Altobelli"] },
+      { name: "فيليبو إنزاغي", value: "25 هدف", aliases: ["إنزاغي", "Inzaghi", "انزاجي"] },
+      { name: "أدولفو بالونسييري", value: "25 هدف", aliases: ["بالونسييري", "Baloncieri"] },
+      { name: "فرانشيسكو غراتسياني", value: "23 هدف", aliases: ["غراتسياني", "Graziani"] },
+      { name: "كريستيان فييري", value: "23 هدف", aliases: ["فييري", "Vieri"] }
+    ]
+  },
+  {
+    id: 125,
+    question: "أكثر 10 لاعبين خوضاً للمباريات في تاريخ الكلاسيكو (ريال مدريد ضد برشلونة)",
+    category: "الدوري الإسباني",
+    type: "player",
+    answers: [
+      { name: "سيرجيو بوسكيتس", value: "48 مباراة", aliases: ["بوسكيتس", "Busquets"] },
+      { name: "ليونيل ميسي", value: "45 مباراة", aliases: ["ميسي", "Messi"] },
+      { name: "سيرجيو راموس", value: "45 مباراة", aliases: ["راموس", "Ramos"] },
+      { name: "باكو خينتو", value: "42 مباراة", aliases: ["خينتو", "Gento"] },
+      { name: "مانويل سانشيز", value: "42 مباراة", aliases: ["سانشيز", "Sanchis"] },
+      { name: "تشافي هيرنانديز", value: "42 مباراة", aliases: ["تشافي", "Xavi"] },
+      { name: "جيرارد بيكيه", value: "40 مباراة", aliases: ["بيكيه", "Pique"] },
+      { name: "كريم بنزيما", value: "39 مباراة", aliases: ["بنزيما", "Benzema"] },
+      { name: "أندريس إنييستا", value: "38 مباراة", aliases: ["إنييستا", "Iniesta"] },
+      { name: "إيكر كاسياس", value: "37 مباراة", aliases: ["كاسياس", "Casillas"] }
+    ]
+  },
+  {
+    id: 126,
+    question: "أكثر 10 لاعبين تحقيقاً للبطولات الرسمية عبر التاريخ",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "44 بطولة", aliases: ["ميسي", "Messi", "البرغوث"] },
+      { name: "داني ألفيس", value: "43 بطولة", aliases: ["ألفيس", "Alves"] },
+      { name: "أندريس إنييستا", value: "37 بطولة", aliases: ["إنييستا", "Iniesta"] },
+      { name: "جيرارد بيكيه", value: "37 بطولة", aliases: ["بيكيه", "Pique"] },
+      { name: "ماكسويل", value: "37 بطولة", aliases: ["ماكسويل", "Maxwell"] },
+      { name: "ريان غيغز", value: "36 بطولة", aliases: ["غيغز", "Giggs"] },
+      { name: "كريستيانو رونالدو", value: "35 بطولة", aliases: ["رونالدو", "CR7", "الدون"] },
+      { name: "كيني دالغليش", value: "35 بطولة", aliases: ["دالغليش", "Dalglish"] },
+      { name: "فيتور بايا", value: "34 بطولة", aliases: ["فيتور بايا", "Baia"] },
+      { name: "تشافي هيرنانديز", value: "33 بطولة", aliases: ["تشافي", "Xavi"] }
+    ]
+  },
+  {
+    id: 127,
+    question: "أعلى 10 منتخبات قيمة تسويقية في العالم (حسب تقارير 2024)",
+    category: "بطولات المنتخبات",
+    type: "country",
+    answers: [
+      { name: "إنجلترا", value: "1.4 مليار", aliases: ["England"] },
+      { name: "فرنسا", value: "1.2 مليار", aliases: ["France"] },
+      { name: "البرتغال", value: "1 مليار", aliases: ["Portugal"] },
+      { name: "البرازيل", value: "1 مليار", aliases: ["Brazil"] },
+      { name: "إسبانيا", value: "900 مليون", aliases: ["Spain"] },
+      { name: "الأرجنتين", value: "850 مليون", aliases: ["Argentina"] },
+      { name: "ألمانيا", value: "800 مليون", aliases: ["Germany"] },
+      { name: "إيطاليا", value: "750 مليون", aliases: ["Italy"] },
+      { name: "هولندا", value: "600 مليون", aliases: ["Netherlands"] },
+      { name: "أوروغواي", value: "480 مليون", aliases: ["Uruguay"] }
+    ]
+  },
+  {
+    id: 128,
+    question: "أكثر 10 لاعبين إسبان تسجيلاً للأهداف في تاريخ المنتخب",
+    category: "بطولات المنتخبات",
+    type: "player",
+    answers: [
+      { name: "ديفيد فيا", value: "59 هدف", aliases: ["فيا", "Villa", "ديفيد فيا"] },
+      { name: "راؤول غونزاليس", value: "44 هدف", aliases: ["راؤول", "Raul"] },
+      { name: "فرناندو توريس", value: "38 هدف", aliases: ["توريس", "Torres", "النينو"] },
+      { name: "ألفارو موراتا", value: "36 هدف", aliases: ["موراتا", "Morata"] },
+      { name: "ديفيد سيلفا", value: "35 هدف", aliases: ["سيلفا", "Silva"] },
+      { name: "فرناندو هييرو", value: "29 هدف", aliases: ["هييرو", "Hierro"] },
+      { name: "فرناندو مورينتس", value: "27 هدف", aliases: ["مورينتس", "Morientes"] },
+      { name: "إيميليو بوتراغينيو", value: "26 هدف", aliases: ["بوتراغينيو", "Butragueno"] },
+      { name: "ألفريدو دي ستيفانو", value: "23 هدف", aliases: ["دي ستيفانو", "Di Stefano"] },
+      { name: "سيرجيو راموس", value: "23 هدف", aliases: ["راموس", "Ramos"] }
+    ]
+  },
+  {
+    id: 129,
+    question: "آخر 10 نسخ لبطولة كأس الرابطة الإنجليزية (2015-2024)",
+    category: "الدوري الإنجليزي",
+    type: "club",
+    answers: [
+      { name: "ليفربول", value: "2024", aliases: ["الريدز", "Liverpool"] },
+      { name: "مانشستر يونايتد", value: "2023", aliases: ["اليونايتد", "Man United"] },
+      { name: "ليفربول", value: "2022", aliases: ["الريدز", "Liverpool"] },
+      { name: "مانشستر سيتي", value: "2021", aliases: ["السيتي", "Man City"] },
+      { name: "مانشستر سيتي", value: "2020", aliases: ["السيتي", "Man City"] },
+      { name: "مانشستر سيتي", value: "2019", aliases: ["السيتي", "Man City"] },
+      { name: "مانشستر سيتي", value: "2018", aliases: ["السيتي", "Man City"] },
+      { name: "مانشستر يونايتد", value: "2017", aliases: ["اليونايتد", "Man United"] },
+      { name: "مانشستر سيتي", value: "2016", aliases: ["السيتي", "Man City"] },
+      { name: "تشيلسي", value: "2015", aliases: ["البلوز", "Chelsea"] }
+    ]
+  },
+  {
+    id: 130,
+    question: "أكثر 10 أندية فوزاً بكأس إيطاليا (Coppa Italia)",
+    category: "الدوري الإيطالي",
+    type: "club",
+    answers: [
+      { name: "يوفنتوس", value: "15 لقب", aliases: ["اليوفي", "Juventus"] },
+      { name: "روما", value: "9 ألقاب", aliases: ["ذئاب روما", "Roma"] },
+      { name: "إنتر ميلان", value: "9 ألقاب", aliases: ["الإنتر", "Inter"] },
+      { name: "لاتسيو", value: "7 ألقاب", aliases: ["نسور العاصمة", "Lazio"] },
+      { name: "فيورنتينا", value: "6 ألقاب", aliases: ["الفيولا", "Fiorentina"] },
+      { name: "نابولي", value: "6 ألقاب", aliases: ["نابولي", "Napoli"] },
+      { name: "تورينو", value: "5 ألقاب", aliases: ["تورينو", "Torino"] },
+      { name: "ميلان", value: "5 ألقاب", aliases: ["إي سي ميلان", "AC Milan"] },
+      { name: "سامبدوريا", value: "4 ألقاب", aliases: ["سامبدوريا", "Sampdoria"] },
+      { name: "بارما", value: "3 ألقاب", aliases: ["بارما", "Parma"] }
+    ]
+  },
+  {
+    id: 131,
+    question: "أكثر 10 لاعبين حصولاً على البطاقات الحمراء في تاريخ الدوري الإنجليزي (البريميرليغ)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "ريتشارد دان", value: "8 بطاقات", aliases: ["دان", "Dunne"] },
+      { name: "دنكان فيرغسون", value: "8 بطاقات", aliases: ["فيرغسون", "Ferguson"] },
+      { name: "باتريك فييرا", value: "8 بطاقات", aliases: ["فييرا", "Vieira"] },
+      { name: "روي كين", value: "7 بطاقات", aliases: ["كين", "Keane"] },
+      { name: "فيني جونز", value: "7 بطاقات", aliases: ["فيني جونز", "Jones"] },
+      { name: "لي كاترمول", value: "7 بطاقات", aliases: ["كاترمول", "Cattermole"] },
+      { name: "آلان سميث", value: "7 بطاقات", aliases: ["آلان سميث", "Smith"] },
+      { name: "جوي بارتون", value: "6 بطاقات", aliases: ["بارتون", "Barton"] },
+      { name: "غاريث باري", value: "6 بطاقات", aliases: ["باري", "Barry"] },
+      { name: "نيمانيا فيديتش", value: "6 بطاقات", aliases: ["فيديتش", "Vidic"] }
+    ]
+  },
+  {
+    id: 132,
+    question: "أكثر 10 لاعبين صناعة للأهداف (أسيست) في تاريخ كرة القدم",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "374+ أسيست", aliases: ["ميسي", "Messi"] },
+      { name: "توماس مولر", value: "300+ أسيست", aliases: ["مولر", "Muller"] },
+      { name: "لويس سواريز", value: "297+ أسيست", aliases: ["سواريز", "Suarez"] },
+      { name: "كريستيانو رونالدو", value: "283+ أسيست", aliases: ["رونالدو", "CR7"] },
+      { name: "أنخيل دي ماريا", value: "282+ أسيست", aliases: ["دي ماريا", "Di Maria"] },
+      { name: "نيمار جونيور", value: "276+ أسيست", aliases: ["نيمار", "Neymar"] },
+      { name: "كيفن دي بروين", value: "275+ أسيست", aliases: ["دي بروين", "De Bruyne"] },
+      { name: "فرانك ريبيري", value: "246 أسيست", aliases: ["ريبيري", "Ribery"] },
+      { name: "تشافي هيرنانديز", value: "236 أسيست", aliases: ["تشافي", "Xavi"] },
+      { name: "سيسك فابريغاس", value: "234 أسيست", aliases: ["فابريغاس", "Fabregas"] }
+    ]
+  },
+  {
+    id: 133,
+    question: "أسرع 10 لاعبين وصولاً لـ 100 هدف في تاريخ البريميرليغ (حسب عدد المباريات)",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "آلان شيرر", value: "124 مباراة", aliases: ["شيرر", "Shearer"] },
+      { name: "هاري كين", value: "141 مباراة", aliases: ["كين", "Kane"] },
+      { name: "سيرجيو أغويرو", value: "147 مباراة", aliases: ["أغويرو", "Aguero", "اجويرو"] },
+      { name: "تييري هنري", value: "160 مباراة", aliases: ["هنري", "Henry"] },
+      { name: "محمد صلاح", value: "162 مباراة", aliases: ["صلاح", "Salah", "مو صلاح"] },
+      { name: "روبي فاولر", value: "175 مباراة", aliases: ["فاولر", "Fowler"] },
+      { name: "ليس فيرديناند", value: "178 مباراة", aliases: ["فيرديناند", "Ferdinand"] },
+      { name: "مايكل أوين", value: "185 مباراة", aliases: ["أوين", "Owen"] },
+      { name: "آندي كول", value: "185 مباراة", aliases: ["كول", "Cole"] },
+      { name: "روبن فان بيرسي", value: "197 مباراة", aliases: ["فان بيرسي", "Van Persie"] }
+    ]
+  },
+  {
+    id: 134,
+    question: "أكبر 10 لاعبين سناً تسجيلاً للأهداف في تاريخ دوري أبطال أوروبا",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "بيبي", value: "40 سنة و290 يوماً", aliases: ["بيبي", "Pepe"] },
+      { name: "فرانشيسكو توتي", value: "38 سنة و59 يوماً", aliases: ["توتي", "Totti"] },
+      { name: "رايان غيغز", value: "37 سنة و290 يوماً", aliases: ["غيغز", "Giggs", "جيجز"] },
+      { name: "سيرجيو راموس", value: "37 سنة و244 يوماً", aliases: ["راموس", "Ramos"] },
+      { name: "فيليبو إنزاغي", value: "37 سنة و87 يوماً", aliases: ["إنزاغي", "Inzaghi", "انزاجي"] },
+      { name: "خافيير زانيتي", value: "37 سنة و72 يوماً", aliases: ["زانيتي", "Zanetti"] },
+      { name: "لوكا مودريتش", value: "37 سنة و54 يوماً", aliases: ["مودريتش", "Modric"] },
+      { name: "لوران بلان", value: "36 سنة و338 يوماً", aliases: ["بلان", "Blanc"] },
+      { name: "باولو مالديني", value: "36 سنة و333 يوماً", aliases: ["مالديني", "Maldini"] },
+      { name: "أوليفييه جيرو", value: "36 سنة و300 يوماً", aliases: ["جيرو", "Giroud"] }
+    ]
+  },
+  {
+    id: 135,
+    question: "أكثر 10 لاعبين تسجيلاً للأهداف في (نسخة واحدة فقط) من كأس العالم",
+    category: "كأس العالم",
+    type: "player",
+    answers: [
+      { name: "جوست فونتين", value: "13 هدف (1958)", aliases: ["فونتين", "Fontaine"] },
+      { name: "ساندور كوتشيس", value: "11 هدف (1954)", aliases: ["كوتشيس", "Kocsis"] },
+      { name: "غيرد مولر", value: "10 أهداف (1970)", aliases: ["مولر", "Muller"] },
+      { name: "أوزيبيو", value: "9 أهداف (1966)", aliases: ["أوزيبيو", "Eusebio"] },
+      { name: "غييرمو ستابيلي", value: "8 أهداف (1930)", aliases: ["ستابيلي", "Stabile"] },
+      { name: "أديمير", value: "8 أهداف (1950)", aliases: ["أديمير", "Ademir"] },
+      { name: "رونالدو الظاهرة", value: "8 أهداف (2002)", aliases: ["رونالدو", "الظاهرة", "R9"] },
+      { name: "كيليان مبابي", value: "8 أهداف (2022)", aliases: ["مبابي", "Mbappe"] },
+      { name: "ليونيداس", value: "7 أهداف (1938)", aliases: ["ليونيداس", "Leonidas"] },
+      { name: "غجيغوج لاتو", value: "7 أهداف (1974)", aliases: ["لاتو", "Lato"] }
+    ]
+  },
+  {
+    id: 136,
+    question: "أعلى 10 لاعبي كرة قدم أجراً في العالم (حسب تقرير فوربس 2024)",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "كريستيانو رونالدو", value: "285 مليون دولار", aliases: ["رونالدو", "CR7"] },
+      { name: "ليونيل ميسي", value: "135 مليون دولار", aliases: ["ميسي", "Messi"] },
+      { name: "نيمار جونيور", value: "110 مليون دولار", aliases: ["نيمار", "Neymar"] },
+      { name: "كريم بنزيما", value: "104 مليون دولار", aliases: ["بنزيما", "Benzema"] },
+      { name: "كيليان مبابي", value: "90 مليون دولار", aliases: ["مبابي", "Mbappe"] },
+      { name: "إيرلينغ هالاند", value: "60 مليون دولار", aliases: ["هالاند", "Haaland"] },
+      { name: "فينيسيوس جونيور", value: "55 مليون دولار", aliases: ["فينيسيوس", "Vini"] },
+      { name: "محمد صلاح", value: "53 مليون دولار", aliases: ["صلاح", "Salah"] },
+      { name: "ساديو ماني", value: "52 مليون دولار", aliases: ["ماني", "Mane"] },
+      { name: "كيفن دي بروين", value: "39 مليون دولار", aliases: ["دي بروين", "De Bruyne"] }
+    ]
+  },
+  {
+    id: 137,
+    question: "أكثر 10 أندية إنجليزية تتويجاً بالبطولات الكبرى (محلياً وقارياً)",
+    category: "الدوري الإنجليزي",
+    type: "club",
+    answers: [
+      { name: "ليفربول", value: "68 بطولة", aliases: ["الريدز", "Liverpool"] },
+      { name: "مانشستر يونايتد", value: "67 بطولة", aliases: ["اليونايتد", "Man United"] },
+      { name: "أرسنال", value: "48 بطولة", aliases: ["الجانرز", "Arsenal"] },
+      { name: "مانشستر سيتي", value: "34 بطولة", aliases: ["السيتي", "Man City"] },
+      { name: "تشيلسي", value: "34 بطولة", aliases: ["البلوز", "Chelsea"] },
+      { name: "أستون فيلا", value: "25 بطولة", aliases: ["أستون فيلا", "Aston Villa"] },
+      { name: "توتنهام هوتسبير", value: "24 بطولة", aliases: ["توتنهام", "Tottenham"] },
+      { name: "إيفرتون", value: "24 بطولة", aliases: ["إيفرتون", "Everton"] },
+      { name: "نيوكاسل يونايتد", value: "14 بطولة", aliases: ["نيوكاسل", "Newcastle"] },
+      { name: "نوتنغهام فورست", value: "13 بطولة", aliases: ["نوتنغهام", "Nottingham"] }
+    ]
+  },
+  {
+    id: 138,
+    question: "أكثر 10 لاعبين إهداراً لركلات الجزاء في القرن الـ 21 (بسبب كثرة تسديداتهم)",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "31 ركلة ضائعة", aliases: ["ميسي", "Messi"] },
+      { name: "كريستيانو رونالدو", value: "30 ركلة ضائعة", aliases: ["رونالدو", "CR7"] },
+      { name: "فرانشيسكو توتي", value: "20 ركلة ضائعة", aliases: ["توتي", "Totti"] },
+      { name: "زلاتان إبراهيموفيتش", value: "17 ركلة ضائعة", aliases: ["زلاتان", "إبراهيموفيتش", "Zlatan"] },
+      { name: "أنطونيو دي ناتالي", value: "15 ركلة ضائعة", aliases: ["دي ناتالي", "Di Natale"] },
+      { name: "إدينسون كافاني", value: "14 ركلة ضائعة", aliases: ["كافاني", "Cavani"] },
+      { name: "واين روني", value: "13 ركلة ضائعة", aliases: ["روني", "Rooney"] },
+      { name: "نيمار جونيور", value: "13 ركلة ضائعة", aliases: ["نيمار", "Neymar"] },
+      { name: "رونالدينيو", value: "13 ركلة ضائعة", aliases: ["رونالدينيو", "Ronaldinho"] },
+      { name: "سيرجيو أغويرو", value: "12 ركلة ضائعة", aliases: ["أغويرو", "Aguero", "اجويرو"] }
+    ]
+  },
+  {
+    id: 139,
+    question: "أكثر 10 لاعبين تسجيلاً للأهداف العكسية (في مرماهم) في تاريخ الدوري الإنجليزي",
+    category: "الدوري الإنجليزي",
+    type: "player",
+    answers: [
+      { name: "ريتشارد دان", value: "10 أهداف", aliases: ["دان", "Dunne", "ريتشارد"] },
+      { name: "جيمي كاراغر", value: "7 أهداف", aliases: ["كاراغر", "Carragher"] },
+      { name: "مارتن سكرتيل", value: "7 أهداف", aliases: ["سكرتيل", "Skrtel"] },
+      { name: "فيل جاغيلكا", value: "7 أهداف", aliases: ["جاغيلكا", "Jagielka"] },
+      { name: "ريان شوكروس", value: "6 أهداف", aliases: ["شوكروس", "Shawcross"] },
+      { name: "ويس براون", value: "6 أهداف", aliases: ["براون", "Brown"] },
+      { name: "لويس دانك", value: "6 أهداف", aliases: ["دانك", "Dunk"] },
+      { name: "فرانك سنكلير", value: "6 أهداف", aliases: ["سنكلير", "Sinclair"] },
+      { name: "جوني إيفانز", value: "6 أهداف", aliases: ["إيفانز", "Evans"] },
+      { name: "هاري ماغواير", value: "5 أهداف", aliases: ["ماغواير", "Maguire"] }
+    ]
+  },
+  {
+    id: 140,
+    question: "أغلى 10 صفقات انتقال للاعبين (تحت سن 21 عاماً) في تاريخ كرة القدم",
+    category: "إحصائيات متنوعة",
+    type: "player",
+    answers: [
+      { name: "كيليان مبابي", value: "180 مليون (إلى باريس)", aliases: ["مبابي", "Mbappe"] },
+      { name: "جواو فيليكس", value: "127 مليون (إلى أتلتيكو)", aliases: ["فيليكس", "جواو فيليكس", "Felix"] },
+      { name: "عثمان ديمبيلي", value: "105 مليون (إلى برشلونة)", aliases: ["ديمبيلي", "Dembele"] },
+      { name: "جود بيلينغهام", value: "103 مليون (إلى الريال)", aliases: ["بيلينغهام", "Bellingham", "جود"] },
+      { name: "ماتيس دي ليخت", value: "85.5 مليون (إلى يوفنتوس)", aliases: ["دي ليخت", "De Ligt"] },
+      { name: "جادون سانشو", value: "85 مليون (إلى اليونايتد)", aliases: ["سانشو", "Sancho"] },
+      { name: "روميو لافيا", value: "68 مليون (إلى تشيلسي)", aliases: ["لافيا", "Lavia"] },
+      { name: "كريستيان بوليسيتش", value: "64 مليون (إلى تشيلسي)", aliases: ["بوليسيتش", "Pulisic"] },
+      { name: "إندريك", value: "60 مليون (إلى الريال)", aliases: ["إندريك", "اندريك", "Endrick"] },
+      { name: "أنتوني مارسيال", value: "60 مليون (إلى اليونايتد)", aliases: ["مارسيال", "Martial"] }
+    ]
+  },
+  {
+    id: 141,
+    question: "آخر 10 دول استضافت نهائيات كأس العالم (1986-2022)",
+    category: "كأس العالم",
+    type: "country",
+    answers: [
+      { name: "قطر", value: "2022", aliases: ["Qatar"] },
+      { name: "روسيا", value: "2018", aliases: ["Russia"] },
+      { name: "البرازيل", value: "2014", aliases: ["Brazil"] },
+      { name: "جنوب أفريقيا", value: "2010", aliases: ["South Africa"] },
+      { name: "ألمانيا", value: "2006", aliases: ["Germany"] },
+      { name: "اليابان وكوريا الجنوبية", value: "2002", aliases: ["اليابان", "كوريا الجنوبية"] },
+      { name: "فرنسا", value: "1998", aliases: ["France"] },
+      { name: "الولايات المتحدة", value: "1994", aliases: ["أمريكا", "USA"] },
+      { name: "إيطاليا", value: "1990", aliases: ["Italy"] },
+      { name: "المكسيك", value: "1986", aliases: ["Mexico"] }
+    ]
+  },
+  {
+    id: 142,
+    question: "أكثر 10 مدربين فوزاً بلقب دوري أبطال أوروبا تاريخياً",
+    category: "دوري أبطال أوروبا",
+    type: "player",
+    answers: [
+      { name: "كارلو أنشيلوتي", value: "5 ألقاب", aliases: ["أنشيلوتي", "Ancelotti"] },
+      { name: "بيب غوارديولا", value: "3 ألقاب", aliases: ["غوارديولا", "Guardiola", "جوارديولا"] },
+      { name: "زين الدين زيدان", value: "3 ألقاب", aliases: ["زيدان", "Zidane"] },
+      { name: "بوب بيزلي", value: "3 ألقاب", aliases: ["بيزلي", "Paisley"] },
+      { name: "جوزيه مورينيو", value: "2 ألقاب", aliases: ["مورينيو", "Mourinho"] },
+      { name: "أليكس فيرغسون", value: "2 ألقاب", aliases: ["فيرغسون", "Ferguson", "السير"] },
+      { name: "يوب هاينكس", value: "2 ألقاب", aliases: ["هاينكس", "Heynckes"] },
+      { name: "أوتمار هيتسفيلد", value: "2 ألقاب", aliases: ["هيتسفيلد", "Hitzfeld"] },
+      { name: "فيسنتي ديل بوسكي", value: "2 ألقاب", aliases: ["ديل بوسكي", "Del Bosque"] },
+      { name: "أريغو ساكي", value: "2 ألقاب", aliases: ["ساكي", "Sacchi"] }
+    ]
+  },
+  {
+    id: 143,
+    question: "أكثر 10 أندية تتويجاً ببطولة كأس أمم إفريقيا",
+    category: "كرة قدم إفريقية",
+    type: "country",
+    answers: [
+      { name: "مصر", value: "7 ألقاب", aliases: ["مصر", "Egypt"] },
+      { name: "الكاميرون", value: "5 ألقاب", aliases: ["الكاميرون", "Cameroon"] },
+      { name: "غانا", value: "4 ألقاب", aliases: ["غانا", "Ghana"] },
+      { name: "نيجيريا", value: "3 ألقاب", aliases: ["نيجيريا", "Nigeria"] },
+      { name: "ساحل العاج (كوت ديفوار)", value: "3 ألقاب", aliases: ["ساحل العاج", "كوت ديفوار", "Ivory Coast"] },
+      { name: "الجزائر", value: "2 لقب", aliases: ["الجزائر", "Algeria"] },
+      { name: "الكونغو الديمقراطية", value: "2 لقب", aliases: ["الكونغو", "DR Congo"] },
+      { name: "تونس", value: "1 لقب", aliases: ["تونس", "Tunisia"] },
+      { name: "السنغال", value: "1 لقب", aliases: ["السنغال", "Senegal"] },
+      { name: "المغرب", value: "1 لقب", aliases: ["المغرب", "Morocco"] }
+    ]
+  },
+  {
+    id: 144,
+    question: "أكثر 10 لاعبين خوضاً للمباريات في تاريخ نهائيات كأس العالم",
+    category: "كأس العالم",
+    type: "player",
+    answers: [
+      { name: "ليونيل ميسي", value: "26 مباراة", aliases: ["ميسي", "Messi"] },
+      { name: "لوتار ماتيوس", value: "25 مباراة", aliases: ["ماتيوس", "Matthaus"] },
+      { name: "ميروسلاف كلوزه", value: "24 مباراة", aliases: ["كلوزه", "Klose"] },
+      { name: "باولو مالديني", value: "23 مباراة", aliases: ["مالديني", "Maldini"] },
+      { name: "كريستيانو رونالدو", value: "22 مباراة", aliases: ["رونالدو", "CR7"] },
+      { name: "دييغو مارادونا", value: "21 مباراة", aliases: ["مارادونا", "Maradona"] },
+      { name: "أوفه زيلر", value: "21 مباراة", aliases: ["زيلر", "Seeler"] },
+      { name: "فلاديسلاف زمودا", value: "21 مباراة", aliases: ["زمودا", "Zmuda"] },
+      { name: "كافو", value: "20 مباراة", aliases: ["كافو", "Cafu"] },
+      { name: "فيليب لام", value: "20 مباراة", aliases: ["لام", "Lahm"] }
+    ]
   }
 ];
+
 
 // ═══════════════════════════════════════════════
 // الدوال
